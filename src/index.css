@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Screen full width */
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#root {
+  width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Sora: 400, Regular, 16px, line-height 100%, letter-spacing -4% */
+.font-sora-16 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+/* Sora: 400, Regular, 50px, line-height 100%, letter-spacing -4% */
+.font-sora-50 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+/* Manrope: 600, SemiBold, 16px, line-height 150%, letter-spacing -2% */
+.font-manrope-16 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+/* Sora: 600 SemiBold, 16px, line-height 100%, letter-spacing -2% */
+.font-sora-16-semibold {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+/* Sora: 600 SemiBold, 19px, line-height 100%, letter-spacing -4% */
+.font-sora-19-semibold {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
