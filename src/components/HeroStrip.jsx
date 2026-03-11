@@ -4,7 +4,7 @@ export default function HeroStrip() {
   const repeated = Array(8).fill(phrases).flat()
   return (
     <section 
-      className="w-[1920px] max-w-full h-[62px] mx-auto overflow-hidden flex items-center justify-center"
+      className="w-full h-[62px] mx-auto overflow-hidden flex items-center justify-center"
       style={{ background: 'linear-gradient(to right, #E65C00, #FF8C42)' }}
     >
       <div className="flex items-center justify-center flex-nowrap gap-[36px] h-full">
