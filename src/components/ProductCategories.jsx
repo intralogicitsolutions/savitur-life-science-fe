@@ -42,23 +42,30 @@ export default function ProductCategories() {
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16 mb-12 lg:mb-16">
           <div className="max-w-xl space-y-4">
-            <div className="inline-flex flex-row items-center gap-1 px-3 py-1.5 h-[36px] w-[232px] rounded-full border border-[#E5E7EB] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
+          <div className="inline-flex flex-row items-center gap-1 px-3 py-1.5 h-[36px] w-[232px] rounded-full border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
               <span className="flex items-center justify-center" aria-hidden>
                 <img src={CheckAll} alt="" className="w-5 h-5" />
               </span>
-              <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#1A2C46]">
+              <span
+                className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#1A2C46]"
+                style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              >
                 Our Product Categories
               </span>
             </div>
 
-            <h2 className="w-[574px] font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#1A2C46]">
+            <h2 className="w-[574px] font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#000000]"
+             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            >
               Comprehensive Pharmaceutical &amp; Process
               <br className="hidden sm:block" />
               {' '}Support Materials
             </h2>
           </div>
 
-          <p className="pt-[80px] w-[472px] font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4A5568]">
+          <p className="pt-[80px] w-[472px] font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D]"
+             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+          >
             Supplying high-quality pharmaceutical materials that power research &amp; development,
             support clinical advancement, and strengthen commercial manufacturing.
           </p>
@@ -76,7 +83,10 @@ export default function ProductCategories() {
                   <img src={item.icon} alt={item.title} className="w-[54px] h-[54px]" />
                 </div>
 
-                <h3 className="font-manrope font-semibold text-[24px] leading-[100%] tracking-[-0.04em] text-[#111827]">
+                <h3
+                  className="font-manrope font-semibold text-[24px] leading-[100%] tracking-[-0.04em] text-[#111827]"
+                  style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                >
                   {item.title}
                 </h3>
               </div>
@@ -93,7 +103,9 @@ export default function ProductCategories() {
 
         {/* Bottom CTA */}
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] text-[#4A5568]">
+          <p className="font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D]"
+            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+          >
             Any queries related to Product Availability or Inquiry.
           </p>
 
