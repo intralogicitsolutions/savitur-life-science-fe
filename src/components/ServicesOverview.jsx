@@ -28,7 +28,7 @@ const services = [
 export default function ServicesOverview() {
   return (
     <section className="w-full bg-white flex justify-center">
-      <div className="w-full max-w-[1164px] h-[634px] mx-auto py-10">
+      <div className="w-full max-w-[1164px] mx-auto py-10">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16 mb-12 lg:mb-16">
           <div className="max-w-xl space-y-4">
