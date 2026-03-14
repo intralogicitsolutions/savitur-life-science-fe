@@ -8,6 +8,7 @@ import FounderHighlight from './components/FounderHighlight'
 import ServicesOverview from './components/ServicesOverview'
 import Partnership from './components/Partnership'
 import HowItWorks from './components/HowItWorks'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <ServicesOverview />
             <Partnership />
             <HowItWorks />
+            <Footer />
           </div>
         }
       />

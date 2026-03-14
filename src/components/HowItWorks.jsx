@@ -74,8 +74,6 @@ export default function HowItWorks() {
                 </li>
               ))}
             </ol>
-
-           
           </div>
        
         </div>
