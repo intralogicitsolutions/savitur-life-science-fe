@@ -7,23 +7,19 @@
   box-sizing: border-box;
 }
 html {
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 body {
   width: 100vw;
-  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 #root {
-  width: 100vw;
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -40,6 +36,16 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+/* Sora: 400, Regular, 16px, line-height 100%, letter-spacing -4% */
+.font-sora-16-tight {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
   letter-spacing: -0.04em;
 }
 
@@ -49,9 +55,21 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: -0.04em;
 }
+
+/* Sora: 400, Regular, 40px, line-height 100%, letter-spacing -4% */
+.font-sora-40 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+
 
 /* Manrope: 600, SemiBold, 16px, line-height 150%, letter-spacing -2% */
 .font-manrope-16 {
@@ -59,6 +77,16 @@ body {
   font-weight: 600;
   font-style: normal;
   font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+/* Manrope: 600, SemiBold, 20px, line-height 150%, letter-spacing -2% */
+.font-manrope-20 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
 }
@@ -81,4 +109,9 @@ body {
   font-size: 19px;
   line-height: 100%;
   letter-spacing: -0.04em;
+}
+
+/* Underline with ink skipping */
+.text-decoration-skip-ink-auto {
+  text-decoration-skip-ink: auto;
 }

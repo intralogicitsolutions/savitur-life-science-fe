@@ -1,6 +1,7 @@
 import HeaderLogo from '../assets/images/Header_Logo.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import LineImg from '../assets/images/Line.svg'
+import CaretDownMd from '../assets/images/Caret_Down_MD.svg'
 
 const navLinks = [
   { label: 'Home', href: '#', active: true },
@@ -13,7 +14,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent font-sora">
       <div className="w-full max-w-[1360px] mx-auto">
-        <div className="flex items-center justify-between h-[90px]">
+        <div className="flex items-center justify-between h-[46px] mt-[24px] mb-[24px]">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <img src={HeaderLogo} alt="Savitur Logo" className="w-[154px] h-[46px] flex-shrink-0" />
@@ -21,20 +22,20 @@ export default function Header() {
           </a>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center justify-between w-[402px] h-[24px]">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className={`flex items-center gap-1 text-white hover:text-white transition-colors pb-0.5 hover:border-b-[1px] hover:border-white ${
-                  link.active ? 'font-medium border-b-[1px] border-white' : ''
+                className={`flex items-center text-white hover:text-white transition-colors font-normal ${
+                  link.active ? 'underline hover:font-semibold' : 'hover:font-semibold hover:underline'
                 }`}
               >
-                {link.label}
+                <span className="font-sora-16 text-[#FFFFFF]">
+                  {link.label}
+                </span>
                 {link.showArrow && (
-                  <svg className="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                  </svg>
+                  <img src={CaretDownMd} alt="" className="w-[24px] h-[24px] brightness-0 invert" aria-hidden />
                 )}
               </a>
             ))}
