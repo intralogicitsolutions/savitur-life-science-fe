@@ -35,7 +35,7 @@ export default function FounderHighlight() {
             </div>
 
             {/* Right content */}
-            <div className="w-[462px] h-[502px] flex flex-col justify-between space-y-6 ml-[64px]">
+            <div className="w-[462px] min-w-[462px] max-w-[462px] h-[502px] min-h-[502px] max-h-[502px] flex flex-col justify-between ml-[59px] flex-shrink-0 p-[5px] box-border overflow-hidden">
               {/* Badge + texts */}
               <div className="space-y-[14px]">
                 <div className="inline-flex w-[189px] h-[36px] items-center rounded-full border border-[#E5E7EB] bg-white px-[12px] py-[6px] shadow-[0_4px_10px_rgba(15,23,42,0.06)]">
@@ -51,13 +51,13 @@ export default function FounderHighlight() {
 
                 <div>
                   <h2
-                    className="inline-block font-sora-40 text-[#000000]"
+                    className="inline-block font-sora-40 text-[#000000] mb-[8px]"
                     style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.07)' }}
                   >
                     Dr Rajendra Chavda  
                   </h2>
                   <p
-                    className="font-manrope-16 w-[456px] h-[72px] text-[#4D4D4D] mt-[8px] mb-[32px]"
+                    className="font-manrope-16 w-[456px] h-[72px] text-[#4D4D4D] mb-[32px]"
                     style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                   >
                     Director -Tivan sciences pvt ltd, Certified Independent
@@ -67,15 +67,15 @@ export default function FounderHighlight() {
                     University, Professor of practice (DSU) Junagadh.
                   </p>  
                 </div>
-                    <hr />
+                    <hr/>
                 <p
-                  className="font-manrope-20 w-[456px] h-[150px] text-[#000000] mt-[32px]"
+                  className="font-manrope-20 w-[456px] h-[150px] text-[#000000] pt-[18px]"
                 >
                   “Extensive experience in pharma API development, process optimization and strategic industry partnerships,
                   ensuring quality supply and practical insights across complex chemical processes.”
                 </p>
 
-                <p className="font-manrope font-semibold w-[361px] h-[24px] text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D]"
+                <p className="font-manrope font-semibold w-[361px] h-[24px] text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] mt-[24px] mb-[4px]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
                 >
                   For any query &amp; guidance related to this business.
@@ -83,11 +83,11 @@ export default function FounderHighlight() {
               </div>
 
               {/* Contact actions */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-2 pt-[1px] w-[337px] h-[48px]">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2 w-[337px] h-[48px] mt-[2px]">
               <div className="flex items-center gap-2">
                   <button
                     type="button"
-                    className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full"
+                    className="inline-flex items-center justify-center rounded-full"
                     aria-label="Email"
                   >
                     <img src={MailIcon} alt="" className="h-[48px] w-[48px]" aria-hidden />

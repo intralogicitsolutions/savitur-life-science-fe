@@ -5,8 +5,8 @@ import HeroImg from '../assets/images/Hero_img.svg'
 export default function HowItWorks() {
   return (
     <section className="w-full bg-white flex justify-center">
-      <div className="w-full max-w-[982px] px-4 md:px-0 py-16">
-        <div className="flex flex-col md:flex-row gap-10 items-center bg-white px-0 py-10 h-[522px] overflow-hidden">
+      <div className="w-full max-w-[982px] h-[662px] mt-[160px] mb-[124px] opacity-100 box-border">
+        <div className="flex flex-col md:flex-row items-center gap-[64px] bg-white w-[982px] h-[522px]">
           {/* Left image */}
           <div className="w-[456px] h-[522px] rounded-[16px] overflow-hidden relative">
             <div
@@ -19,10 +19,10 @@ export default function HowItWorks() {
           </div>
 
           {/* Right content */}
-          <div className="w-full md:w-[462px] h-[504px] flex flex-col gap-6 px-6 md:px-10">
+          <div className="w-full md:w-[456px] h-[504px] flex flex-col">
             {/* Pill */}
             <div
-              className="inline-flex items-center gap-[4px] px-[12px] py-[6px] w-[160px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] text-[13px] font-manrope font-semibold tracking-[0.18em] uppercase"
+              className="inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[158px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-manrope font-semibold tracking-[0.18em] uppercase mb-[14px]"
               style={{ boxShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full">
@@ -39,23 +39,26 @@ export default function HowItWorks() {
             {/* Heading */}
             <h2
               className="font-sora font-normal text-[39px] leading-[120%] tracking-[-0.04em] text-[#000000] w-[456px] h-[150px]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
             >
               From Sample to Commercial Scale — Seamless at Every Stage
             </h2>
 
-            {/* Divider */}
-            <div className="h-px w-[462px] bg-[#4D4D4D]/20" />
-
+              {/* Divider */}
+              <div className="h-px w-[462px] bg-[#4D4D4D]/20 "/>
+                  <hr className='mb-[32px] mt-[32px]'/>
             {/* Steps */}
-            <ol className="space-y-4">
+            <ol>
               {[
                 'Explore Catalogues & Submit Inquiry',
                 'Acquire Sample Load',
                 'Regulatory Alignment',
                 'Get Commercial Supply',
               ].map((label, index) => (
-                <li key={label} className="flex items-center gap-4">
+                <li
+                  key={label}
+                  className="flex items-center gap-4 w-[402px] h-[48px] rounded-[52px] my-[16px]"
+                >
                   <span
                     className="flex h-[48px] w-[48px] items-center justify-center rounded-full text-white font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em]"
                     style={{
@@ -78,8 +81,8 @@ export default function HowItWorks() {
        
         </div>
           {/* Bottom text + button */}
-          <div className="mt-8 flex flex-col items-center gap-3 text-center">
-            <p className="font-manrope font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] text-[#4D4D4D]"
+          <div className="flex flex-col items-center gap-3 text-center mt-[56px] w-[378px] h-[84px] mx-auto">
+            <p className="font-manrope font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] text-[#4D4D4D] w-[378px] h-[24px]"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Any queries related to Product Availability or Inquiry.
