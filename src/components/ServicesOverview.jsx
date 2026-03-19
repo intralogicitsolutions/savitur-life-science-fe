@@ -28,7 +28,7 @@ const services = [
 export default function ServicesOverview() {
   return (
     <section className="w-full bg-white flex justify-center">
-      <div className="w-[1164px] h-[634px] mt-[124px] border border-[#EEF0F4] overflow-hidden">
+      <div className="w-[1164px] h-[634px] mt-[124px] overflow-hidden">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">

@@ -38,7 +38,7 @@ const categories = [
 export default function ProductCategories() {
   return (
     <section className="w-full bg-white flex justify-center mt-[124px] mb-[124px]">
-      <div className="w-[1164px] h-[648px] mx-auto  border border-[#EEF0F4]">
+      <div className="w-[1164px] h-[648px] mx-auto">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="max-w-xl space-y-4">
