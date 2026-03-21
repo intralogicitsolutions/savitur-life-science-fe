@@ -35,15 +35,20 @@ export default function FounderHighlight() {
             </div>
 
             {/* Right content */}
-            <div className="w-[462px] min-w-[462px] max-w-[462px] h-[502px] min-h-[502px] max-h-[502px] flex flex-col justify-between ml-[59px] flex-shrink-0 p-[5px] box-border overflow-hidden">
+            <div className="w-[462px] min-w-[462px] max-w-[462px] h-[502px] min-h-[502px] max-h-[502px] flex flex-col justify-between ml-[64px] flex-shrink-0  overflow-hidden relative top-[6px]">
               {/* Badge + texts */}
-              <div className="space-y-[14px]">
-                <div className="inline-flex w-[189px] h-[36px] items-center rounded-full border border-[#E5E7EB] bg-white px-[12px] py-[6px] shadow-[0_4px_10px_rgba(15,23,42,0.06)]">
-                  <span className="inline-flex items-center justify-center">
-                    <img src={CheckAll} alt="" className="h-[24px] w-[24px]" />
+              <div>
+                <div
+                  className="inline-flex w-[189px] h-[36px] items-center rounded-[60px] border-[1px] border-[#E5E7EB] bg-white px-[12px] py-[6px] opacity-100 shadow-[0_4px_10px_rgba(15,23,42,0.06)] mb-[14px]"
+                  style={{ transform: 'rotate(0deg)' }}
+                >
+                  <span className="inline-flex items-center justify-center w-[24px] h-[24px]">
+                    <img src={CheckAll} alt="" className="h-[24px] w-[24px] pr-[2px]" />
                   </span>
-                  <span className="font-sora text-[16px] leading-[100%] tracking-[-0.04em] text-[#111827]"
-                  style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+
+                  <span
+                    className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#111827]"
+                    style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)', fontStyle: 'normal' }}
                   >
                     Founder Highlight
                   </span>
@@ -51,47 +56,85 @@ export default function FounderHighlight() {
 
                 <div>
                   <h2
-                    className="inline-block font-sora-40 text-[#000000] mb-[8px]"
-                    style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.07)' }}
+                    className="inline-block font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#000000] w-[456px] h-[50px] opacity-100 mb-[8px]"
+                    style={{
+                      textShadow: '2px 2px 0 rgba(0,0,0,0.07)',
+                      fontStyle: 'normal',
+                      transform: 'rotate(0deg)',
+                    }}
                   >
-                    Dr Rajendra Chavda  
+                    Dr Rajendra Chavda
                   </h2>
+
                   <p
-                    className="font-manrope-16 w-[456px] h-[72px] text-[#4D4D4D] mb-[32px]"
-                    style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                    className="text-[16px] leading-[150%] tracking-[-0.02em] w-[456px] h-[72px] text-[#4D4D4D] mb-[32px]"
+                    style={{
+                      fontFamily: 'Manrope',
+                      fontWeight: 600,
+                      fontStyle: 'normal',
+                      fontSize: '16px',
+                      lineHeight: '150%',
+                      letterSpacing: '-0.02em',
+                      // Not supported universally, but requested.
+                      lineHeightTrim: 'none',
+                      textShadow: '2px 2px 0 rgba(0,0,0,0.06)',
+                    }}
                   >
                     Director -Tivan sciences pvt ltd, Certified Independent
-                    <br />
                     Director, Member of the academic council - Dr Shubhas
-                    <br />
                     University, Professor of practice (DSU) Junagadh.
-                  </p>  
+                  </p>
                 </div>
-                    <hr/>
+
+                <hr />
+
                 <p
-                  className="font-manrope-20 w-[456px] h-[150px] text-[#000000] pt-[18px]"
+                  className="text-[20px] leading-[150%] tracking-[-0.02em] w-[456px] h-[150px] text-[#000000] mt-[32px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    fontSize: '20px',
+                    lineHeight: '150%',
+                    letterSpacing: '-0.02em',
+                    // Not supported universally, but requested.
+                    lineHeightTrim: 'none',
+                  }}
                 >
                   “Extensive experience in pharma API development, process optimization and strategic industry partnerships,
                   ensuring quality supply and practical insights across complex chemical processes.”
                 </p>
 
-                <p className="font-manrope font-semibold w-[361px] h-[24px] text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] mt-[24px] mb-[4px]"
-                style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
+                <p
+                  className="w-[361px] h-[24px] text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] mt-[24px] mb-[12px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    fontSize: '16px',
+                    lineHeight: '150%',
+                    letterSpacing: '-0.02em',
+                    // Requested (not universally supported), set anyway.
+                    lineHeightTrim: 'none',
+                  }}
                 >
                   For any query &amp; guidance related to this business.
                 </p>
+               
               </div>
+              
+             
 
               {/* Contact actions */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-2 w-[337px] h-[48px] mt-[2px]">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2 w-[337px] h-[48px]">
+                <div className="flex items-center gap-2">
                   <button
                     type="button"
                     className="inline-flex items-center justify-center rounded-full"
                     aria-label="Email"
                   >
                     <img src={MailIcon} alt="" className="h-[48px] w-[48px]" aria-hidden />
-                  </button> 
+                  </button>
 
                   <button
                     type="button"
@@ -118,8 +161,8 @@ export default function FounderHighlight() {
                   <img src={ContactBtn} alt="Contact Us" className="w-[157px] h-[48px]" />
                 </button>
               </div>
-
             </div>
+    
           </div>
         </div>
       </div>

@@ -22,14 +22,14 @@ export default function HowItWorks() {
           <div className="w-full md:w-[456px] h-[504px] flex flex-col">
             {/* Pill */}
             <div
-              className="inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[158px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-manrope font-semibold tracking-[0.18em] uppercase mb-[14px]"
+              className="inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[158px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-semibold tracking-[0.18em] uppercase mb-[14px]"
               style={{ boxShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full">
                 <img src={CheckAll} alt="" className="h-[16px] w-[16px]" />
               </span>
               <span
-                className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] normal-case"
+                className="font-normal text-[16px] leading-[100%] tracking-[-0.04em] normal-case"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 How it works?
@@ -38,7 +38,7 @@ export default function HowItWorks() {
 
             {/* Heading */}
             <h2
-              className="font-sora font-normal text-[39px] leading-[120%] tracking-[-0.04em] text-[#000000] w-[456px] h-[150px]"
+              className="font-normal text-[39px] leading-[120%] tracking-[-0.04em] text-[#000000] w-[456px] h-[150px]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
             >
               From Sample to Commercial Scale — Seamless at Every Stage
@@ -60,7 +60,7 @@ export default function HowItWorks() {
                   className="flex items-center gap-4 w-[402px] h-[48px] rounded-[52px] my-[16px]"
                 >
                   <span
-                    className="flex h-[48px] w-[48px] items-center justify-center rounded-full text-white font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em]"
+                    className="flex h-[48px] w-[48px] items-center justify-center rounded-full text-white font-semibold text-[16px] leading-[100%] tracking-[-0.02em]"
                     style={{
                       backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00)',
                       boxShadow: '2px 2px 0 rgba(0,0,0,0.06)',
@@ -69,7 +69,7 @@ export default function HowItWorks() {
                     {index + 1}
                   </span>
                   <span
-                    className="font-manrope font-semibold text-[20px] leading-[100%] tracking-[-0.01em] text-[#000000]"
+                    className="font-semibold text-[20px] leading-[100%] tracking-[-0.01em] text-[#000000]"
                     style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                   >
                     {label}
@@ -82,7 +82,7 @@ export default function HowItWorks() {
         </div>
           {/* Bottom text + button */}
           <div className="flex flex-col items-center gap-3 text-center mt-[56px] w-[378px] h-[84px] mx-auto">
-            <p className="font-manrope font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] text-[#4D4D4D] w-[378px] h-[24px]"
+            <p className="font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] text-[#4D4D4D] w-[378px] h-[24px]"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Any queries related to Product Availability or Inquiry.

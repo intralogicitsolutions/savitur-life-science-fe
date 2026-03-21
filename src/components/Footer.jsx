@@ -23,7 +23,7 @@ const productTypes = [
 
 export default function Footer() {
   return (
-    <footer className="w-[1520px] h-[626px] mx-auto rounded-2xl overflow-hidden relative font-manrope border border-white/10 bg-[#1F2A44] opacity-100">
+    <footer className="w-[1520px] h-[626px] mx-auto rounded-2xl overflow-hidden relative border border-white/10 bg-[#1F2A44] opacity-100">
       <div className="relative z-10 w-[1362px] min-h-[295px] mt-[124px] ml-[80px] mr-[78px]">
         {/* Main content - 5 columns */}
         <div className="grid grid-cols-1 lg:grid-cols-5 w-[1362px]">
@@ -32,20 +32,20 @@ export default function Footer() {
             <a href="#" className="inline-block mb-4">
               <img src={HeaderLogo} alt="Savitur Life Science" className="h-[46px] w-[154px]" />
             </a>
-            <p className="font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.01em] text-white/90 w-[202px] h-[48px]">
+            <p className="font-semibold text-[16px] leading-[150%] tracking-[-0.01em] text-white/90 w-[202px] h-[48px]">
               Powering Progress in Pharmaceutical Excellence
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="w-[104px] h-[167px]">
-            <h3 className="font-manrope font-medium text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Quick Links</h3>
+            <h3 className="font-medium text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 list-disc list-inside text-white">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className={`font-manrope text-[16px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
+                    className={`text-[16px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
                   >
                     {link.label}
                   </a>
@@ -56,11 +56,11 @@ export default function Footer() {
 
           {/* Product Types */}
           <div className="w-[208px] h-[199px]">
-            <h3 className="font-manrope font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Product Types</h3>
+            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Product Types</h3>
             <ul className="space-y-2 list-disc list-inside text-white">
               {productTypes.map((type) => (
                 <li key={type}>
-                  <a href="#" className="font-manrope font-medium text-[16px] leading-[100%] tracking-[-0.04em] text-white/90 hover:text-white hover:underline transition-colors">
+                  <a href="#" className="font-medium text-[16px] leading-[100%] tracking-[-0.04em] text-white/90 hover:text-white hover:underline transition-colors">
                     {type}
                   </a>
                 </li>
@@ -70,8 +70,8 @@ export default function Footer() {
 
           {/* Office Address */}
           <div className="w-[220px] h-[145px]">
-            <h3 className="font-manrope font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Office Address</h3>
-            <address className="font-manrope font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 not-italic">
+            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Office Address</h3>
+            <address className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 not-italic">
               Sr. No. 117, Plot No. 1, Taluka:
               
               behind Balaji Multiflex Pvt. Ltd,
@@ -84,18 +84,18 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="w-[232px] h-[111px]">
-            <h3 className="font-manrope font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Contact Info</h3>
+            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Contact Info</h3>
             <div className="space-y-4">
               <a
                 href="mailto:info@saviturlifescience.com"
-                className="font-manrope font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
+                className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
               >
                 <img src={Fmail} alt="" className="w-[24px] h-[24px] flex-shrink-0" />
                 info@saviturlifescience.com
               </a>
               <a
                 href="tel:+917043112818"
-                className="font-manrope font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
+                className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
               >
                 <img src={Fphone} alt="" className="w-[24px] h-[24px] flex-shrink-0" />
                 +917043112818
@@ -109,7 +109,7 @@ export default function Footer() {
 
         {/* Copyright & Social */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-manrope font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] w-[406px] h-[24px]">
+          <p className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] w-[406px] h-[24px]">
             Copyrights © 2023 all rights reserved by SaviturLifeScience
           </p>
           <div className="flex items-center justify-between w-[96px] h-[24px]">

@@ -80,12 +80,12 @@ export default function Partnership() {
     <section className="w-full bg-white mt-[124px] flex justify-center">
         <div className="w-[1524px] h-[746px] rounded-[15px] bg-[#FF9A52] text-center text-[#000000] flex flex-col items-center border border-[rgba(0,0,0,0.12)] opacity-100 box-border">
           {/* Top pill */}
-          <div className=" mb-[14px] mt-[124px] inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[172px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-manrope font-semibold tracking-[0.18em] uppercase shadow-[0_6px_16px_rgba(15,23,42,0.12)]">
+          <div className=" mb-[14px] mt-[124px] inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[172px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-semibold tracking-[0.18em] uppercase shadow-[0_6px_16px_rgba(15,23,42,0.12)]">
             <span>
               <img src={CheckAll} alt="" className="h-[24px] w-[24px]" />
             </span>
             <span
-              className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] normal-case"
+              className="font-normal text-[16px] leading-[100%] tracking-[-0.04em] normal-case"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Why Choose Us
@@ -94,7 +94,7 @@ export default function Partnership() {
 
           {/* Main heading */}
           <h2
-            className="font-sora font-normal text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-[574px] h-[100px] text-center mb-[69px]"
+            className="font-normal text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-[574px] h-[100px] text-center mb-[69px]"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Precision, Partnership &amp; Predictability
@@ -103,46 +103,46 @@ export default function Partnership() {
           {/* Stats row */}
           <div className="flex w-[1164px] h-[111px] mx-auto items-center justify-between mb-[84px]">
             <div className="w-[284px] h-[111px] mx-[2px]">
-              <p className="font-sora font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+              <p className="font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 {count1}+
               </p>
-              <p className="mt-2 font-manrope font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
+              <p className="mt-2 font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Trusted Global Suppliers
               </p>
             </div>
             <div className="w-[283.5px] h-[111px] mx-[2px]">
-            <p className="font-sora font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+            <p className="font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 {count2}Y+
               </p>
-              <p className="mt-2 font-manrope font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
+              <p className="mt-2 font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Experience</p>
             </div>
             <div className="w-[283.5px] h-[111px] mx-[2px]">
-            <p className="font-sora font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+            <p className="font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 {count3}+
               </p>
-              <p className="mt-2 font-manrope font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
+              <p className="mt-2 font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Quality Products</p>
             </div>
             <div className="w-[283.5px] h-[111px] mx-[2px]">
-            <p className="font-sora font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+            <p className="font-semibold text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 {count4}+
               </p>
-              <p className="mt-2 font-manrope font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
+              <p className="mt-2 font-semibold text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[283.5px] h-[30px] opacity-90 text-[#212121]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 On-time Delivery</p>
@@ -151,7 +151,7 @@ export default function Partnership() {
 
           {/* Bottom text + button */}
           <div className="flex flex-col items-center justify-center gap-[12px] w-[252px] h-[84px] mb-[124px]">
-            <p className="font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] w-[252px] h-[24px]"
+            <p className="font-semibold text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] w-[252px] h-[24px]"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Get best quality pharma materials.

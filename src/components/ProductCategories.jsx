@@ -47,21 +47,21 @@ export default function ProductCategories() {
                 <img src={CheckAll} alt="" className="w-[24px] h-[24px]" />
               </span>
               <span
-                className="font-sora-16-tight text-[#000000]"
+                className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Our Product Categories
               </span>
             </div>
 
-            <h2 className="w-[574px] h-[150px] font-sora-40 text-[#000000]"
+            <h2 className="w-[574px] h-[150px] font-sora font-normal text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Comprehensive Pharmaceutical &amp; Process Support Materials
             </h2>
           </div>
 
-          <p className="pt-[80px] w-[472px] h-[150px] font-manrope-16 align-middle text-[#4D4D4D]"
+          <p className="pt-[80px] w-[472px] h-[150px] font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Supplying high-quality pharmaceutical materials that power research &amp; development,
@@ -77,12 +77,12 @@ export default function ProductCategories() {
               className="flex flex-col justify-between w-[220px] h-[252px] rounded-[24px] border border-[#EEF0F4] bg-[#F4F6F9] px-[16px] lg:px-7 lg:py-7"
             >
               <div className="flex flex-col gap-4">
-                <div className="w-[54px] h-[54px mb-[24px]">
+                <div className="w-[54px] h-[54px] mb-[24px]">
                   <img src={item.icon} alt={item.title} className="w-[54px] h-[54px]" />
                 </div>
 
                 <h3
-                  className="font-manrope font-semibold text-[24px] leading-[120%] tracking-[-0.02em] text-[#111827]"
+                  className="font-semibold text-[24px] leading-[120%] tracking-[-0.02em] text-[#111827]"
                   style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                 >
                   {item.title}
@@ -101,7 +101,7 @@ export default function ProductCategories() {
 
         {/* Bottom CTA */}
         <div className="flex flex-col items-center text-center w-[378px] h-[84px] mx-auto">
-          <p className="font-manrope-16 text-[#4D4D4D]"
+          <p className="font-semibold text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D]"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Any queries related to Product Availability or Inquiry.

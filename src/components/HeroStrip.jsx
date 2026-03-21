@@ -10,7 +10,7 @@ export default function HeroStrip() {
       <div className="flex items-center justify-center flex-nowrap gap-[36px] w-[2103px] h-[14px]">
         {repeated.map((phrase, i) => (
           <span key={i} className="flex items-center gap-[36px] flex-shrink-0">
-            <span className="font-sora-19-semibold text-white whitespace-nowrap">
+            <span className="font-sora font-semibold text-[19px] leading-[100%] tracking-[-0.04em] text-white whitespace-nowrap">
               {phrase}
             </span>
             {i < repeated.length - 1 && (

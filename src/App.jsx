@@ -9,6 +9,8 @@ import ServicesOverview from './components/ServicesOverview'
 import Partnership from './components/Partnership'
 import HowItWorks from './components/HowItWorks'
 import Footer from './components/Footer'
+import AboutUs from './pages/AboutUs'
+import ServicesPage from './pages/ServicesPage'
 
 function App() {
   return (
@@ -26,6 +28,22 @@ function App() {
             <Partnership />
             <HowItWorks />
             <Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/about-us"
+        element={
+          <div>
+            <AboutUs />
+          </div>
+        }
+      />
+      <Route
+        path="/services"
+        element={
+          <div>
+            <ServicesPage />
           </div>
         }
       />

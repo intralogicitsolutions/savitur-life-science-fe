@@ -37,21 +37,21 @@ export default function ServicesOverview() {
                 <img src={CheckAll} alt="" className="w-[24px] h-[24px]" />
               </span>
               <span
-                className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
+                className="font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Our Services at a Glance
               </span>
             </div>
 
-            <h2 className="w-[574px] h-[100px] font-sora-40 text-[#000000] mt-[14px]"
+            <h2 className="w-[574px] h-[100px] font-sora font-normal text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000] mt-[14px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
              Consulting Services That Remove Uncertainties
             </h2>
           </div>
 
-          <p className="pt-[80px] w-[472px] h-[100px] font-manrope-16 align-middle text-[#4D4D4D] opacity-100 mb-[51px]"
+          <p className="pt-[80px] w-[472px] h-[100px] font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D] opacity-100 mb-[51px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Harness expert support for manufacturing strategy, regulatory navigation and material utilization.
@@ -77,7 +77,7 @@ export default function ServicesOverview() {
               {/* Title */}
               <div className="relative z-10 flex h-full items-end p-6">
                 <h3
-                  className="font-manrope font-semibold w-[241px] h-[66px] text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
+                  className="font-semibold w-[241px] h-[66px] text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
                   style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                 >
                   {service.title}
@@ -99,7 +99,7 @@ export default function ServicesOverview() {
 
           <button
             type="button"
-            className="inline-flex items-center font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em] bg-gradient-to-r from-[#FF8C42] to-[#E65C00] text-transparent bg-clip-text underline"
+            className="inline-flex items-center font-semibold text-[16px] leading-[100%] tracking-[-0.02em] bg-gradient-to-r from-[#FF8C42] to-[#E65C00] text-transparent bg-clip-text underline"
           >
             <span>Or View Service in Details</span>
             <img src={ArrowUp} alt="Arrow Up" className="w-[24px] h-[24px]" />

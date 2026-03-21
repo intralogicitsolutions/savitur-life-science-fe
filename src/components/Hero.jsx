@@ -34,18 +34,30 @@ export default function Hero() {
           {/* Tagline Badge */}
           <div className="inline-flex items-center justify-center gap-2 bg-white/10 rounded-[60px] px-[12px] py-[6px] mb-[14px] border border-white/20 w-fit max-w-[300px] h-[36px]">
             <img src={CheckAll} alt="" className="w-[24px] h-[24px] flex-shrink-0" aria-hidden />
-            <span className="text-gray-200 font-sora-16-tight whitespace-nowrap">Trusted for Quality & Compliance</span>
+            <span className="text-gray-200 font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] whitespace-nowrap">Trusted for Quality & Compliance</span>
           </div>
 
           {/* Main Headline */}
           <h1
-            className="text-[#FFFFFF] font-sora-50 h-[252px] mb-[6px] shadow-[2px_2px_0px_0px_#0000000F]"
+            className="text-[#FFFFFF] font-sora font-normal text-[50px] leading-[120%] tracking-[-0.04em] w-[468px] h-[252px] mb-[6px] shadow-[2px_2px_0px_0px_#0000000F]"
           >
             Bridging Global Pharma Needs With Trusted Ingredients & Expertise
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[#FFFFFF] opacity-95 mb-[22px] font-manrope font-semibold text-[16px] leading-[150%] tracking-[-0.02em] w-[468px] h-[96px] shadow-[2px_2px_0px_0px_#0000000F]">
+         <p
+           className="text-[#FFFFFF] opacity-95 mb-[22px] text-[16px] leading-[150%] tracking-[-0.02em] w-[468px] h-[96px] shadow-[2px_2px_0px_0px_#0000000F]"
+           style={{
+             fontFamily: 'Manrope',
+             fontWeight: 600,
+             fontStyle: 'normal',
+             fontSize: '16px',
+             lineHeight: '150%',
+             letterSpacing: '-0.02em',
+             // Not supported in all browsers, but safe to set.
+             lineHeightTrim: 'none',
+           }}
+         >
             We empower pharmaceutical innovators with high-quality APIs, intermediates, KSMs, solvents, excipients and deep industry consultancy – backed by decades of research & process development experience.
           </p>
 
@@ -57,7 +69,7 @@ export default function Hero() {
 
             <a
               href="#"
-              className="inline-flex items-center justify-center text-white font-sora-16-semibold min-h-[24px] rounded-lg underline text-decoration-skip-ink-auto transition-colors shrink-0"
+              className="inline-flex items-center justify-center text-white font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em] min-h-[24px] rounded-lg underline [text-decoration-skip-ink:auto] transition-colors shrink-0"
             >
               View Product Catalogue
               <img src={ArrowUpRightMD} alt="" className="w-[24px] h-[24px] flex-shrink-0 text-[#FFFFFF]" aria-hidden />

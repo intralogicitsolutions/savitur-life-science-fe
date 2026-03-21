@@ -2,6 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sora Font - from public/font folder */
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('/font/Sora-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Manrope Font - from public/font folder */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/font/Manrope-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* Screen full width */
 * {
   box-sizing: border-box;
@@ -13,6 +107,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  font-family: 'Manrope', sans-serif;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -22,106 +117,4 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-
-body {
-  font-family: 'Manrope', sans-serif;
-}
-
-/* Sora: 400, Regular, 16px, line-height 100%, letter-spacing -4% */
-.font-sora-16 {
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-}
-
-/* Sora: 400, Regular, 16px, line-height 100%, letter-spacing -4% */
-.font-sora-16-tight {
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-}
-
-/* Sora: 400, Regular, 50px, line-height 100%, letter-spacing -4% */
-.font-sora-50 {
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
-  line-height: 120%;
-  letter-spacing: -0.04em;
-}
-
-/* Sora: 400, Regular, 40px, line-height 100%, letter-spacing -4% */
-.font-sora-40 {
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
-}
-
-
-
-/* Manrope: 600, SemiBold, 16px, line-height 150%, letter-spacing -2% */
-.font-manrope-16 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-}
-
-/* Manrope: 600, SemiBold, 20px, line-height 150%, letter-spacing -2% */
-.font-manrope-20 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-}
-
-/* Manrope: 600, SemiBold, 24px, line-height 100%, letter-spacing -4% */
-.font-manrope-24 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-}
-
-/* Sora: 600 SemiBold, 16px, line-height 100%, letter-spacing -2% */
-.font-sora-16-semibold {
-  font-family: 'Sora', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-}
-
-/* Sora: 600 SemiBold, 19px, line-height 100%, letter-spacing -4% */
-.font-sora-19-semibold {
-  font-family: 'Sora', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 19px;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-}
-
-/* Underline with ink skipping */
-.text-decoration-skip-ink-auto {
-  text-decoration-skip-ink: auto;
 }
