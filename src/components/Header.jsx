@@ -64,9 +64,9 @@ export default function Header() {
           </nav>
 
           {/* Contact Us Button */}
-          <a href="#" className="inline-block hover:opacity-90 transition-opacity">
+          <Link to="/contact-us" className="inline-block hover:opacity-90 transition-opacity">
             <img src={ContactBtn} alt="Contact Us" className="w-[141px] h-[42px]" />
-          </a>
+          </Link>
         </div>
       </div>
       {/* Line image below header */}

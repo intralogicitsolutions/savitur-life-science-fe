@@ -11,6 +11,7 @@ import HowItWorks from './components/HowItWorks'
 import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
 import ServicesPage from './pages/ServicesPage'
+import ContactUs from './pages/ContactUs'
 
 function App() {
   return (
@@ -44,6 +45,14 @@ function App() {
         element={
           <div>
             <ServicesPage />
+          </div>
+        }
+      />
+      <Route
+        path="/contact-us"
+        element={
+          <div>
+            <ContactUs />
           </div>
         }
       />
