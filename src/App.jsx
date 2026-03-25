@@ -10,8 +10,8 @@ import Partnership from './components/Partnership'
 import HowItWorks from './components/HowItWorks'
 import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
-import ServicesPage from './pages/ServicesPage'
 import ContactUs from './pages/ContactUs'
+import Services from './pages/Services'
 
 function App() {
   return (
@@ -44,7 +44,7 @@ function App() {
         path="/services"
         element={
           <div>
-            <ServicesPage />
+            <Services />
           </div>
         }
       />
