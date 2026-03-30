@@ -37,31 +37,29 @@ const categories = [
 
 export default function ProductCategories() {
   return (
-    <section className="w-full bg-white flex justify-center mt-[124px] mb-[124px]">
-      <div className="w-[1164px] h-[648px] mx-auto">
+    <section className="w-full bg-white flex justify-center mt-[60px] mb-[60px] sm:mt-[124px] sm:mb-[124px]">
+      <div className="mx-auto h-[931px] min-h-[931px] w-[354px] max-w-[354px] sm:h-[648px] sm:min-h-0 sm:max-h-none sm:w-full sm:max-w-[1164px] sm:overflow-visible">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="max-w-xl space-y-4">
-          <div className="inline-flex flex-row items-center px-[12px] py-[6px] h-[36px] w-[232px] rounded-full border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
-              <span className="flex items-center justify-center" aria-hidden>
-                <img src={CheckAll} alt="" className="w-[24px] h-[24px]" />
-              </span>
+          <div className="inline-flex h-auto min-h-[36px] w-fit max-w-full flex-row items-center rounded-full border border-[rgba(0,0,0,0.1)] bg-white px-[12px] py-[6px] shadow-[0_6px_16px_rgba(15,23,42,0.06)] sm:h-[36px] sm:w-[232px]">
+              <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               <span
-                className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
+                className="font-sora font-normal text-[12px] leading-[100%] tracking-[-0.04em] text-[#000000] sm:text-[16px]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Our Product Categories
               </span>
             </div>
 
-            <h2 className="w-[574px] h-[150px] font-sora font-normal text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000]"
+            <h2 className="h-auto w-full max-w-full font-sora font-normal text-[26px] leading-[120%] tracking-[-0.02em] text-[#000000] !mt-[12px] min-[1600px]:!mt-[16px] sm:h-[150px] sm:w-[574px] sm:text-[40px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
               Comprehensive Pharmaceutical &amp; Process Support Materials
             </h2>
           </div>
 
-          <p className="pt-[80px] w-[472px] h-[150px] font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D]"
+          <p className="h-auto w-full pt-[8px] font-semibold text-[14px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:pt-[80px] sm:h-[150px] sm:w-[472px] sm:text-[16px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Supplying high-quality pharmaceutical materials that power research &amp; development,
@@ -70,19 +68,19 @@ export default function ProductCategories() {
         </div>
 
         {/* Category cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[16px] w-[1164px] h-[252px] opacity-100 mt-[56px] mb-[56px]">
+        <div className="mt-[28px] mb-[39px] grid w-full grid-cols-2 gap-3 opacity-100 sm:mt-[56px] sm:mb-[56px] sm:gap-[16px] lg:grid-cols-5">
           {categories.map((item) => (
             <article
               key={item.title}
-              className="flex flex-col justify-between w-[220px] h-[252px] rounded-[24px] border border-[#EEF0F4] bg-[#F4F6F9] px-[16px] lg:px-7 lg:py-7"
+              className="flex h-[170px] min-w-0 w-[169px] flex-col justify-between overflow-hidden rounded-[16px] border border-[#EEF0F4] bg-[#F4F6F9] px-[12px] py-[12px] sm:rounded-[24px] sm:px-[16px] sm:py-5 lg:h-[252px] lg:w-[220px] lg:px-7 lg:py-7"
             >
-              <div className="flex flex-col gap-4">
-                <div className="w-[54px] h-[54px] mb-[24px]">
-                  <img src={item.icon} alt={item.title} className="w-[54px] h-[54px]" />
+              <div className="flex flex-col">
+                <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] mb-[12px] sm:mb-[24px]">
+                  <img src={item.icon} alt={item.title} className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
                 </div>
 
                 <h3
-                  className="font-semibold text-[24px] leading-[120%] tracking-[-0.02em] text-[#111827]"
+                  className="font-manrope font-semibold sm:text-[24px] text-[16px] leading-[100%] tracking-[-0.04em] text-[#111827]"
                   style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                 >
                   {item.title}
@@ -91,17 +89,18 @@ export default function ProductCategories() {
 
               <button
                 type="button"
-                className="inline-flex items-center justify-start w-[138px] h-[24px]"
+                className="inline-flex h-[20px] sm:h-[24px] w-full max-w-[138px] items-center justify-start"
               >
-                <img src={ViewProductImg} alt="View Products" className="w-[138px] h-[24px]" />
+                <img src={ViewProductImg} alt="View Products" className="h-[24px] w-full max-w-[138px] object-contain object-left" />
               </button>
             </article>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="flex flex-col items-center text-center w-[378px] h-[84px] mx-auto">
-          <p className="font-semibold text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D]"
+        <div className="mx-auto flex sm:max-w-[378px] w-[195px] h-[94px] flex-col items-center px-2 text-center sm:h-[84px]">
+          <p
+            className="flex h-[42px] w-[195px] items-center justify-center font-manrope font-semibold text-[14px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] opacity-95 text-center min-[1600px]:whitespace-nowrap sm:whitespace-normal"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Any queries related to Product Availability or Inquiry.
@@ -109,9 +108,13 @@ export default function ProductCategories() {
 
           <button
             type="button"
-            className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity mt-[12px]"
+            className="inline-flex items-center justify-center w-[132px] h-[40px] hover:opacity-90 transition-opacity mt-[12px] sm:w-[157px] sm:h-[48px]"
           >
-            <img src={ContactBtn} alt="Contact Us" className="w-[157px] h-[48px]" />
+            <img
+              src={ContactBtn}
+              alt="Contact Us"
+              className="w-[195px] h-[94px] sm:w-[157px] sm:h-[48px] mb-0"
+            />
           </button>
         </div>
       </div>

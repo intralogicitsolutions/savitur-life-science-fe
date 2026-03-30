@@ -59,7 +59,7 @@ export default function Hero() {
           <div
             className="inline-flex items-center justify-center bg-white/10 rounded-[60px] px-[12px] py-[6px] mt-[204px] mb-[8px] sm:mt-0 sm:ml-0 sm:mb-[14px] border border-[#FFFFFF80] shadow-[2px_2px_0px_0px_#0000000F] w-fit max-w-[300px] h-[36px]"
           >
-            <img src={CheckAll} alt="" className="w-[24px] h-[24px] mr-[2px]" />
+            <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
             <span className="text-gray-200 font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] whitespace-nowrap">Trusted for Quality & Compliance</span>
           </div>
 
