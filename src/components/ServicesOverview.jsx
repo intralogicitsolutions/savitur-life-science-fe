@@ -27,31 +27,33 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="w-full bg-white flex justify-center">
-      <div className="w-[1164px] h-[634px] mt-[124px] overflow-hidden">
+    <section className="w-full bg-white flex justify-center opacity-100">
+      <div className="w-full max-w-[393px] min-h-[997px] sm:max-w-[1164px] sm:min-h-0 px-[20px] sm:px-6 lg:px-0 mt-[124px] lg:mt-[140px] pb-[60px] pt-[60px] sm:pb-0 sm:pt-0">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">
-          <div className="inline-flex flex-row items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] h-[36px] w-[234px] rounded-full border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
+
+          <div className="inline-flex flex-row items-center gap-1 px-[12px] py-[6px] h-[32px] w-[208px] opacity-100 sm:h-[36px] sm:w-[234px] rounded-[60px] border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
               <span className="flex items-center justify-center" aria-hidden>
-                <img src={CheckAll} alt="" className="w-[24px] h-[24px]" />
+              <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               </span>
               <span
-                className="font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
+                className="mt-[8px] font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 Our Services at a Glance
               </span>
-            </div>
+          </div>
 
-            <h2 className="w-[574px] h-[100px] font-sora font-normal text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000] mt-[14px]"
+
+            <h2 className="w-full max-w-[574px] font-sora font-normal text-[28px] sm:text-[32px] lg:text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000] sm:mt-[14px] mt-[12px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
              Consulting Services That Remove Uncertainties
             </h2>
           </div>
 
-          <p className="pt-[80px] w-[472px] h-[100px] font-semibold text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D] opacity-100 mb-[51px]"
+          <p className="lg:pt-[80px] w-full max-w-[472px] font-semibold text-sm sm:text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D] opacity-100 lg:mb-[51px]"
              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
           >
             Harness expert support for manufacturing strategy, regulatory navigation and material utilization.
@@ -59,11 +61,11 @@ export default function ServicesOverview() {
         </div>
 
         {/* Service cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-[56px] mb-[64px] w-[1164px] h-[316px] rounded-[12px] opacity-100">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-[12px] lg:mt-[56px] mb-[45px] lg:mb-[64px] w-full rounded-[12px] opacity-100">
           {services.map((service) => (
             <article
               key={service.title}
-              className="relative w-[276px] h-[316px] overflow-hidden rounded-[12px]"
+              className="relative w-[351px] h-[142px] opacity-100 sm:w-full sm:h-[280px] lg:h-[316px] overflow-hidden rounded-[12px]"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
@@ -75,9 +77,9 @@ export default function ServicesOverview() {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.15)]" />
 
               {/* Title */}
-              <div className="relative z-10 flex h-full items-end p-6">
+              <div className="relative z-10 flex h-full items-end p-4">
                 <h3
-                  className="font-semibold w-[241px] h-[66px] text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
+                  className="font-semibold w-[181px] h-[50px] sm:w-auto sm:h-auto max-w-[241px] text-[16px] sm:text-[20px] lg:text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
                   style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                 >
                   {service.title}
@@ -88,23 +90,24 @@ export default function ServicesOverview() {
         </div>
 
         {/* Bottom CTA row */}
-        <div className="flex items-center justify-center gap-4 w-[404px] h-[48px] mx-auto rounded-full">
+        <div className="flex flex-row items-center w-[343px] h-[40px] sm:justify-center sm:gap-4 sm:w-[404px] sm:h-auto mx-auto rounded-full">
           <button
             type="button"
-            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity mr-[16px]"
             aria-label="Contact Us"
           >
-            <img src={ContactBtn} alt="Contact Us" className="w-[157px] h-[48px]" />
+            <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
           </button>
 
           <button
             type="button"
-            className="inline-flex items-center font-semibold text-[16px] leading-[100%] tracking-[-0.02em] bg-gradient-to-r from-[#FF8C42] to-[#E65C00] text-transparent bg-clip-text underline"
+            className="inline-flex items-center font-semibold text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] bg-gradient-to-r from-[#FF8C42] to-[#E65C00] text-transparent bg-clip-text underline whitespace-nowrap"
           >
             <span>Or View Service in Details</span>
-            <img src={ArrowUp} alt="Arrow Up" className="w-[24px] h-[24px]" />
+            <img src={ArrowUp} alt="Arrow Up" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]" />
           </button>
         </div>
+
       </div>
     </section>
   )
