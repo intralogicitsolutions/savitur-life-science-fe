@@ -87,20 +87,14 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-      <section className="relative w-full min-w-full h-[460px] min-h-[460px] overflow-hidden" style={{ width: '100vw', minWidth: '100%', maxWidth: '100%' }}>
+      <section
+      className="relative w-full min-w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]"
+    >
         {/* Background image */}
-        <div 
-        className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-        style={{ 
-          backgroundImage: `url(${HeroImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center -40px',
-          minHeight: '460px',
-          left: 0,
-          right: 0,
-          width: '100%',
-        }}
-      />
+        <div
+          className="absolute inset-0  bg-no-repeat bg-cover bg-[position:65%_calc(0%+40px)] sm:bg-top top-[-37px]"
+          style={{ backgroundImage: `url(${HeroImg})` }}
+        />
 
         {/* Overlay gradients (matches Hero style) */}
         <div
@@ -111,16 +105,15 @@ export default function AboutUs() {
         />
 
         {/* Content */}
-        <div className="relative z-10 w-full h-full min-h-[460px] flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center w-[223px] h-[93px]">
+        <div className="relative z-10 w-full h-full min-h-[689px] sm:min-h-[460px] flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center text-center sm:w-[223px] sm:h-[93px] w-[143px] h-[66px]">
             {/* Main heading */}
             <h1 
-              className="text-[#FFFFFF] font-sora font-normal text-[50px] leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
                 fontStyle: 'normal',
-                fontSize: '50px',
                 lineHeight: '100%',
                 letterSpacing: '-4%',
                 leadingTrim: 'none',
@@ -130,14 +123,13 @@ export default function AboutUs() {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
+            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
               <span 
               className="opacity-90 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
                 fontStyle: 'normal',
-                fontSize: '16px',
                 lineHeight: '100%',
                 letterSpacing: '-2%',
                 leadingTrim: 'none',
@@ -145,7 +137,7 @@ export default function AboutUs() {
             >
               Home
             </span>
-              <span className="opacity-70 shrink-0 inline-flex items-center justify-center">
+              <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px]">
                 <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
@@ -154,7 +146,6 @@ export default function AboutUs() {
                 fontFamily: 'Manrope',
                 fontWeight: 600,
                 fontStyle: 'normal',
-                fontSize: '16px',
                 lineHeight: '100%',
                 letterSpacing: '-2%',
                 leadingTrim: 'none',
@@ -171,7 +162,7 @@ export default function AboutUs() {
 
       {/* About Us business panel */}
       <section className="w-full">
-        <div className="w-[1164px] h-[541px] mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden">
+        <div className="w-full max-w-[1164px] h-auto mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden max-[393px]:w-[354px] max-[393px]:max-w-[354px] max-[393px]:h-auto max-[393px]:min-h-[978px] max-[393px]:overflow-visible max-[393px]:mt-[38px] max-[393px]:mb-[100px]">
           <div className="flex flex-col h-full">
             {/* Top pill */}
             <div>
@@ -197,10 +188,10 @@ export default function AboutUs() {
             </div>
 
             {/* Top row */}
-            <div className="flex items-start justify-between gap-[118px]">
-              <div className="w-[574px] h-[150px] mt-[14px]">
+            <div className="flex items-start justify-between gap-[118px] max-[393px]:flex-col max-[393px]:gap-[16px] max-[393px]:px-[20px]">
+              <div className="w-[574px] h-[150px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[16px]">
                 <h2
-                  className="font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px]"
+                  className="font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
                   style={{
                     fontStyle: 'normal',
                     fontSize: '40px',
@@ -218,9 +209,9 @@ export default function AboutUs() {
                 
               </div>
 
-              <div className="w-[520px] flex flex-col items-start">
+              <div className="w-[520px] flex flex-col items-start max-[393px]:w-full">
                 <p
-                  className="text-[16px] leading-[150%] tracking-[-0.02em] w-[472px] h-[72px] text-[#4D4D4D] mt-[14px] text-left"
+                  className="text-[16px] leading-[150%] tracking-[-0.02em] w-[472px] h-[72px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -234,7 +225,7 @@ export default function AboutUs() {
                   Delivering high-quality pharmaceutical materials and strategic consultancy to support research, development, and commercial manufacturing worldwide.
                 </p>
 
-                <div className="flex items-center justify-start mt-[30px] w-[404px] h-[48px]">
+                <div className="flex items-center justify-start mt-[30px] w-[404px] h-[48px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-wrap max-[393px]:gap-y-[12px] max-[393px]:mt-[24px]">
                   <a
                     href="#"
                     className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity pr-[22px]"
@@ -247,7 +238,7 @@ export default function AboutUs() {
                     className="inline-flex items-center hover:opacity-90 transition-opacity"
                   >
                     <span
-                      className="font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em] underline"
+                      className="font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em] underline max-[393px]:whitespace-nowrap"
                       style={{
                         fontFamily: 'Sora',
                         fontWeight: 600,
@@ -282,9 +273,9 @@ export default function AboutUs() {
             </div>
 
             {/* Cards row */}
-            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px]">
+            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-col max-[393px]:gap-[14px] max-[393px]:mt-[24px] max-[393px]:px-[20px] max-[393px]:pb-[20px]">
               {/* Who We Are */}
-              <div className="w-[377px] h-[285px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px]">
+              <div className="w-[377px] h-[285px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
                 
                   <img src={WhoWeAreIcon} alt="" className="w-[54px] h-[54px]"/>
               
@@ -319,7 +310,7 @@ export default function AboutUs() {
               </div>
 
               {/* Mission */}
-              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px]">
+              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
                 
                   <img
                     src={MissionIcon}
@@ -359,7 +350,7 @@ export default function AboutUs() {
               </div>
 
               {/* Vision */}
-              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[20px] pt-[20px]">
+              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[20px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
                 
                   <img src={VisionIcon} alt="" className="w-[54px] h-[54px]" />
                
@@ -396,6 +387,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
       <FounderHighlight />
 
       {/* What Sets Us Apart — We focus on long-term */}

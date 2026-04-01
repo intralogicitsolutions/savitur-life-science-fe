@@ -14,20 +14,15 @@ export default function ContactUs() {
   return (
     <>
       <Header />
-      <section className="relative w-full min-w-full h-[460px] min-h-[460px] overflow-hidden" style={{ width: '100vw', minWidth: '100%', maxWidth: '100%' }}>
+      <section
+      className="relative w-full min-w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]"
+    >
+       
         {/* Background image */}
-        <div 
-        className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-        style={{ 
-          backgroundImage: `url(${HeroImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center -40px',
-          minHeight: '460px',
-          left: 0,
-          right: 0,
-          width: '100%',
-        }}
-      />
+        <div
+          className="absolute inset-0  bg-no-repeat bg-cover bg-[position:65%_calc(0%+40px)] sm:bg-top top-[-37px]"
+          style={{ backgroundImage: `url(${HeroImg})` }}
+        />
 
         {/* Overlay gradients (matches Hero style) */}
         <div
@@ -38,16 +33,15 @@ export default function ContactUs() {
         />
 
         {/* Content */}
-        <div className="relative z-10 w-full h-full min-h-[460px] flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center w-[267px] h-[93px]">
+        <div className="relative z-10 w-full h-full min-h-[689px] sm:min-h-[460px] flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center text-center sm:w-[267px] sm:h-[93px] w-[166px] max-[393px]:w-[223px] h-[66px]">
             {/* Main heading */}
             <h1 
-              className="text-[#FFFFFF] font-sora font-normal text-[50px] leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] max-[393px]:whitespace-nowrap leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
                 fontStyle: 'normal',
-                fontSize: '50px',
                 lineHeight: '100%',
                 letterSpacing: '-4%',
                 leadingTrim: 'none',
@@ -57,14 +51,13 @@ export default function ContactUs() {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
+            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
               <span 
               className="opacity-90 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
                 fontStyle: 'normal',
-                fontSize: '16px',
                 lineHeight: '100%',
                 letterSpacing: '-2%',
                 leadingTrim: 'none',
@@ -72,7 +65,7 @@ export default function ContactUs() {
             >
               Home
             </span>
-              <span className="opacity-70 shrink-0 inline-flex items-center justify-center">
+              <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px]">
                 <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
@@ -81,7 +74,6 @@ export default function ContactUs() {
                 fontFamily: 'Manrope',
                 fontWeight: 600,
                 fontStyle: 'normal',
-                fontSize: '16px',
                 lineHeight: '100%',
                 letterSpacing: '-2%',
                 leadingTrim: 'none',

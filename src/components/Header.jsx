@@ -110,12 +110,12 @@ export default function Header() {
 
       {/* Mobile dropdown nav (names only) */}
       {menuOpen && (
-        <div className="md:hidden absolute right-[0px] left-auto top-[86px] z-[60]">
-          <div className="w-[110px]">
-            <div className="rounded-[16px] bg-transparent px-[16px] py-[16px] border border-transparent">
+        <div className="md:hidden absolute left-0 right-0 top-[86px] z-[60] w-full">
+          <div className="w-full px-[20px]">
+            <div className="w-full rounded-[16px] bg-white px-[16px] py-[16px] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
               <nav className="flex flex-col gap-[14px]">
                 {navLinks.map((link) => {
-                  const className = `flex items-center text-[#FFFFFF] transition-colors font-normal`
+                  const className = `flex items-center text-[#1F2A44] transition-colors font-normal`
 
                   if (link.to.startsWith('/')) {
                     return (
@@ -125,7 +125,7 @@ export default function Header() {
                         className={className}
                         onClick={() => setMenuOpen(false)}
                       >
-                        <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#FFFFFF]">
+                        <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#1F2A44]">
                           {link.label}
                         </span>
                       </Link>
@@ -139,7 +139,7 @@ export default function Header() {
                       className={className}
                       onClick={() => setMenuOpen(false)}
                     >
-                      <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#FFFFFF]">
+                      <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#1F2A44]">
                         {link.label}
                       </span>
                     </a>

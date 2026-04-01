@@ -23,121 +23,134 @@ const productTypes = [
 
 export default function Footer() {
   return (
-    <footer className="w-[1520px] h-[626px] mx-auto rounded-2xl overflow-hidden relative border border-white/10 bg-[#1F2A44] opacity-100">
-      <div className="relative z-10 w-[1362px] min-h-[295px] mt-[124px] ml-[80px] mr-[78px]">
-        {/* Main content - 5 columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 w-[1362px]">
-          {/* Company Branding */}
-          <div className="lg:col-span-1 w-[202px] h-[118px]">
-            <a href="#" className="inline-block mb-4">
-              <img src={HeaderLogo} alt="Savitur Life Science" className="h-[46px] w-[154px]" />
-            </a>
-            <p className="font-semibold text-[16px] leading-[150%] tracking-[-0.01em] text-white/90 w-[202px] h-[48px]">
-              Powering Progress in Pharmaceutical Excellence
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="w-[104px] h-[167px]">
-            <h3 className="font-medium text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2 list-disc list-inside text-white">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className={`text-[16px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Product Types */}
-          <div className="w-[208px] h-[199px]">
-            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Product Types</h3>
-            <ul className="space-y-2 list-disc list-inside text-white">
-              {productTypes.map((type) => (
-                <li key={type}>
-                  <a href="#" className="font-medium text-[16px] leading-[100%] tracking-[-0.04em] text-white/90 hover:text-white hover:underline transition-colors">
-                    {type}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Office Address */}
-          <div className="w-[220px] h-[145px]">
-            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Office Address</h3>
-            <address className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 not-italic">
-              Sr. No. 117, Plot No. 1, Taluka:
-              
-              behind Balaji Multiflex Pvt. Ltd,
-              
-              Village:, Amreli, Paddhari,
-              
-              Gujarat, India - 360110.
-            </address>
-          </div>
-
-          {/* Contact Info */}
-          <div className="w-[232px] h-[111px]">
-            <h3 className="font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white mb-4">Contact Info</h3>
-            <div className="space-y-4">
-              <a
-                href="mailto:info@saviturlifescience.com"
-                className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
-              >
-                <img src={Fmail} alt="" className="w-[24px] h-[24px] flex-shrink-0" />
-                info@saviturlifescience.com
+    <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8">
+      <footer className="relative w-full max-w-full min-h-0 overflow-hidden rounded-none border border-white/10 bg-[#1F2A44] pb-28 opacity-100 lg:max-w-[1520px] lg:rounded-2xl lg:min-h-[626px] lg:pb-0">
+        <div className="relative z-10 pt-[60px] pl-[20px] pr-[20px] pb-[34px] w-full max-w-[353px] min-h-[719px] text-left lg:mx-0 lg:mt-[124px] lg:ml-[80px] lg:mr-[78px] lg:min-h-0 lg:max-w-none lg:w-[1362px] lg:px-0 lg:pt-0 lg:pb-0">
+          {/* Main: mobile = brand, 2-col links, address, contact | lg = 5 columns */}
+          <div className="grid w-full grid-cols-1 lg:grid-cols-5 lg:gap-6">
+            {/* Company Branding */}
+            <div className="Sm:w-[202px] sm:h-[118px] w-[177px] h-[104px] lg:col-span-1 lg:h-auto mb-[36px]">
+              <a href="#" className="sm:mb-[24px] mb-[16px] inline-block">
+                <img src={HeaderLogo} alt="Savitur Life Science" className="sm:h-[46px] sm:w-[154px] h-[46px] w-[154px]" />
               </a>
-              <a
-                href="tel:+917043112818"
-                className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] flex items-center gap-3 text-white/90 hover:text-white transition-colors"
-              >
-                <img src={Fphone} alt="" className="w-[24px] h-[24px] flex-shrink-0" />
-                +917043112818
+              <p className="h-auto max-w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90">
+                Powering Progress in Pharmaceutical Excellence
+              </p>
+            </div>
+
+            {/* Quick Links + Product Types: 2 columns on mobile, separate cols on lg */}
+            <div className="grid grid-cols-2 gap-6 gap-y-8 lg:contents">
+              <div className="min-w-0 lg:w-[104px]">
+                <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+                  Quick Links
+                </h3>
+                <ul className="list-inside list-disc space-y-2 text-white">
+                  {quickLinks.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className={`sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="min-w-0 lg:w-[208px] mb-[36px]">
+                <h3 className="mb-4 font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white sm:mb-6">
+                  Product Type
+                </h3>
+                <ul className="list-outside list-disc space-y-2 pl-5 text-white marker:text-white">
+                  {productTypes.map((type) => (
+                    <li key={type} className="pl-1 leading-[140%]">
+                      <a
+                        href="#"
+                        className="font-medium text-[14px] leading-[140%] tracking-[-0.04em] text-white transition-colors hover:underline sm:text-[16px] sm:leading-[100%]"
+                      >
+                        {type}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Office Address */}
+            <div className="w-[261px] h-[99px] sm:h-[145px] sm:w-[220px] mb-[30px]">
+            <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+                Office Address
+              </h3>
+              <address className="not-italic font-medium text-[12px] leading-[150%] sm:text-[16px] sm:leading-[150%] text-white/90">
+                Sr. No. 117, Plot No. 1, Taluka: behind Balaji Multiflex Pvt. Ltd, Village:, Amreli,
+                Paddhari, Gujarat, India - 360110.
+              </address>
+            </div>
+
+            {/* Contact Info */}
+            <div className="w-full lg:w-[232px]">
+            <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+                Contact Info
+              </h3>
+              <div className="space-y-3 sm:space-y-4">
+                <a
+                  href="mailto:info@saviturlifescience.com"
+                  className="flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                >
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  info@saviturlifescience.com
+                </a>
+                <a
+                  href="tel:+917043112818"
+                  className="flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                >
+                  <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  +91 70431 12818
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="mb-6 mt-8 h-0 max-w-[1361px] border-t border-white/20 w-[393px]:mt-[32px] w-[353px] max-[393px]:mb-[24px] lg:mb-[24px]" />
+
+          {/* Copyright & Social — design: left text, right icons on mobile */}
+          <div className="flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
+            <p className="sm:w-[240px] w-[186px] h-[42px] font-medium text-[14px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] sm:max-w-none sm:text-[16px] lg:w-auto">
+              Copyrights © 2023 all rights reserved by SaviturLifeScience
+            </p>
+            <div className="flex h-[24px] w-[96px] flex-shrink-0 items-center justify-between">
+              <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="LinkedIn">
+                <img src={Flinkedin} alt="" className="h-[24px] w-[24px]" />
+              </a>
+              <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="Instagram">
+                <img src={Finstagram} alt="" className="h-[24px] w-[24px]" />
+              </a>
+              <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="Facebook">
+                <img src={Ffacebook} alt="" className="h-[24px] w-[24px]" />
               </a>
             </div>
           </div>
+
         </div>
 
-        {/* Divider */}
-        <div className="w-full max-w-[1361px] h-0 border-t border-white/20 mb-[24px]" />
-
-        {/* Copyright & Social */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] w-[406px] h-[24px]">
-            Copyrights © 2023 all rights reserved by SaviturLifeScience
-          </p>
-          <div className="flex items-center justify-between w-[96px] h-[24px]">
-            <a href="#" className="text-white hover:opacity-80 transition-opacity" aria-label="LinkedIn">
-              <img src={Flinkedin} alt="" className="w-[24px] h-[24px]" />
-            </a>
-            <a href="#" className="text-white hover:opacity-80 transition-opacity" aria-label="Instagram">
-              <img src={Finstagram} alt="" className="w-[24px] h-[24px]" />
-            </a>
-            <a href="#" className="text-white hover:opacity-80 transition-opacity" aria-label="Facebook">
-              <img src={Ffacebook} alt="" className="w-[24px] h-[24px]" />
-            </a>
-          </div>
+        {/* Decorative background — scaled + clipped on narrow screens */}
+        <div
+          className="pointer-events-none absolute bottom-0 left-1/2 flex w-full max-w-full -translate-x-1/2 flex-col items-center overflow-hidden mb-[24px] max-[393px]:mb-[25px]"
+          aria-hidden
+        >
+          <img
+            src={FSaviturLogo}
+            alt=""
+            className="h-[56px] w-[min(1400px,200%)] max-w-none select-none object-contain opacity-40 max-[393px]:h-[42px] max-[393px]:w-[584px] max-[393px]:opacity-100 sm:h-[72px] lg:h-[102px] lg:w-[1400px] lg:opacity-100"
+          />
+          <div className="hidden h-[2px] w-full max-w-[1400px] bg-[rgba(100,150,255,0.35)] px-[60px] lg:block" />
         </div>
-      </div>
-
-      {/* Decorative background image */}
-      <div
-        className="absolute bottom-0 left-0 right-0 flex flex-col items-center overflow-visible pointer-events-none"
-        aria-hidden
-      >
-        <img
-          src={FSaviturLogo}
-          alt=""
-          className="w-[1400px] h-[102px] select-none opacity-100 object-contain"
-        />
-        <div className="w-full max-w-[1400px] px-[60px] h-[2px] bg-[rgba(100,150,255,0.35)]" />
-      </div>
-    </footer>
+      </footer>
+    </div>
   )
+
+
+
 }

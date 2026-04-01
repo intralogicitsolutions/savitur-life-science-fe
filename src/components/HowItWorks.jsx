@@ -4,11 +4,11 @@ import HeroImg from '../assets/images/Hero_img.svg'
 
 export default function HowItWorks() {
   return (
-    <section className="w-full bg-white flex justify-center">
-      <div className="w-full max-w-[982px] h-[662px] mt-[160px] mb-[124px] opacity-100 box-border">
-        <div className="flex flex-col md:flex-row items-center gap-[64px] bg-white w-[982px] h-[522px]">
-          {/* Left image */}
-          <div className="w-[456px] h-[522px] rounded-[16px] overflow-hidden relative">
+    <section className="w-full bg-white flex justify-center px-[20px] sm:px-6 lg:px-0">
+      <div className=" w-[353px] h-[855px] sm:max-w-[982px] sm:min-h-0 md:mt-[160px] md:mb-[124px] opacity-100 box-border mt-[60px] mb-[60px]">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-16 bg-white w-full">
+          {/* Hero image — full width on mobile, left column on md+ */}
+          <div className="w-[353px] md:w-[456px] md:shrink-0 h-[353px] sm:h-[280px] md:h-[522px] rounded-[16px] overflow-hidden relative">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -18,18 +18,16 @@ export default function HowItWorks() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[rgba(1,18,36,0.85)] via-[rgba(1,18,36,0.65)] to-[rgba(1,18,36,0.2)]" />
           </div>
 
-          {/* Right content */}
-          <div className="w-full md:w-[456px] h-[504px] flex flex-col">
+          {/* Content */}
+          <div className="w-full md:w-[456px] md:max-w-[456px] flex flex-col items-start text-left h-auto mt-[28px]">
             {/* Pill */}
             <div
-              className="inline-flex items-center pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[158px] h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 text-[13px] font-semibold tracking-[0.18em] uppercase mb-[14px]"
+              className="inline-flex items-center gap-1 pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[141px] h-[32px] sm:w-[158px] sm:h-[36px]  rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 sm:text-[13px] text-[11px] font-semibold tracking-[0.18em] uppercase mb-[12px]"
               style={{ boxShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
             >
-              <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full">
-                <img src={CheckAll} alt="" className="h-[16px] w-[16px]" />
-              </span>
+              <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               <span
-                className="font-normal text-[16px] leading-[100%] tracking-[-0.04em] normal-case"
+                className="font-normal sm:text-[16px] text-[14px] leading-[100%] normal-case tracking-[-0.04em]"
                 style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
               >
                 How it works?
@@ -38,17 +36,17 @@ export default function HowItWorks() {
 
             {/* Heading */}
             <h2
-              className="font-normal text-[39px] leading-[120%] tracking-[-0.04em] text-[#000000] w-[456px] h-[150px]"
+              className="font-normal text-[26px] sm:text-[32px] md:text-[39px] leading-[120%]  text-[#000000] w-[351px] h-[99px] sm:w-full sm:h-auto sm:max-w-[456px]"
               style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
             >
               From Sample to Commercial Scale — Seamless at Every Stage
             </h2>
 
-              {/* Divider */}
-              <div className="h-px w-[462px] bg-[#4D4D4D]/20 "/>
-                  <hr className='mb-[32px] mt-[32px]'/>
+            {/* Divider */}
+            <div className="h-px w-full max-w-[462px] bg-[#4D4D4D]/20 md:my-8 my-[16px]" />
+
             {/* Steps */}
-            <ol>
+            <ol className="w-full list-none p-0 m-0">
               {[
                 'Explore Catalogues & Submit Inquiry',
                 'Acquire Sample Load',
@@ -57,10 +55,10 @@ export default function HowItWorks() {
               ].map((label, index) => (
                 <li
                   key={label}
-                  className="flex items-center gap-4 w-[402px] h-[48px] rounded-[52px] my-[16px]"
+                  className="flex items-center sm:items-start gap-3 sm:gap-4 w-full max-w-[402px] min-h-[48px] rounded-[52px] sm:py-[8px] py-[7px] first:pt-0 last:pb-0"
                 >
                   <span
-                    className="flex h-[48px] w-[48px] items-center justify-center rounded-full text-white font-semibold text-[16px] leading-[100%] tracking-[-0.02em]"
+                    className="flex h-[40px] w-[40px] sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center rounded-full text-white font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em]"
                     style={{
                       backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00)',
                       boxShadow: '2px 2px 0 rgba(0,0,0,0.06)',
@@ -69,7 +67,7 @@ export default function HowItWorks() {
                     {index + 1}
                   </span>
                   <span
-                    className="font-semibold text-[20px] leading-[100%] tracking-[-0.01em] text-[#000000]"
+                    className="font-semibold text-[14px] sm:text-[20px] leading-[130%] md:leading-[100%] tracking-[-0.01em] text-[#000000] sm:pt-0.5"
                     style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
                   >
                     {label}
@@ -78,24 +76,24 @@ export default function HowItWorks() {
               ))}
             </ol>
           </div>
-       
         </div>
-          {/* Bottom text + button */}
-          <div className="flex flex-col items-center gap-3 text-center mt-[56px] w-[378px] h-[84px] mx-auto">
-            <p className="font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] text-[#4D4D4D] w-[378px] h-[24px]"
+
+        {/* Bottom text + button */}
+        <div className="flex flex-col items-start md:items-center gap-3 text-left md:text-center mt-[24px] md:mt-[56px] w-full max-w-[378px] md:mx-auto md:h-auto">
+          <p
+            className="font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] w-full"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
-            >
-              Any queries related to Product Availability or Inquiry.
-            </p>
-            <button
-              type="button"
-              className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
-            >
-              <img src={ContactBtn} alt="Contact Us" className="h-[48px] w-[157px]" />
-            </button>
-          </div>
+          >
+            Any queries related to Product Availability or Inquiry.
+          </p>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
+          >
+           <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
+          </button>
+        </div>
       </div>
     </section>
   )
 }
-
