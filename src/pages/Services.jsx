@@ -18,21 +18,12 @@ export default function Services() {
     <>
       <Header />
       <section
-        className="relative w-full min-w-full h-[460px] min-h-[460px] overflow-hidden"
-        style={{ width: "100vw", minWidth: "100%", maxWidth: "100%" }}
-      >
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${HeroImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center -40px",
-            minHeight: "460px",
-            left: 0,
-            right: 0,
-            width: "100%",
-          }}
+      className="relative w-full min-w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]"
+    >
+       {/* Background image */}
+       <div
+          className="absolute inset-0  bg-no-repeat bg-cover bg-[position:65%_calc(0%+40px)] sm:bg-top top-[-37px]"
+          style={{ backgroundImage: `url(${HeroImg})` }}
         />
 
         {/* Overlay gradients (matches Hero style) */}
@@ -47,58 +38,50 @@ export default function Services() {
         <div className="relative z-10 w-full h-full min-h-[460px] flex items-center justify-center">
           <div className="flex flex-col items-center justify-center text-center w-[179px] h-[93px]">
             {/* Main heading */}
-            <h1
-              className="text-[#FFFFFF] font-sora font-normal text-[50px] leading-[100%] tracking-[-0.04em] mb-[14px]"
-              style={{
-                fontFamily: "Sora",
+            <h1 
+              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
+              style={{ 
+                fontFamily: 'Sora',
                 fontWeight: 400,
-                fontStyle: "normal",
-                fontSize: "50px",
-                lineHeight: "100%",
-                letterSpacing: "-4%",
-                leadingTrim: "none",
+                fontStyle: 'normal',
+                lineHeight: '100%',
+                letterSpacing: '-4%',
+                leadingTrim: 'none',
               }}
             >
               Services
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
-              <span
-                className="opacity-90 shrink-0"
-                style={{
-                  fontFamily: "Manrope",
-                  fontWeight: 600,
-                  fontStyle: "normal",
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  letterSpacing: "-2%",
-                  leadingTrim: "none",
-                }}
-              >
+            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
+              <span 
+              className="opacity-90 shrink-0"
+              style={{
+                fontFamily: 'Manrope',
+                fontWeight: 600,
+                fontStyle: 'normal',
+                lineHeight: '100%',
+                letterSpacing: '-2%',
+                leadingTrim: 'none',
+              }}
+            >
                 Home
               </span>
-              <span className="opacity-70 shrink-0 inline-flex items-center justify-center">
-                <img
-                  src={ChevronRightMD}
-                  alt=""
-                  className="w-[20px] h-[20px] brightness-0 invert"
-                  style={{ filter: "brightness(0) invert(1)" }}
-                  aria-hidden
-                />
+              <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px]">
+                <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
-              <span
-                className="opacity-100 shrink-0"
-                style={{
-                  fontFamily: "Manrope",
-                  fontWeight: 600,
-                  fontStyle: "normal",
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  letterSpacing: "-2%",
-                  leadingTrim: "none",
-                }}
-              >
+
+                 <span 
+              className="opacity-100 shrink-0"
+              style={{
+                fontFamily: 'Manrope',
+                fontWeight: 600,
+                fontStyle: 'normal',
+                lineHeight: '100%',
+                letterSpacing: '-2%',
+                leadingTrim: 'none',
+              }}
+            >
                 Contact us
               </span>
             </div>
@@ -109,8 +92,8 @@ export default function Services() {
 
       {/* Services — expert consultancy */}
       <section
-        className="mx-auto mb-[124px] mt-[124px] box-border flex min-h-0 w-full max-w-full flex-col"
-        style={{ width: "1164px", height: "982px", maxWidth: "100%" }}
+        className="mx-auto mb-[124px] mt-[124px] box-border flex min-h-0 w-full max-w-full flex-col max-[393px]:max-w-[354px] max-[393px]:mt-[60px] max-[393px]:mb-[60px] max-[393px]:px-[20px]"
+        style={{ width: '1164px', maxWidth: '100%' }}
       >
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div>
@@ -128,25 +111,19 @@ export default function Services() {
                 boxShadow: '2px 2px 0px 0px #0000000F',
               }}
             >
-              <img src={CheckAll} alt="" className="h-[24px] w-[24px] mr-[2px]" />
+              <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               
               <span
-                style={{
-                  fontFamily: 'Sora',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                  fontSize: '16px',
-                  lineHeight: '100%',
-                  letterSpacing: '-0.04em',
-                }}
-              >
+                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] [text-shadow:none] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    style={{ fontStyle: 'normal' }}
+                  >
                 Our Services
               </span>
             </div>
 
-            <div className="w-[574px] h-[150px] mt-[14px]">
+            <div className="w-[574px] h-[150px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto">
               <h2
-                className="box-border"
+                className="box-border max-[393px]:text-[24px] max-[393px]:leading-[120%]"
                 style={{
                   fontFamily: "Sora",
                   fontWeight: 400,
@@ -165,10 +142,8 @@ export default function Services() {
           </div>
           
           <p
-            className="text-[#4D4D4D] mt-[50px]"
+            className="text-[#4D4D4D] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
             style={{
-              width: '472px',
-              height: '96px',
               fontFamily: 'Manrope',
               fontWeight: 600,
               fontStyle: 'normal',
@@ -188,10 +163,10 @@ export default function Services() {
         </div>
 
         {/* Cards (3 columns x 2 rows) */}
-        <div className="grid grid-cols-3 w-[1164px] mt-[56px]">
+        <div className="grid grid-cols-3 w-[1164px] mt-[56px] max-[393px]:grid-cols-1 max-[393px]:w-full max-[393px]:mt-[24px] max-[393px]:gap-[14px]">
           {/* 1 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px]"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -234,7 +209,7 @@ export default function Services() {
 
           {/* 2 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px]"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -278,7 +253,7 @@ export default function Services() {
 
           {/* 3 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px]"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -321,7 +296,7 @@ export default function Services() {
 
           {/* 4 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -364,7 +339,7 @@ export default function Services() {
 
           {/* 5 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -407,7 +382,7 @@ export default function Services() {
 
           {/* 6 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col"
+            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
@@ -450,7 +425,7 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto flex flex-col items-center justify-center w-[376px] h-[84px] mt-[56px]">
+        <div className="mx-auto flex flex-col items-center justify-center w-[376px] h-[84px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[32px]">
           <p
             className="text-center text-[#4D4D4D]"
             style={{

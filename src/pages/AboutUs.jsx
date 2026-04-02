@@ -10,14 +10,22 @@ import VisionIcon from '../assets/images/Vision_icon.svg'
 import CheckAll from '../assets/images/Check_All.svg'
 import ChevronRightMD from '../assets/images/Chevron_Right_MD.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
+import { useEffect, useState } from 'react'
 
 const whatSetsUsApartCards = [
   {
-    title: 'Scientifically Guided Sourcing',
+    title: (
+      <>
+        Scientifically <br /> Guided Sourcing
+      </>
+    ),
     imageUrl:
       'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=800',
     titleWidth: 177,
     titleHeight: 66,
+    titleWidthMobile: 133,
+    titleHeightMobile: 50,
+    titleFontSizeMobile: 18,
     titlePadding: '20px',
     titleTypography: {
       fontFamily: 'Manrope',
@@ -30,11 +38,19 @@ const whatSetsUsApartCards = [
     },
   },
   {
-    title: 'Trusted Manufacturing',
+    title: (
+      <>
+        Trusted <br /> Manufacturing
+      </>
+    ),
+    
     imageUrl:
       'https://images.pexels.com/photos/3912479/pexels-photo-3912479.jpeg?auto=compress&cs=tinysrgb&w=800',
       titleWidth: 158,
       titleHeight: 66,
+      titleWidthMobile: 119,
+      titleHeightMobile: 50,
+      titleFontSizeMobile: 18,
       titlePadding: '20px',
       titleTypography: {
         fontFamily: 'Manrope',
@@ -45,13 +61,21 @@ const whatSetsUsApartCards = [
         letterSpacing: '-4%',
         leadingTrim: 'none',
   },
-},
+  },
   {
-    title: 'Regulatory Conscious Approach',
+    title: (
+      <>
+        Regulatory <br /> Conscious Approach
+      </>
+    ),
+  
     imageUrl:
       'https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800',
       titleWidth: 221,
       titleHeight: 66,
+      titleWidthMobile: 166,
+      titleHeightMobile: 50,
+      titleFontSizeMobile: 18,
       titlePadding: '20px',
       titleTypography: {
         fontFamily: 'Manrope',
@@ -65,11 +89,19 @@ const whatSetsUsApartCards = [
 
   },
   {
-    title: 'Risk - Mitigated Execution',
+    title: (
+      <>
+        Risk - Mitigated <br /> Execution
+      </>
+    ),
+    
     imageUrl:
       'https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=800',
       titleWidth: 163,
       titleHeight: 66,
+      titleWidthMobile: 123,
+      titleHeightMobile: 50,
+      titleFontSizeMobile: 18,
       titlePadding: '20px',
       titleTypography: {
         fontFamily: 'Manrope',
@@ -84,6 +116,24 @@ const whatSetsUsApartCards = [
 ]
 
 export default function AboutUs() {
+  const [isMobile393, setIsMobile393] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const mql = window.matchMedia('(max-width: 393px)')
+    const update = () => setIsMobile393(mql.matches)
+
+    update()
+    if (mql.addEventListener) mql.addEventListener('change', update)
+    else mql.addListener(update)
+
+    return () => {
+      if (mql.removeEventListener) mql.removeEventListener('change', update)
+      else mql.removeListener(update)
+    }
+  }, [])
+
   return (
     <>
       <Header />
@@ -162,39 +212,32 @@ export default function AboutUs() {
 
       {/* About Us business panel */}
       <section className="w-full">
-        <div className="w-full max-w-[1164px] h-auto mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden max-[393px]:w-[354px] max-[393px]:max-w-[354px] max-[393px]:h-auto max-[393px]:min-h-[978px] max-[393px]:overflow-visible max-[393px]:mt-[38px] max-[393px]:mb-[100px]">
+        <div className="w-full max-w-[1164px] h-auto mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden max-[393px]:w-[354px] max-[393px]:max-w-[354px] max-[393px]:h-auto max-[393px]:min-h-[978px] max-[393px]:overflow-visible max-[393px]:mt-[60px] max-[393px]:mb-[60px]">
           <div className="flex flex-col h-full">
             {/* Top pill */}
             <div>
               <div
-                className="inline-flex items-center w-[202px] h-[36px] px-[12px] py-[6px] rounded-[60px] border-[1px] border-[#EEF0F4] bg-white opacity-100"
+                className="inline-flex items-center sm:w-[202px] sm:h-[36px] w-[179px] h-[32px] px-[12px] py-[6px] rounded-[60px] border-[1px] border-[#EEF0F4] bg-white opacity-100"
                 style={{ transform: 'rotate(0deg)' }}
               >
-                <span className="inline-flex items-center justify-center w-[24px] h-[24px]">
-                    <img src={CheckAll} alt="" className="h-[24px] w-[24px]" />
-                </span>
+                <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
                   
                 <span
-                  className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#111827]"
-                  style={{
-                    fontStyle: 'normal',
-                    fontSize: '16px',
-                    lineHeightTrim: 'none',
-                  }}
-                >
+                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] [text-shadow:none] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    style={{ fontStyle: 'normal' }}
+                  >
                   About Our Business
                 </span>
               </div>
             </div>
 
             {/* Top row */}
-            <div className="flex items-start justify-between gap-[118px] max-[393px]:flex-col max-[393px]:gap-[16px] max-[393px]:px-[20px]">
-              <div className="w-[574px] h-[150px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[16px]">
+            <div className="flex items-start justify-between gap-[118px] max-[393px]:flex-col max-[393px]:gap-[16px]">
+              <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[12px]">
                 <h2
-                  className="font-sora font-normal text-[40px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
+                  className="font-sora font-normal sm:text-[40px] text-[26px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
                   style={{
                     fontStyle: 'normal',
-                    fontSize: '40px',
                     lineHeight: '120%',
                     letterSpacing: '-0.04em',
                     lineHeightTrim: 'none',
@@ -211,12 +254,11 @@ export default function AboutUs() {
 
               <div className="w-[520px] flex flex-col items-start max-[393px]:w-full">
                 <p
-                  className="text-[16px] leading-[150%] tracking-[-0.02em] w-[472px] h-[72px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
+                  className="sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.02em] sm:w-[472px] sm:h-[72px] w-[351px] h-[84px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
                     lineHeight: '150%',
                     letterSpacing: '-0.02em',
                     lineHeightTrim: 'none',
@@ -225,12 +267,12 @@ export default function AboutUs() {
                   Delivering high-quality pharmaceutical materials and strategic consultancy to support research, development, and commercial manufacturing worldwide.
                 </p>
 
-                <div className="flex items-center justify-start mt-[30px] w-[404px] h-[48px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-wrap max-[393px]:gap-y-[12px] max-[393px]:mt-[24px]">
+                <div className="flex items-center justify-start mt-[30px] sm:w-[404px] sm:h-[48px] w-[343px] h-[40px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-wrap max-[393px]:gap-y-[12px] max-[393px]:mt-[24px]">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity pr-[22px]"
+                    className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity sm:pr-[22px] pr-[16px]"
                   >
-                    <img src={ContactBtn} alt="Contact Us" className="w-[157px] h-[48px] object-contain" />
+                   <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
                   </a>
 
                   <a
@@ -238,12 +280,11 @@ export default function AboutUs() {
                     className="inline-flex items-center hover:opacity-90 transition-opacity"
                   >
                     <span
-                      className="font-sora font-semibold text-[16px] leading-[100%] tracking-[-0.02em] underline max-[393px]:whitespace-nowrap"
+                      className="font-sora font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em] underline max-[393px]:whitespace-nowrap"
                       style={{
                         fontFamily: 'Sora',
                         fontWeight: 600,
                         fontStyle: 'normal',
-                        fontSize: '16px',
                         lineHeight: '100%',
                         letterSpacing: '-2%',
                         leadingTrim: 'none',
@@ -263,7 +304,7 @@ export default function AboutUs() {
                     <img
                       src={ArrowUpRightMD}
                       alt=""
-                      className="w-[24px] h-[24px] shrink-0"
+                      className="h-5 w-5 sm:h-6 sm:w-6"
                       style={{ filter: 'brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(1500%) hue-rotate(360deg) brightness(105%) contrast(101%)' }}
                       aria-hidden
                     />
@@ -273,19 +314,18 @@ export default function AboutUs() {
             </div>
 
             {/* Cards row */}
-            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-col max-[393px]:gap-[14px] max-[393px]:mt-[24px] max-[393px]:px-[20px] max-[393px]:pb-[20px]">
+            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-col max-[393px]:gap-[14px] max-[393px]:mt-[32px]">
               {/* Who We Are */}
-              <div className="w-[377px] h-[285px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:px-[16px] max-[393px]:pb-[20px]">
                 
-                  <img src={WhoWeAreIcon} alt="" className="w-[54px] h-[54px]"/>
+                  <img src={WhoWeAreIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]"/>
               
                 <h3
-                  className="mt-[24px] text-[#111827]"
+                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '24px',
                     lineHeight: '100%',
                     letterSpacing: '-4%',
                     leadingTrim: 'none',
@@ -294,13 +334,11 @@ export default function AboutUs() {
                   Who We Are
                 </h3>
                 <p
-                  className="mt-[12px] text-[#4D4D4D] w-[333px] h-[120px]"
+                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
-                    lineHeight: '150%',
                     letterSpacing: '-2%',
                     leadingTrim: 'none',
                   }}
@@ -310,38 +348,35 @@ export default function AboutUs() {
               </div>
 
               {/* Mission */}
-              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]">
                 
                   <img
                     src={MissionIcon}
                     alt=""
-                    className="w-[54px] h-[54px]"
+                    className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]"
                     
                   />
                 
                 <h3
-                  className="mt-[24px] text-[#111827]"
+                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '24px',
                     lineHeight: '100%',
                     letterSpacing: '-4%',
-                    leadingTrim: 'none',
+                    leadingTrim: 'none',  
                   }}
                 >
                   Mission
                 </h3>
                 <p
-                  className="mt-[12px] text-[#4D4D4D] w-[333px] h-[120px]"
+                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
-                    lineHeight: '150%',
-                    letterSpacing: '-2%',
+                    letterSpacing: '-1%',
                     leadingTrim: 'none',
                   }}
                 >
@@ -350,17 +385,16 @@ export default function AboutUs() {
               </div>
 
               {/* Vision */}
-              <div className="w-[377px] h-[286px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[20px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]">
                 
-                  <img src={VisionIcon} alt="" className="w-[54px] h-[54px]" />
+                  <img src={VisionIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] mb-[8px]" />
                
                   <h3
-                  className="mt-[24px] text-[#111827]"
+                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '24px',
                     lineHeight: '100%',
                     letterSpacing: '-4%',
                     leadingTrim: 'none',
@@ -369,13 +403,11 @@ export default function AboutUs() {
                   Vision
                 </h3>
                 <p
-                  className="mt-[12px] text-[#4D4D4D] w-[333px] h-[120px]"
+                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
-                    lineHeight: '150%',
                     letterSpacing: '-2%',
                     leadingTrim: 'none',
                   }}
@@ -391,16 +423,14 @@ export default function AboutUs() {
       <FounderHighlight />
 
       {/* What Sets Us Apart — We focus on long-term */}
-      <section className="w-full flex justify-center bg-white mt-[124px] mb-[124px]">
-        <div className="w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px]">
+      <section className="w-full flex justify-center bg-white sm:mt-[124px] sm:mb-[124px] max-[393px]:mt-[60px] ">
+        <div className="w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px] max-[393px]:w-[354px] max-[393px]:h-auto max-[393px]:overflow-visible">
           {/* Top row */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 mb-[56px] w-[1164px] h-[150px]">
-            <div className="max-w-[574px] h-[150px]">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 sm:mb-[56px] w-[1164px] h-[150px] max-[393px]:mt-[120px] max-[393px]:mb-[78px]  max-[393px]:w-full max-[393px]:h-auto">
+            <div className="max-w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto">
               <div
-                className="inline-flex items-center justify-center rounded-[60px] bg-white opacity-100 shrink-0 box-border"
+                className="inline-flex items-center justify-center rounded-[60px] bg-white opacity-100 shrink-0 box-border sm:w-[199px] sm:h-[36px] w-[176px] h-[32px]"
                 style={{
-                  width: '199px',
-                  height: '36px',
                   paddingTop: '6px',
                   paddingRight: '12px',
                   paddingBottom: '6px',
@@ -411,20 +441,17 @@ export default function AboutUs() {
                   gap: '4px',
                 }}
               >
-                <span className="inline-flex items-center justify-center w-[24px] h-[24px] shrink-0">
-                  <img src={CheckAll} alt="" className="h-[24px] w-[24px]" aria-hidden />
-                </span>
-                <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] text-[#111827] whitespace-nowrap">
+                <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-[#111827] whitespace-nowrap">
                   What Sets Us Apart
                 </span>
               </div>
               <h2
-                className="mt-[14px] text-[#111827] w-[574px] h-[100px]"
+                className="mt-[12px] text-[#111827] w-[574px] h-[100px] sm:text-[40px]  leading-[120%] max-[393px]:w-full max-[393px]:h-auto max-[393px]:text-[26px] max-[393px]:leading-[150%]"
                 style={{
                   fontFamily: 'Sora',
                   fontWeight: 400,
                   fontStyle: 'normal',
-                  fontSize: '40px',
                   lineHeight: '120%',
                   letterSpacing: '-4%',
                   leadingTrim: 'none',
@@ -435,18 +462,22 @@ export default function AboutUs() {
             </div>
             <a
               href="#"
-              className="inline-flex items-center justify-center w-[157px] h-[48px] shrink-0 hover:opacity-90 transition-opacity self-center sm:self-center"
+              className="inline-flex items-center justify-center w-[157px] h-[48px] shrink-0 hover:opacity-90 transition-opacity self-center sm:self-center max-[393px]:hidden"
             >
-              <img src={ContactBtn} alt="Contact Us" className="w-[157px] h-[48px] object-contain" />
+              <img
+                src={ContactBtn}
+                alt="Contact Us"
+                className="w-[157px] h-[48px] object-contain"
+              />
             </a>
           </div>
 
           {/* Four cards — each 276×316 */}
-          <div className="flex flex-row flex-wrap justify-between gap-[14px] w-[1164px] h-[316px] opacity-100 shrink-0">
+          <div className="flex flex-row flex-wrap justify-between gap-[14px] w-[1164px] h-[316px] opacity-100 shrink-0 max-[393px]:flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:justify-start">
             {whatSetsUsApartCards.map((card) => (
               <article
                 key={card.title}
-                className="relative w-[276px] h-[316px] shrink-0 rounded-[12px] overflow-hidden"
+                className="relative w-[276px] h-[316px] shrink-0 rounded-[12px] overflow-hidden max-[393px]:w-[351px] max-[393px]:h-[142px]"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -459,11 +490,7 @@ export default function AboutUs() {
                 />
                 <div
                   className="relative z-10 flex h-full items-end w-full"
-                  style={
-                    card.titlePadding
-                      ? { padding: card.titlePadding }
-                      : { padding: '20px' }
-                  }
+                  style={{ padding: 'clamp(12px, 3.5vw, 20px)' }}
                 >
                   <h3
                     className={
@@ -472,14 +499,27 @@ export default function AboutUs() {
                         : 'font-sora font-semibold text-[15px] sm:text-[16px] leading-[130%] tracking-[-0.03em] text-white drop-shadow-sm shrink-0'
                     }
                     style={{
-                      ...(card.titleWidth != null && card.titleHeight != null
+                      ...(isMobile393 &&
+                      card.titleWidthMobile != null &&
+                      card.titleHeightMobile != null
                         ? {
-                            width: `${card.titleWidth}px`,
-                            height: `${card.titleHeight}px`,
+                            width: `${card.titleWidthMobile}px`,
+                            height: `${card.titleHeightMobile}px`,
                             boxSizing: 'border-box',
                           }
-                        : {}),
+                        : card.titleWidth != null && card.titleHeight != null
+                          ? {
+                              width: `clamp(140px, 45vw, ${card.titleWidth}px)`,
+                              height: `clamp(44px, 9vw, ${card.titleHeight}px)`,
+                              boxSizing: 'border-box',
+                            }
+                          : {}),
                       ...(card.titleTypography || {}),
+                      ...(isMobile393 && card.titleFontSizeMobile != null
+                        ? { fontSize: `${card.titleFontSizeMobile}px` }
+                        : card.titleTypography
+                          ? { fontSize: 'clamp(14px, 3.7vw, 24px)' }
+                          : {}),
                     }}
                   >
                     {card.title}
@@ -487,6 +527,13 @@ export default function AboutUs() {
                 </div>
               </article>
             ))}
+          </div>
+
+          {/* Mobile: button below cards */}
+          <div className="hidden max-[393px]:flex w-full justify-center max-[393px]:mt-[45px] max-[393px]:mb-[27px]">
+            <a href="#" className="inline-flex items-center justify-center w-[150px] h-[42px] hover:opacity-90 transition-opacity">
+            <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
+            </a>
           </div>
         </div>
       </section>           
