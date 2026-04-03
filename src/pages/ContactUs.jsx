@@ -89,29 +89,26 @@ export default function ContactUs() {
       <HeroStrip />
 
     {/* Contact Us - Get In Touch Section */}
-    <div className="w-full flex justify-center ">
+    <div className="w-full flex justify-center max-[393px]:max-w-full ">
       <section
-        className="flex items-center justify-center rounded-[16px] mr-[38px] ml-[38px] mt-[38px] mb-[100px]"
-        style={{ width: '1524px', maxWidth: '100%', height: '746px', background: '#F4F6F9' }}
+        className="flex sm:w-[1524px] items-center justify-center rounded-[16px] mx-[38px] sm:mt-[38px] sm:mb-[100px] min-h-0 px-0 sm:h-[746px] w-[393px] h-[1202px] max-[393px]:mx-0  max-[393px]:max-w-none max-[393px]:rounded-none"
+        style={{ background: '#F4F6F9' }}
       >
       <div
-        className="flex flex-col lg:flex-row items-center justify-between shrink-0"
-        style={{ width: '1046px', height: '602px' }}
+        className="flex w-full max-w-[1046px] flex-col items-stretch justify-between shrink-0 max-[393px]:w-full max-[393px]:max-w-full max-[393px]:mx-4 lg:h-[602px] lg:flex-row lg:items-center lg:gap-0 lg:px-0 lg:py-0 "
       >
         {/* Left Column - Contact Info */}
-        <div className="flex flex-col mr-[85px]" style={{ width: '387px', height: '392px' }}>
+        <div className="flex w-[393px] h-[428px] flex-col self-center sm:h-[392px] sm:w-[387px] lg:mr-[85px] lg:self-auto max-[393px]:mb-[60px] max-[393px]:mt-[60px] max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-full max-[393px]:px-[20px]">
           {/* Contact Us Badge */}
-          <div className="inline-flex items-center pl-[12px] pr-[12px] pt-[6px] pb-[6px] rounded-full bg-white border border-[rgba(0,0,0,0.08)] shadow-sm mb-[14px] w-fit h-9 " style={{ width: '138px', height: '36px' }}>
-            <span className="inline-flex items-center justify-center h-[24px] w-[24px] mr-[2px]">
-              <img src={CheckAll} alt="" className="h-[24px] w-[24px]" aria-hidden />
-            </span>
+          <div className="w-[123px] h-[32px] sm:w-[138px] sm:h-[36px] inline-flex items-center pl-[12px] pr-[12px] pt-[6px] pb-[6px] rounded-full bg-white border border-[rgba(0,0,0,0.08)] shadow-sm sm:mb-[14px] mb-[12px]">
+              <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
+
             <span
-              className="font-sora font-normal text-[16px] leading-[100%] text-[#212121] whitespace-nowrap"
+              className="font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] text-[#212121] whitespace-nowrap"
               style={{
                 fontFamily: 'Sora',
                 fontWeight: 400,
                 fontStyle: 'normal',
-                fontSize: '16px',
                 lineHeight: '100%',
                 letterSpacing: '-0.04em',
               }}
@@ -122,42 +119,36 @@ export default function ContactUs() {
 
           {/* Main Heading */}
           <h2
-            className="text-[#111827] mb-[32px]"
+            className="sm:mb-[32px] max-[393px]:mb-[20px] w-full text-[#111827] sm:text-[40px] text-[26px] leading-[120%] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
             style={{
-                width: '387px',
-                height: '100px',
               fontFamily: 'Sora',
               fontWeight: 400,
               fontStyle: 'normal',
-              fontSize: '40px',
-              lineHeight: '120%',
               letterSpacing: '-0.04em',
             }}
           >
-            Have Questions? We're Ready to Help.
+            Have Questions? <br /> We're Ready to Help.
           </h2>
 
           {/* Contact Details */}
-          <div className="flex flex-col" style={{ width: '338px', height: '210px' }}>
+          <div className="flex w-full max-w-[338px] flex-col max-[393px]:max-w-full">
             <a
               href="mailto:info@saviturlifescience.com"
-              className="flex items-center gap-4 group shrink-0 overflow-hidden mb-[24px]"
-              style={{ width: '325px', height: '48px' }}
+              className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full"
             >
-              <img
+              <img  
                 src={MailIcon}
                 alt=""
-                className="w-[48px] h-[48px] shrink-0 object-contain group-hover:opacity-90 transition-opacity pt-[3px] pb-[3px]"
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
                 aria-hidden
               />
               <div className="min-w-0 flex flex-col justify-center leading-none">
                 <p
-                  className="font-manrope text-[16px] text-[#4D4D4D] leading-[100%] mb-[5px]"
+                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -165,12 +156,11 @@ export default function ContactUs() {
                   Email
                 </p>
                 <p
-                  className="font-manrope text-[#000000] leading-[100%] truncate"
+                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] break-words max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '20px',
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -181,21 +171,21 @@ export default function ContactUs() {
               </div>
             </a>    
             
-            <a href="tel:+917043112818" className="flex items-center gap-4 group shrink-0 overflow-hidden mb-[24px]">
+            <a href="tel:+917043112818" className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full">
             <img
                 src={PhoneIcon}
                 alt=""
-                className="w-[48px] h-[48px] shrink-0 object-contain group-hover:opacity-90 transition-opacity pt-[3px] pb-[3px]"
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
                 aria-hidden
               />
               <div>
               <p
-                  className="font-manrope text-[16px] text-[#4D4D4D] leading-[100%] mb-[5px]"
+                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
+                   
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -203,16 +193,16 @@ export default function ContactUs() {
                   Contact
                 </p>
                 <p
-                  className="font-manrope text-[#000000] leading-[100%] truncate"
+                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '20px',
+                    
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
-                  title="info@saviturlifescience.com"
+                  title="+91 70431 12818"
                 >+91 70431 12818</p>
               </div>
             </a>
@@ -220,17 +210,17 @@ export default function ContactUs() {
               <img
                 src={AddressIcon}
                 alt=""
-                 className="w-[48px] h-[48px] shrink-0 object-contain group-hover:opacity-90 transition-opacity pt-[3px] pb-[3px]"
+                 className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
                 aria-hidden
               />
               <div>
               <p
-                  className="font-manrope text-[16px] text-[#4D4D4D] leading-[100%] mb-[5px]"
+                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '16px',
+                
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -238,16 +228,14 @@ export default function ContactUs() {
                   Address
                 </p>
                 <p
-                  className="font-manrope text-[#000000] leading-[100%] truncate"
+                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[130%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    fontSize: '20px',
-                    lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
-                  title="info@saviturlifescience.com"
+                  title="Rajkot, Gujarat, India - 360110"
                 >
                     Rajkot, Gujarat, India - 360110</p>
               </div>
@@ -256,19 +244,16 @@ export default function ContactUs() {
         </div>
 
         {/* Right Column - Contact Form Card */}
-        <div className="flex-1 w-full flex justify-center">
+        <div className="flex w-full flex-1 justify-center lg:min-w-0 max-[393px]:w-full">
           <div
-            className="w-full bg-white rounded-[12px] pl-[32px] pr-[32px] pt-[48px] shrink-0 overflow-y-auto box-border"
-            style={{ width: '574px', height: '602px', maxWidth: '100%' }}
+            className="box-border w-[393px] h-[772px] sm:w-[574px] sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[393px]:max-w-full max-[393px]:rounded-none max-[393px]:px-[20px] max-[393px]:pb-[60px] max-[393px]:pt-[60px] lg:h-[602px]"
           >
             <h3
-              className="text-[#000000] text-center mb-[36px]"
+              className="mb-[36px] max-[393px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
               style={{
                 fontFamily: 'Sora',
                 fontWeight: 400,
                 fontStyle: 'normal',
-                fontSize: '40px',
-                lineHeight: '100%',
                 letterSpacing: '-0.04em',
               }}
             >
@@ -276,10 +261,10 @@ export default function ContactUs() {
             </h3>
 
             <form className="flex flex-col">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-[20px]">
+              <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
-                    className="block text-[#000000] mb-[6px]"
+                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -294,14 +279,13 @@ export default function ContactUs() {
                   <input
                     type="text"
                     placeholder="Enter First Name"
-                    className="rounded-[12px] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] transition-all"
-                    style={{ width: '248px', height: '50px', opacity: 1, border: '1px solid #1F2A4433' }}
+                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
                   />
                 </div>
 
                 <div>
                 <label
-                    className="block text-[#000000] mb-[6px]"
+                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -315,17 +299,16 @@ export default function ContactUs() {
                   <input
                     type="text"
                     placeholder="Enter Last Name"
-                    className="rounded-[12px] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] transition-all"
-                    style={{ width: '248px', height: '50px', opacity: 1, border: '1px solid #1F2A4433' }}
+                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
                   />
                 </div>
               </div>
 
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-[20px]">
+              <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                 <label
-                    className="block text-[#000000] mb-[6px]"
+                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -340,8 +323,7 @@ export default function ContactUs() {
                   <input
                     type="email"
                     placeholder="Enter Email"
-                    className="rounded-[12px] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] transition-all"
-                    style={{ width: '248px', height: '50px', opacity: 1, border: '1px solid #1F2A4433' }}
+                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
                   />
                 </div>
                 <div>
@@ -359,16 +341,7 @@ export default function ContactUs() {
                     Phone/Contact Number <span className="text-red-500">*</span>
                   </label>
                   <div
-                    className="flex items-center gap-[8px] rounded-[12px] overflow-hidden bg-[#F4F6F9] transition-all box-border"
-                    style={{
-                      width: '248px',
-                      height: '50px',
-                      border: '1px solid #1F2A4433',
-                      paddingTop: '10px',
-                      paddingRight: '16px',
-                      paddingBottom: '12px',
-                      paddingLeft: '16px',
-                    }}
+                    className="box-border flex h-[50px] w-full max-w-full min-w-0 items-center gap-[8px] overflow-hidden rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] py-[10px] pl-4 pr-4 transition-all sm:max-w-[248px]"
                   >
                     <select
                       className="bg-transparent border-0 font-manrope text-[14px] text-[#111827] cursor-pointer shrink-0"
@@ -396,7 +369,7 @@ export default function ContactUs() {
 
               <div>
               <label
-                    className="block text-[#000000] mb-[6px]"
+                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -410,15 +383,14 @@ export default function ContactUs() {
                 </label>
                 <textarea
                   rows={5}
-                  placeholder="Enter"
-                  className="rounded-[12px] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] transition-all"
-                    style={{ width: '510px', height: '130px', opacity: 1, border: '1px solid #1F2A4433' }}
+                  placeholder="Enter Message"
+                  className="box-border h-[130px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] lg:max-w-[510px]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="flex items-center justify-center bg-transparent border-0 p-0 cursor-pointer mt-[38px]"
+                className="mt-[38px] flex w-full cursor-pointer items-center justify-center border-0 bg-transparent p-0 max-[393px]:mt-6"
               >
                 <img
                   src={SubmitBtn}
