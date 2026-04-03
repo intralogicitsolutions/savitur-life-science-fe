@@ -81,13 +81,14 @@ export default function Header() {
             >
               <img src={MailIcon} alt="" className="w-[40px] h-[40px]" />
             </a>
-            <a
+            <Link
+            to="/contact-us"
               href="tel:+917043112818"
               aria-label="Call"
               className="inline-flex items-center justify-center"
             >
               <img src={CallIcon} alt="" className="w-[40px] h-[40px]" aria-hidden />
-            </a>
+            </Link>
             <button
               type="button"
               aria-label="Menu"

@@ -121,7 +121,7 @@ export default function Services() {
               </span>
             </div>
 
-          <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[393px]:w-[351px] max-[393px]:h-[99px]">
+          <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[70px] mt-[14px] max-[393px]:w-[351px] max-[393px]:h-[70px]">
               <h2
                 className="box-border sm:text-[40px] text-[26px] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
                 style={{
@@ -135,19 +135,18 @@ export default function Services() {
                   textShadow: "2px 2px 0px #0000000F",
                 }}
               >
-                Expert Consultancy for Pharmaceutical Development & Manufacturing
+                Expert Consultancy for <br />  Pharmaceutical Development <br /> & Manufacturing
               </h2>
-            </div>
+          </div>
 
           </div>
           
           <p
-            className="text-[#4D4D4D] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
+            className="text-[#4D4D4D] sm:text-[16px] text-[14px] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
             style={{
               fontFamily: 'Manrope',
               fontWeight: 600,
               fontStyle: 'normal',
-              fontSize: '16px',
               lineHeight: '150%',
               letterSpacing: '-0.02em',
               color: '#4D4D4D',
@@ -163,39 +162,35 @@ export default function Services() {
         </div>
 
         {/* Cards (3 columns x 2 rows) */}
-        <div className="grid grid-cols-3 w-[1164px] mt-[56px] max-[393px]:grid-cols-1 max-[393px]:w-full max-[393px]:mt-[24px] max-[393px]:gap-[14px]">
+        <div className="grid grid-cols-3 w-[1164px] sm:mt-[56px] mt-[28px] max-[393px]:grid-cols-1 max-[393px]:w-full max-[393px]:mt-[28px] max-[393px]:gap-[14px]">
           {/* 1 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconProcess} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconProcess} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
-            
+
               <h3
-                className="text-[#111827]"
+                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
-                  fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
+                  fontStyle: "semibold",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                Process Development & Optimization
+                Process Development & <br /> Optimization
               </h3>
             
-            
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -209,37 +204,34 @@ export default function Services() {
 
           {/* 2 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconStrategy} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconStrategy} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
             
               <h3
-                className="text-[#111827]"
+                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                API & Intermediate Strategy
+                API & Intermediate Strategy <br />
                 Consulting
               </h3>
             
             
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -253,36 +245,33 @@ export default function Services() {
 
           {/* 3 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px] max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconCompliance} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconCompliance} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
             
               <h3
-                className="text-[#111827]"
+                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                Regulatory & Compliance Support
+                Regulatory & Compliance <br /> Support
               </h3>
             
             
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -296,36 +285,33 @@ export default function Services() {
 
           {/* 4 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconSourcing} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconSourcing} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
             
               <h3
-                className="text-[#111827]"
+                 className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                Vendor & Sourcing Strategy
+                Vendor & Sourcing <br /> Strategy
               </h3>
             
             
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -339,36 +325,32 @@ export default function Services() {
 
           {/* 5 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconTechnology} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconTechnology} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
             
               <h3
-                className="text-[#111827]"
+                 className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                Scale-Up & Technology Transfer
+                Scale-Up & Technology <br /> Transfer
               </h3>
             
-            
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -382,36 +364,33 @@ export default function Services() {
 
           {/* 6 */}
           <article
-            className="box-border w-[377px] h-[285px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] px-[20px] pt-[20px] flex flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]"
+            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
-            <div className="w-[54px] h-[54px] shrink-0 flex items-center justify-center mb-[24px]">
-              <img src={IconImprovement} alt="" className="w-[54px] h-[54px]" />
+            <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]  shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
+              <img src={IconImprovement} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]" />
             </div>
             
               <h3
-                className="text-[#111827]"
+                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "24px",
-                  lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   textShadow: "2px 2px 0px 0px #0000000F",
                 }}
               >
-                Troubleshooting & Process Improvement
+                Troubleshooting & <br /> Process Improvement
               </h3>
             
             
               <p
-                className="text-[#4D4D4D] mt-[12px]"
+                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  fontSize: "16px",
                   lineHeight: "150%",
                   letterSpacing: "-0.02em",
                   color: "#4D4D4D",
@@ -425,14 +404,13 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto flex flex-col items-center justify-center w-[376px] h-[84px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[32px]">
+        <div className="mx-auto flex h-[94px] w-[188px] shrink-0 flex-col items-center justify-center mt-[56px] max-[393px]:mt-[32px] sm:h-[84px] sm:w-[376px]">
           <p
-            className="text-center text-[#4D4D4D]"
+            className="text-center text-[#4D4D4D] sm:text-[16px] text-[14px] mb-[12px] sm:mb-[12px]"
             style={{
               fontFamily: "Manrope",
               fontWeight: 600,
               fontStyle: "normal",
-              fontSize: "16px",
               lineHeight: "150%",
               letterSpacing: "-0.02em",
               color: "#4D4D4D",
@@ -441,19 +419,13 @@ export default function Services() {
           >
             Discuss Your Queries With Us to Get Best Guidance.
           </p>
-
-          
           <Link
             to="/contact-us"
           >
-            <img
-              src={ContactBtn}
-              alt="Contact Us"
-              className="w-[157px] h-[48px] mt-[12px]"
-              aria-hidden={false}
-            />
+           <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
           </Link>
         </div>
+
       </section>
       <Footer />
     </>
