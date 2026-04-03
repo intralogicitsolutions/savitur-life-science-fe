@@ -78,7 +78,7 @@ export default function Partnership() {
 
   return (
     <section className="w-full bg-white sm:mt-[124px] flex justify-center px-0 sm:px-6">
-        <div className="w-full max-w-[393px] h-[601px] sm:max-w-none sm:w-[1524px] sm:h-[746px] bg-[#FF9A52] text-center text-[#000000] flex flex-col items-center border border-[rgba(0,0,0,0.12)] opacity-100 box-border px-[20px] py-[60px] sm:px-0 sm:py-0">
+        <div className="w-full max-w-[393px] h-[601px] sm:max-w-none sm:w-[1524px] sm:rounded-[16px] sm:h-[746px] bg-[#FF9A52] text-center text-[#000000] flex flex-col items-center border border-[rgba(0,0,0,0.12)] opacity-100 box-border px-[20px] py-[60px] sm:px-0 sm:py-0">
           {/* Top pill */}
           <div className="mb-[14px] mt-0 inline-flex items-center gap-1 pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[153px] h-[32px] opacity-100 sm:w-[172px] sm:h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] text-[13px] font-semibold tracking-[0.18em] uppercase shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:mt-[124px]">
             <span>

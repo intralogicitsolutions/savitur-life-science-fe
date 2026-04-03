@@ -121,14 +121,13 @@ export default function Services() {
               </span>
             </div>
 
-            <div className="w-[574px] h-[150px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto">
+          <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[393px]:w-[351px] max-[393px]:h-[99px]">
               <h2
-                className="box-border max-[393px]:text-[24px] max-[393px]:leading-[120%]"
+                className="box-border sm:text-[40px] text-[26px] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
                 style={{
                   fontFamily: "Sora",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  fontSize: "40px",
                   lineHeight: "120%",
                   letterSpacing: "-0.04em",
                   width: "574px",
@@ -139,6 +138,7 @@ export default function Services() {
                 Expert Consultancy for Pharmaceutical Development & Manufacturing
               </h2>
             </div>
+
           </div>
           
           <p

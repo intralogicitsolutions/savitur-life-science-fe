@@ -137,20 +137,15 @@ export default function Footer() {
 
         {/* Decorative background — scaled + clipped on narrow screens */}
         <div
-          className="pointer-events-none absolute bottom-0 left-1/2 flex w-full max-w-full -translate-x-1/2 flex-col items-center overflow-hidden mb-[24px] max-[393px]:mb-[25px]"
+          className="pointer-events-none absolute bottom-0 left-1/2 flex w-full max-w-full -translate-x-1/2 flex-col items-center overflow-hidden max-[393px]:mb-[25px]"
           aria-hidden
         >
           <img
             src={FSaviturLogo}
-            alt=""
-            className="h-[56px] w-[min(1400px,200%)] max-w-none select-none object-contain opacity-40 max-[393px]:h-[42px] max-[393px]:w-[584px] max-[393px]:opacity-100 sm:h-[72px] lg:h-[102px] lg:w-[1400px] lg:opacity-100"
           />
-          <div className="hidden h-[2px] w-full max-w-[1400px] bg-[rgba(100,150,255,0.35)] px-[60px] lg:block" />
+          <div className="hidden h-[2px] w-full max-w-[1400px] bg-[rgba(100,150,255,0.35)] px-[60px]  lg:block" />
         </div>
       </footer>
     </div>
   )
-
-
-
 }
