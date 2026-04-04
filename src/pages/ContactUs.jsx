@@ -426,7 +426,8 @@ export default function ContactUs() {
           aria-labelledby="contact-success-title"
         >
           <div className="flex h-[772px] w-full max-w-[393px] flex-col overflow-hidden rounded-[12px] bg-white text-center shadow-[0_12px_40px_rgba(0,0,0,0.15)] max-[393px]:h-[100dvh] max-[393px]:min-h-[100dvh] max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:rounded-none max-[393px]:shadow-none sm:h-[602px] sm:max-w-[574px]">
-            <div className="box-border mt-[100px] mb-[110px] ml-[57px] mr-[58px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[393px]:mx-0 max-[393px]:mb-0 max-[393px]:mt-8 max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:px-4 max-[393px]:pt-8 max-[480px]:h-auto max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
+            
+            <div className="box-border mb-[60px] ml-[38px] mr-[38px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[393px]:mx-0 max-[393px]:mb-0 max-[393px]:mt-8 max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:px-4 max-[393px]:pt-8 max-[480px]:h-auto max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
               <img
                 src={TickCircle}
                 alt=""
