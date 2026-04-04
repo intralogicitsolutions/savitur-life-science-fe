@@ -118,3 +118,26 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* HeroStrip — seamless horizontal auto-scroll */
+@keyframes hero-strip-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-strip-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: hero-strip-marquee 45s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-strip-marquee-track {
+    animation: none;
+  }
+}

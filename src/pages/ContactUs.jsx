@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import HeroImg from '../assets/images/Hero_img.svg'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -9,8 +10,12 @@ import PhoneIcon from '../assets/images/phone_contact.svg'
 import AddressIcon from '../assets/images/Address.png'
 import Line1 from '../assets/images/Line1.svg'
 import SubmitBtn from '../assets/images/submit_btn.svg'
+import TickCircle from '../assets/images/tick-circle.svg'
+import SubmitAnotherBtn from '../assets/images/Submitanother.svg'
 
 export default function ContactUs() {
+  const [successOpen, setSuccessOpen] = useState(false)
+
   return (
     <>
       <Header />
@@ -91,14 +96,14 @@ export default function ContactUs() {
     {/* Contact Us - Get In Touch Section */}
     <div className="w-full flex justify-center max-[393px]:max-w-full ">
       <section
-        className="flex sm:w-[1524px] items-center justify-center rounded-[16px] mx-[38px] sm:mt-[38px] sm:mb-[100px] min-h-0 px-0 sm:h-[746px] w-[393px] h-[1202px] max-[393px]:mx-0  max-[393px]:max-w-none max-[393px]:rounded-none"
+        className="flex sm:w-[1524px] items-center justify-center rounded-[16px] mx-[38px] sm:mt-[38px] sm:mb-[100px] min-h-0 px-0 sm:h-[746px] w-[393px] h-[1130px] max-[393px]:mx-0  max-[393px]:max-w-none max-[393px]:rounded-none"
         style={{ background: '#F4F6F9' }}
       >
       <div
         className="flex w-full max-w-[1046px] flex-col items-stretch justify-between shrink-0 max-[393px]:w-full max-[393px]:max-w-full max-[393px]:mx-4 lg:h-[602px] lg:flex-row lg:items-center lg:gap-0 lg:px-0 lg:py-0 "
       >
         {/* Left Column - Contact Info */}
-        <div className="flex w-[393px] h-[428px] flex-col self-center sm:h-[392px] sm:w-[387px] lg:mr-[85px] lg:self-auto max-[393px]:mb-[60px] max-[393px]:mt-[60px] max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-full max-[393px]:px-[20px]">
+        <div className="flex w-[393px] h-[428px] flex-col self-center sm:h-[392px] sm:w-[387px] lg:mr-[85px] lg:self-auto max-[393px]:mb-[60px] max-[393px]:mt-[80px] max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-full max-[393px]:px-[20px]">
           {/* Contact Us Badge */}
           <div className="w-[123px] h-[32px] sm:w-[138px] sm:h-[36px] inline-flex items-center pl-[12px] pr-[12px] pt-[6px] pb-[6px] rounded-full bg-white border border-[rgba(0,0,0,0.08)] shadow-sm sm:mb-[14px] mb-[12px]">
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
@@ -246,7 +251,7 @@ export default function ContactUs() {
         {/* Right Column - Contact Form Card */}
         <div className="flex w-full flex-1 justify-center lg:min-w-0 max-[393px]:w-full">
           <div
-            className="box-border w-[393px] h-[772px] sm:w-[574px] sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[393px]:max-w-full max-[393px]:rounded-none max-[393px]:px-[20px] max-[393px]:pb-[60px] max-[393px]:pt-[60px] lg:h-[602px]"
+            className="box-border w-[393px] h-[750px] sm:w-[574px] sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[393px]:max-w-full max-[393px]:rounded-none max-[393px]:px-[20px] max-[393px]:pb-[60px] max-[393px]:pt-[60px] lg:h-[602px]"
           >
             <h3
               className="mb-[36px] max-[393px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
@@ -260,7 +265,13 @@ export default function ContactUs() {
               Get In Touch
             </h3>
 
-            <form className="flex flex-col">
+            <form
+              className="flex flex-col"
+              onSubmit={(e) => {
+                e.preventDefault()
+                setSuccessOpen(true)
+              }}
+            >
               <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
@@ -396,7 +407,7 @@ export default function ContactUs() {
                   src={SubmitBtn}
                   alt="Submit"
                   className="w-[157px] h-[48px] select-none"
-                />
+                />  
               </button>
             </form>
           </div>
@@ -406,7 +417,56 @@ export default function ContactUs() {
     </section>
     </div>
 
-          
+      {/* Success modal */}
+      {successOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 p-5 max-[393px]:items-stretch max-[393px]:justify-stretch max-[393px]:p-0"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="contact-success-title"
+        >
+          <div className="flex h-[772px] w-full max-w-[393px] flex-col overflow-hidden rounded-[12px] bg-white text-center shadow-[0_12px_40px_rgba(0,0,0,0.15)] max-[393px]:h-[100dvh] max-[393px]:min-h-[100dvh] max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:rounded-none max-[393px]:shadow-none sm:h-[602px] sm:max-w-[574px]">
+            <div className="box-border mt-[100px] mb-[110px] ml-[57px] mr-[58px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[393px]:mx-0 max-[393px]:mb-0 max-[393px]:mt-8 max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:px-4 max-[393px]:pt-8 max-[480px]:h-auto max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
+              <img
+                src={TickCircle}
+                alt=""
+                className="mb-[16px] h-[46px] w-[46px] shrink-0 select-none sm:mb-[32px] sm:h-[64px] sm:w-[64px]"
+                aria-hidden
+              />
+              <h2
+                id="contact-success-title"
+                className="mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
+              >
+                Message Submitted!
+              </h2>
+
+              <p className="font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
+                Thank you for reaching out! Your message has been received, and our team will get back to you as soon as
+                possible. <br /> <br /> If your request is urgent, please contact us directly at
+                info@saviturlifescience.com or +91 70431 12818.
+              </p>
+            </div>
+
+            <div className="mt-auto shrink-0">
+              <div className="mb-[30px] h-px w-full bg-[#E5E7EB]" />
+              <div className="flex justify-center px-6 pb-8 max-[393px]:px-4 max-[393px]:pb-8">
+                <button
+                  type="button"
+                  onClick={() => setSuccessOpen(false)}
+                  className="flex cursor-pointer items-center justify-center border-0 bg-transparent p-0"
+                >
+                  <img
+                    src={SubmitAnotherBtn}
+                    alt="Submit another"
+                    className="h-[40px] w-[132px] sm:h-[48px] sm:w-[157px]"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </>
   )

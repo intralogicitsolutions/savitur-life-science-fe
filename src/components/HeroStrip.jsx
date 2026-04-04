@@ -2,19 +2,24 @@ const phrases = ['Regulatory Insight', 'Process Support', 'Quality Sourcing']
 
 export default function HeroStrip() {
   const repeated = Array(8).fill(phrases).flat()
+  const loop = [...repeated, ...repeated]
+
   return (
-    <section 
-      className="sm:w-[2103px] sm:h-[62px] w-[393px] h-[52px] mx-auto overflow-hidden flex items-center justify-center"
+    <section
+      className="mx-auto flex h-[52px] w-full max-w-[393px] items-center justify-center overflow-hidden sm:h-[62px] sm:w-[2103px] sm:max-w-none"
       style={{ background: 'linear-gradient(to right, #E65C00, #FF8C42)' }}
     >
-      <div className="flex items-center justify-center flex-nowrap sm:gap-[36px] gap-[22px] w-[2103px] h-[14px]">
-        {repeated.map((phrase, i) => (
-          <span key={i} className="flex items-center gap-[36px] flex-shrink-0">
-            <span className="font-sora font-semibold sm:text-[19px] text-[16px] leading-[100%] tracking-[-0.04em] text-white whitespace-nowrap">
+      <div className="hero-strip-marquee-track items-center gap-[22px] sm:gap-[36px]">
+        {loop.map((phrase, i) => (
+          <span
+            key={`${phrase}-${i}`}
+            className="flex flex-shrink-0 items-center gap-[22px] sm:gap-[36px]"
+          >
+            <span className="whitespace-nowrap font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.04em] text-white sm:text-[19px]">
               {phrase}
             </span>
-            {i < repeated.length - 1 && (
-              <span className="w-[8px] h-[8px] rounded-full bg-white flex-shrink-0" aria-hidden />
+            {i < loop.length - 1 && (
+              <span className="h-[8px] w-[8px] flex-shrink-0 rounded-full bg-white" aria-hidden />
             )}
           </span>
         ))}
