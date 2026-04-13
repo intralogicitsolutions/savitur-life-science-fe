@@ -42,7 +42,7 @@ export default function ContactUs() {
           <div className="flex flex-col items-center justify-center text-center sm:w-[267px] sm:h-[93px] w-[166px] max-[393px]:w-[223px] h-[66px]">
             {/* Main heading */}
             <h1 
-              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] max-[393px]:whitespace-nowrap leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] max-[393px]:whitespace-nowrap leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -56,7 +56,7 @@ export default function ContactUs() {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
+            <div className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
               <span 
               className="opacity-90 shrink-0"
               style={{
@@ -74,7 +74,7 @@ export default function ContactUs() {
                 <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
-              className="opacity-100 shrink-0"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -109,7 +109,7 @@ export default function ContactUs() {
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
 
             <span
-              className="font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] text-[#212121] whitespace-nowrap"
+              className="[text-shadow:2px_2px_0_#0000000F] font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] text-[#212121] whitespace-nowrap"
               style={{
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -124,7 +124,7 @@ export default function ContactUs() {
 
           {/* Main Heading */}
           <h2
-            className="sm:mb-[32px] max-[393px]:mb-[20px] w-full text-[#111827] sm:text-[40px] text-[26px] leading-[120%] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
+            className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[32px] max-[393px]:mb-[20px] w-full text-[#111827] sm:text-[40px] text-[26px] leading-[120%] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
             style={{
               fontFamily: 'Sora',
               fontWeight: 400,
@@ -149,7 +149,7 @@ export default function ContactUs() {
               />
               <div className="min-w-0 flex flex-col justify-center leading-none">
                 <p
-                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -161,7 +161,7 @@ export default function ContactUs() {
                   Email
                 </p>
                 <p
-                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] break-words max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] break-words max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -185,12 +185,11 @@ export default function ContactUs() {
               />
               <div>
               <p
-                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                   
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -198,12 +197,11 @@ export default function ContactUs() {
                   Contact
                 </p>
                 <p
-                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                    
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -220,12 +218,11 @@ export default function ContactUs() {
               />
               <div>
               <p
-                  className="font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
-                
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
@@ -233,7 +230,7 @@ export default function ContactUs() {
                   Address
                 </p>
                 <p
-                  className="font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[130%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[130%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -254,7 +251,7 @@ export default function ContactUs() {
             className="box-border w-[393px] h-[750px] sm:w-[574px] sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[393px]:max-w-full max-[393px]:rounded-none max-[393px]:px-[20px] max-[393px]:pb-[60px] max-[393px]:pt-[60px] lg:h-[602px]"
           >
             <h3
-              className="mb-[36px] max-[393px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
+              className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[393px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
               style={{
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -275,7 +272,7 @@ export default function ContactUs() {
               <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
-                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
+                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -296,7 +293,7 @@ export default function ContactUs() {
 
                 <div>
                 <label
-                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
+                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -319,7 +316,7 @@ export default function ContactUs() {
               <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                 <label
-                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
+                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -339,7 +336,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                 <label
-                    className="block text-[#000000] mb-[6px]"
+                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] mb-[6px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -380,7 +377,7 @@ export default function ContactUs() {
 
               <div>
               <label
-                    className="block text-[#000000] sm:mb-[6px] mb-[4px]"
+                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
                     style={{
                       fontFamily: 'Manrope',
                       fontWeight: 600,
@@ -436,12 +433,12 @@ export default function ContactUs() {
               />
               <h2
                 id="contact-success-title"
-                className="mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
+                className="[text-shadow:2px_2px_0_#0000000F] mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
               >
                 Message Submitted!
               </h2>
 
-              <p className="font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
+              <p className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
                 Thank you for reaching out! Your message has been received, and our team will get back to you as soon as
                 possible. <br /> <br /> If your request is urgent, please contact us directly at
                 info@saviturlifescience.com or +91 70431 12818.

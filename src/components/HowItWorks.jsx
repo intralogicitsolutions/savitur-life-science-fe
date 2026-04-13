@@ -27,8 +27,8 @@ export default function HowItWorks() {
             >
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               <span
-                className="font-normal sm:text-[16px] text-[14px] leading-[100%] normal-case tracking-[-0.04em]"
-                style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                className="[text-shadow:2px_2px_0_#0000000F] font-normal sm:text-[16px] text-[14px] leading-[100%] normal-case tracking-[-0.04em]"
+               
               >
                 How it works?
               </span>
@@ -36,8 +36,8 @@ export default function HowItWorks() {
 
             {/* Heading */}
             <h2
-              className="font-normal text-[26px] sm:text-[32px] md:text-[39px] leading-[120%] text-[#000000] max-[393px]:w-[351px] max-[393px]:h-[99px] w-full h-auto md:max-w-[456px]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.03)' }}
+              className="[text-shadow:2px_2px_0_#0000000F] font-normal text-[26px] sm:text-[32px] md:text-[39px] leading-[120%] text-[#000000] max-[393px]:w-[351px] max-[393px]:h-[99px] w-full h-auto md:max-w-[456px]"
+              
             >
               From Sample to Commercial Scale — Seamless at Every Stage
             </h2>
@@ -60,15 +60,15 @@ export default function HowItWorks() {
                   <span
                     className="flex h-[40px] w-[40px] sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center rounded-full text-white font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em]"
                     style={{
-                      backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00)',
-                      boxShadow: '2px 2px 0 rgba(0,0,0,0.06)',
+                      backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00) [text-shadow:2px_2px_0_#0000000F]',
+                      
                     }}
                   >
                     {index + 1}
                   </span>
                   <span
-                    className="font-semibold text-[14px] sm:text-[20px] leading-[130%] md:leading-[100%] tracking-[-0.01em] text-[#000000] sm:pt-0.5"
-                    style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                    className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[14px] sm:text-[20px] leading-[130%] md:leading-[100%] tracking-[-0.01em] text-[#000000] sm:pt-0.5"
+                    
                   >
                     {label}
                   </span>
@@ -81,8 +81,8 @@ export default function HowItWorks() {
         {/* Bottom text + button */}
         <div className="flex flex-col items-start md:items-center gap-3 text-left md:text-center mt-[24px] md:mt-[56px] w-full max-w-[378px] md:max-w-full md:mx-auto md:h-auto">
           <p
-            className="font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] w-full"
-            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[14px] md:text-[16px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] w-full"
+            
           >
             Any queries related to Product Availability or Inquiry.
           </p>

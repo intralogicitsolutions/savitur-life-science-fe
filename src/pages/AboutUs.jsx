@@ -159,7 +159,7 @@ export default function AboutUs() {
           <div className="flex flex-col items-center justify-center text-center sm:w-[223px] sm:h-[93px] w-[143px] h-[66px]">
             {/* Main heading */}
             <h1 
-              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -173,9 +173,9 @@ export default function AboutUs() {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
+            <div className=" text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
               <span 
-              className="opacity-90 shrink-0"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-90 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -191,7 +191,7 @@ export default function AboutUs() {
                 <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
-              className="opacity-100 shrink-0"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -223,7 +223,7 @@ export default function AboutUs() {
                 <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
                   
                 <span
-                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] [text-shadow:none] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    className="[text-shadow:2px_2px_0_#0000000F] whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
                     style={{ fontStyle: 'normal' }}
                   >
                   About Our Business
@@ -235,7 +235,7 @@ export default function AboutUs() {
             <div className="flex items-start justify-between gap-[118px] max-[393px]:flex-col max-[393px]:gap-[16px]">
               <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[12px]">
                 <h2
-                  className="font-sora font-normal sm:text-[40px] text-[26px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-sora font-normal sm:text-[40px] text-[26px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
                   style={{
                     fontStyle: 'normal',
                     lineHeight: '120%',
@@ -254,7 +254,7 @@ export default function AboutUs() {
 
               <div className="w-[520px] flex flex-col items-start max-[393px]:w-full">
                 <p
-                  className="sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.02em] sm:w-[472px] sm:h-[72px] w-[351px] h-[84px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.02em] sm:w-[472px] sm:h-[72px] w-[351px] h-[84px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -321,7 +321,7 @@ export default function AboutUs() {
                   <img src={WhoWeAreIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]"/>
               
                 <h3
-                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -334,7 +334,7 @@ export default function AboutUs() {
                   Who We Are
                 </h3>
                 <p
-                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -358,7 +358,7 @@ export default function AboutUs() {
                   />
                 
                 <h3
-                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -371,7 +371,7 @@ export default function AboutUs() {
                   Mission
                 </h3>
                 <p
-                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -390,7 +390,7 @@ export default function AboutUs() {
                   <img src={VisionIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] mb-[8px]" />
                
                   <h3
-                  className="sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[24px] mt-[12px] sm:text-[24px] text-[18px] text-[#111827]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -403,7 +403,7 @@ export default function AboutUs() {
                   Vision
                 </h3>
                 <p
-                  className="sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -442,12 +442,12 @@ export default function AboutUs() {
                 }}
               >
                 <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
-                <span className="font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-[#111827] whitespace-nowrap">
+                <span className="[text-shadow:2px_2px_0_#0000000F] font-sora font-normal sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-[#111827] whitespace-nowrap">
                   What Sets Us Apart
                 </span>
               </div>
               <h2
-                className="mt-[12px] text-[#111827] w-[574px] h-[100px] sm:text-[40px]  leading-[120%] max-[393px]:w-full max-[393px]:h-auto max-[393px]:text-[26px] max-[393px]:leading-[150%]"
+                className="[text-shadow:2px_2px_0_#0000000F] mt-[12px] text-[#111827] w-[574px] h-[100px] sm:text-[40px]  leading-[120%] max-[393px]:w-full max-[393px]:h-auto max-[393px]:text-[26px] max-[393px]:leading-[150%]"
                 style={{
                   fontFamily: 'Sora',
                   fontWeight: 400,
@@ -496,7 +496,7 @@ export default function AboutUs() {
                     className={
                       card.titleTypography
                         ? 'text-white drop-shadow-sm shrink-0'
-                        : 'font-sora font-semibold text-[15px] sm:text-[16px] leading-[130%] tracking-[-0.03em] text-white drop-shadow-sm shrink-0'
+                        : '[text-shadow:2px_2px_0_#0000000F] font-sora font-semibold text-[15px] sm:text-[16px] leading-[130%] tracking-[-0.03em] text-white drop-shadow-sm shrink-0'
                     }
                     style={{
                       ...(isMobile393 &&

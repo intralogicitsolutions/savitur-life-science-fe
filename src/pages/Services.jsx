@@ -39,7 +39,7 @@ export default function Services() {
           <div className="flex flex-col items-center justify-center text-center w-[179px] h-[93px]">
             {/* Main heading */}
             <h1 
-              className="text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -55,7 +55,7 @@ export default function Services() {
             {/* Breadcrumb */}
             <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] w-[135px] h-[24px] flex flex-nowrap items-center justify-center gap-0">
               <span 
-              className="opacity-90 shrink-0"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-90 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -72,7 +72,7 @@ export default function Services() {
               </span>
 
                  <span 
-              className="opacity-100 shrink-0"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -114,7 +114,7 @@ export default function Services() {
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
               
               <span
-                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] [text-shadow:none] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    className="[text-shadow:2px_2px_0_#0000000F] whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
                     style={{ fontStyle: 'normal' }}
                   >
                 Our Services
@@ -123,7 +123,7 @@ export default function Services() {
 
           <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[70px] mt-[14px] max-[393px]:w-[351px] max-[393px]:h-[70px]">
               <h2
-                className="box-border sm:text-[40px] text-[26px] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
+                className="[text-shadow:2px_2px_0_#0000000F] box-border sm:text-[40px] text-[26px] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
                 style={{
                   fontFamily: "Sora",
                   fontWeight: 400,
@@ -142,7 +142,7 @@ export default function Services() {
           </div>
           
           <p
-            className="text-[#4D4D4D] sm:text-[16px] text-[14px] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
+            className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:text-[16px] text-[14px] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
             style={{
               fontFamily: 'Manrope',
               fontWeight: 600,
@@ -173,7 +173,7 @@ export default function Services() {
             </div>
 
               <h3
-                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -186,7 +186,7 @@ export default function Services() {
               </h3>
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -212,7 +212,7 @@ export default function Services() {
             </div>
             
               <h3
-                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -227,7 +227,7 @@ export default function Services() {
             
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -253,7 +253,7 @@ export default function Services() {
             </div>
             
               <h3
-                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -267,7 +267,7 @@ export default function Services() {
             
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -293,7 +293,7 @@ export default function Services() {
             </div>
             
               <h3
-                 className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                 className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -307,7 +307,7 @@ export default function Services() {
             
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -333,7 +333,7 @@ export default function Services() {
             </div>
             
               <h3
-                 className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                 className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -346,7 +346,7 @@ export default function Services() {
               </h3>
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -372,7 +372,7 @@ export default function Services() {
             </div>
             
               <h3
-                className="text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#000000] sm:text-[24px] text-[18px] sm:line-height-[120%] line-height-[100%]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -386,7 +386,7 @@ export default function Services() {
             
             
               <p
-                className="text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
+                className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px]"
                 style={{
                   fontFamily: "Manrope",
                   fontWeight: 600,
@@ -406,7 +406,7 @@ export default function Services() {
         {/* CTA */}
         <div className="mx-auto flex h-[94px] w-[188px] shrink-0 flex-col items-center justify-center mt-[56px] max-[393px]:mt-[32px] sm:h-[84px] sm:w-[376px]">
           <p
-            className="text-center text-[#4D4D4D] sm:text-[16px] text-[14px] mb-[12px] sm:mb-[12px]"
+            className="[text-shadow:2px_2px_0_#0000000F] text-center text-[#4D4D4D] sm:text-[16px] text-[14px] mb-[12px] sm:mb-[12px]"
             style={{
               fontFamily: "Manrope",
               fontWeight: 600,

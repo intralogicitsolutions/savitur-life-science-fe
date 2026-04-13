@@ -9,13 +9,13 @@ export default function HeroStrip() {
       className="mx-auto flex h-[52px] w-full max-w-[393px] items-center justify-center overflow-hidden sm:h-[62px] sm:w-[2103px] sm:max-w-none"
       style={{ background: 'linear-gradient(to right, #E65C00, #FF8C42)' }}
     >
-      <div className="hero-strip-marquee-track items-center gap-[22px] sm:gap-[36px]">
+      <div className="[text-shadow:2px_2px_0_#0000000F] hero-strip-marquee-track items-center gap-[22px] sm:gap-[36px]">
         {loop.map((phrase, i) => (
           <span
             key={`${phrase}-${i}`}
             className="flex flex-shrink-0 items-center gap-[22px] sm:gap-[36px]"
           >
-            <span className="whitespace-nowrap font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.04em] text-white sm:text-[19px]">
+            <span className="[text-shadow:2px_2px_0_#0000000F] whitespace-nowrap font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.04em] text-white sm:text-[19px]">
               {phrase}
             </span>
             {i < loop.length - 1 && (

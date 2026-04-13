@@ -6,7 +6,7 @@ import ArrowUpRightMD from '../assets/images/Arrow_Up_Right_MD.svg'
 export default function Hero() {
   return (
     <section
-      className="relative mx-auto w-[393px] min-w-[393px] h-[689px] min-h-[689px] overflow-hidden sm:w-full sm:min-w-full sm:h-[788px] sm:min-h-[788px] min-[1600px]:w-[1600px] min-[1600px]:min-w-[1600px] min-[1600px]:h-[788px] min-[1600px]:min-h-[788px]"
+      className="relative mx-auto w-[393px] min-w-[393px] h-[689px] min-h-[689px] overflow-hidden sm:w-full sm:min-w-full sm:h-[788px] sm:min-h-[788px] min-[19200px]:w-[1920px] min-[1920px]:min-w-[1920px] min-[1920px]:h-[788px] min-[1920px]:min-h-[788px]"
     >
       
       {/* Mobile (393): full-bleed background */}
@@ -31,16 +31,11 @@ export default function Hero() {
         />
       </div>
 
-      {/* Desktop: background width = image width (1600/788) */}
-      <div className="absolute inset-y-0 left-1/2 hidden h-full -translate-x-1/2 aspect-[1600/788] sm:block">
+      {/* Desktop: same image treatment as About Us — full width, cover, top */}
+      <div className="absolute inset-0 hidden sm:block">
         <div
-          className="absolute inset-0 bg-no-repeat bg-top"
-          style={{
-            backgroundImage: `url(${HeroImg})`,
-            backgroundSize: '100% 100%',
-            backgroundPosition: 'top center',
-            backgroundRepeat: 'no-repeat',
-          }}
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat"
+          style={{ backgroundImage: `url(${HeroImg})` }}
         />
 
         <div
@@ -60,17 +55,17 @@ export default function Hero() {
             className="inline-flex items-center justify-center bg-white/10 rounded-[60px] px-[12px] py-[6px] mt-[204px] mb-[8px] sm:mt-0 sm:ml-0 sm:mb-[14px] border border-[#FFFFFF80] shadow-[2px_2px_0px_0px_#0000000F] w-fit max-w-[300px] h-[36px]"
           >
             <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
-            <span className="text-gray-200 font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] whitespace-nowrap">Trusted for Quality & Compliance</span>
+            <span className="text-gray-200 font-sora font-normal text-[16px] leading-[100%] tracking-[-0.04em] whitespace-nowrap [text-shadow:2px_2px_0_#0000000F]">Trusted for Quality & Compliance</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-[#FFFFFF] font-sora font-normal text-[32px] leading-[120%] tracking-[-0.04em] w-[330px] h-[160px] [text-shadow:2px_2px_0px_#0000000F] sm:text-[50px] sm:leading-[120%] sm:w-[468px] sm:h-[252px] sm:mb-[6px]">
+          <h1 className="text-[#FFFFFF] font-sora font-normal text-[32px] leading-[120%] tracking-[-0.04em] w-[330px] h-[160px] [text-shadow:2px_2px_0_#0000000F] sm:text-[50px] sm:leading-[120%] sm:w-[468px] sm:h-[252px] sm:mb-[6px]">
             Bridging Global Pharma Needs With Trusted Ingredients <br /> & Expertise
           </h1>
 
           {/* Paragraph */}
          <p
-           className="text-[#FFFFFF] opacity-95 mb-[24px] font-manrope font-semibold text-[14px] leading-[150%] tracking-[-0.02em] w-[330px] h-[105px] [text-shadow:2px_2px_0px_#0000000F] sm:mb-[22px] sm:text-[16px] sm:w-[468px] sm:h-[96px]"
+           className="text-[#FFFFFF] opacity-95 mb-[24px] font-manrope font-semibold text-[14px] leading-[150%] tracking-[-0.02em] w-[330px] h-[105px] [text-shadow:2px_2px_0_#0000000F] sm:mb-[22px] sm:text-[16px] sm:w-[468px] sm:h-[96px]"
            style={{
              fontStyle: 'normal',
              letterSpacing: '-0.02em',

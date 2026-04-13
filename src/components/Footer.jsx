@@ -33,7 +33,7 @@ export default function Footer() {
               <a href="#" className="sm:mb-[24px] mb-[16px] inline-block">
                 <img src={HeaderLogo} alt="Savitur Life Science" className="sm:h-[46px] sm:w-[154px] h-[46px] w-[154px]" />
               </a>
-              <p className="h-auto max-w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90">
+              <p className="h-auto w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90 [text-shadow:2px_2px_0_#0000000F]">
                 Powering Progress in Pharmaceutical Excellence
               </p>
             </div>
@@ -41,10 +41,10 @@ export default function Footer() {
             {/* Quick Links + Product Types: 2 columns on mobile, separate cols on lg */}
             <div className="grid grid-cols-2 gap-6 gap-y-8 lg:contents">
               <div className="min-w-0 lg:w-[104px]">
-                <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+                <h3 className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
                   Quick Links
                 </h3>
-                <ul className="list-inside list-disc space-y-2 text-white">
+                <ul className="[text-shadow:2px_2px_0_#0000000F] list-inside list-disc space-y-2 text-white">
                   {quickLinks.map((link) => (
                     <li key={link.label}>
                       <a
@@ -59,10 +59,10 @@ export default function Footer() {
               </div>
 
               <div className="min-w-0 lg:w-[208px] mb-[36px]">
-                <h3 className="mb-4 font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white sm:mb-6">
+                <h3 className="[text-shadow:2px_2px_0_#0000000F] mb-4 font-semibold text-[18px] leading-[100%] tracking-[-0.04em] text-white sm:mb-6">
                   Product Type
                 </h3>
-                <ul className="list-outside list-disc space-y-2 pl-5 text-white marker:text-white">
+                <ul className="[text-shadow:2px_2px_0_#0000000F] list-outside list-disc space-y-2 pl-5 text-white marker:text-white">
                   {productTypes.map((type) => (
                     <li key={type} className="pl-1 leading-[140%]">
                       <a
@@ -79,10 +79,10 @@ export default function Footer() {
 
             {/* Office Address */}
             <div className="w-[261px] h-[99px] sm:h-[145px] sm:w-[220px] mb-[30px]">
-            <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+            <h3 className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
                 Office Address
               </h3>
-              <address className="not-italic font-medium text-[12px] leading-[150%] sm:text-[16px] sm:leading-[150%] text-white/90">
+              <address className="[text-shadow:2px_2px_0_#0000000F] not-italic font-medium text-[12px] leading-[150%] sm:text-[16px] sm:leading-[150%] text-white/90">
                 Sr. No. 117, Plot No. 1, Taluka: behind Balaji Multiflex Pvt. Ltd, Village:, Amreli,
                 Paddhari, Gujarat, India - 360110.
               </address>
@@ -90,20 +90,20 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="w-full lg:w-[232px]">
-            <h3 className="sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
+            <h3 className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
                 Contact Info
               </h3>
               <div className="space-y-3 sm:space-y-4">
                 <a
                   href="mailto:info@saviturlifescience.com"
-                  className="flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
                   info@saviturlifescience.com
                 </a>
                 <a
                   href="tel:+917043112818"
-                  className="flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
                   +91 70431 12818
@@ -116,7 +116,7 @@ export default function Footer() {
           <div className="mb-6 mt-8 h-0 max-w-[1361px] border-t border-white/20 w-[393px]:mt-[32px] w-[353px] max-[393px]:mb-[24px] lg:mb-[24px]" />
 
           {/* Copyright & Social — design: left text, right icons on mobile */}
-          <div className="flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
+          <div className="[text-shadow:2px_2px_0_#0000000F] flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
             <p className="sm:w-[240px] w-[186px] h-[42px] font-medium text-[14px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] sm:max-w-none sm:text-[16px] lg:w-auto">
               Copyrights © 2023 all rights reserved by SaviturLifeScience
             </p>

@@ -36,23 +36,22 @@ export default function ServicesOverview() {
           <div className="inline-flex flex-row items-center gap-1 px-[12px] py-[6px] h-[32px] w-[208px] opacity-100 sm:h-[36px] sm:w-[234px] rounded-[60px] border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_6px_16px_rgba(15,23,42,0.06)]">
           <img src={CheckAll} alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
               <span
-                className="font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000]"
-                style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                className="font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.04em] text-[#000000] [text-shadow:2px_2px_0_#0000000F]"
+                
               >
                 Our Services at a Glance
               </span>
           </div>  
 
 
-            <h2 className="w-full max-w-[574px] font-sora font-normal text-[28px] sm:text-[32px] lg:text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000] sm:mt-[14px] mt-[12px]"
-             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            <h2 className="[text-shadow:2px_2px_0_#0000000F] w-full max-w-[574px] font-sora font-normal text-[26px]  lg:text-[40px] leading-[120%] tracking-[-0.02em] text-[#000000] sm:mt-[14px] mt-[12px]"
+             
             >
              Consulting Services That Remove Uncertainties
             </h2>
           </div>
 
-          <p className="lg:pt-[80px] w-full max-w-[472px] font-semibold text-sm sm:text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D] opacity-100 lg:mb-[51px]"
-             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+          <p className="[text-shadow:2px_2px_0_#0000000F] lg:pt-[80px] w-full max-w-[472px] font-semibold text-sm sm:text-[16px] leading-[150%] tracking-[-0.02em] align-middle text-[#4D4D4D] opacity-100 lg:mb-[51px]"
           >
             Harness expert support for manufacturing strategy, regulatory navigation and material utilization.
           </p>
@@ -77,8 +76,8 @@ export default function ServicesOverview() {
               {/* Title */}
               <div className="relative z-10 flex h-full items-end p-4">
                 <h3
-                  className="font-semibold w-[181px] h-[50px] sm:w-auto sm:h-auto max-w-[241px] text-[16px] sm:text-[20px] lg:text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
-                  style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+                  className="[text-shadow:2px_2px_0_#0000000F] font-semibold w-[181px] h-[50px] sm:w-auto sm:h-auto max-w-[241px] text-[16px] sm:text-[20px] lg:text-[22px] leading-[140%] tracking-[-0.04em] text-[#FFFFFF]"
+                  
                 >
                   {service.title}
                 </h3>

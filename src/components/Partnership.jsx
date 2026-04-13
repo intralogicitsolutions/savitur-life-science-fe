@@ -85,8 +85,7 @@ export default function Partnership() {
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
             </span>
             <span
-              className="font-normal sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] normal-case"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              className="font-normal sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] normal-case [text-shadow:2px_2px_0_#0000000F]"
             >
               Why Choose Us
             </span>
@@ -94,8 +93,8 @@ export default function Partnership() {
 
           {/* Main heading */}
           <h2
-            className="font-normal text-[26px] sm:text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-full max-w-[330px] sm:max-w-[574px] h-auto text-center mb-[40px] sm:mb-[69px]"
-            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            className=" [text-shadow:2px_2px_0_#0000000F] font-normal text-[26px] sm:text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-full max-w-[330px] sm:max-w-[574px] h-auto text-center mb-[40px] sm:mb-[69px]"
+            
           >
             Precision, Partnership &amp; Predictability
           </h2>
@@ -104,48 +103,48 @@ export default function Partnership() {
           <div className="grid grid-cols-2 gap-x-[22px] gap-y-[28px] max-w-[351px] sm:max-w-none sm:flex sm:w-[1164px] sm:h-[111px] sm:mx-auto sm:items-center sm:justify-between mb-[40px] sm:mb-[84px] w-[354px] h-[218px]">
             
             <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
-              <p className="font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+              
               >
                 {count1}+
               </p>
-              <p className="mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              
               >
                 Trusted Global <span className="sm:hidden"><br /></span> Suppliers
               </p>
             </div>
 
             <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
-            <p className="font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+              
               >
                 {count2}Y+
               </p>
-              <p className="mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              
               >
                 Experience</p>
             </div>
             <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
-            <p className="font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+              
               >
                 {count3}+
               </p>
-              <p className="mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              
               >
                 Quality Products</p>
             </div>
             <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
-            <p className="font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
+              
               >
                 {count4}+
               </p>
-              <p className="mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
-              style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              
               >
                 On-time Delivery</p>
             </div>
@@ -153,8 +152,8 @@ export default function Partnership() {
 
           {/* Bottom text + button */}
           <div className="flex flex-col items-center justify-center gap-[12px] w-full max-w-[252px] h-auto mb-0 sm:mb-[124px]">
-            <p className="font-semibold text-[14px] sm:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] w-full h-auto"
-            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.06)' }}
+            <p className ="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[14px] sm:text-[16px] leading-[150%] tracking-[-0.02em] md:tracking-[-0.02em] w-full h-auto"
+            
             >
               Get best quality pharma materials.
             </p>

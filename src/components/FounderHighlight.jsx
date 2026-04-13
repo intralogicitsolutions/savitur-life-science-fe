@@ -46,7 +46,7 @@ export default function FounderHighlight() {
                   </span>
 
                   <span
-                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] [text-shadow:none] sm:text-[16px] sm:font-sora sm:text-[#111827] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] sm:text-[16px] sm:font-sora sm:text-[#111827] [text-shadow:2px_2px_0_#0000000F]"
                     style={{ fontStyle: 'normal' }}
                   >
                     Founder Highlight
@@ -55,7 +55,7 @@ export default function FounderHighlight() {
 
                 <div>
                   <h2
-                    className="inline-block font-sora font-bold text-[26px] leading-[120%] tracking-[-0.04em] text-[#1A1A1A] w-full h-auto opacity-100 mb-[8px] [text-shadow:none] sm:mb-[8px] sm:font-normal sm:text-[40px] sm:leading-[100%] sm:text-[#000000] sm:w-[456px] sm:h-[50px] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.07)]"
+                    className="inline-block font-sora font-bold text-[26px] leading-[120%] tracking-[-0.04em] text-[#1A1A1A] w-full h-auto opacity-100 mb-[8px] sm:mb-[8px] sm:font-normal sm:text-[40px] sm:leading-[100%] sm:text-[#000000] sm:w-[456px] sm:h-[50px] sm:[text-shadow:2px_2px_0_#0000000F]"
                     style={{
                       fontStyle: 'normal',
                       transform: 'rotate(0deg)',
@@ -65,7 +65,7 @@ export default function FounderHighlight() {
                   </h2>
 
                   <p
-                    className="font-manrope text-[14px] font-normal leading-[150%] tracking-[-0.02em] w-full h-auto text-[#666666] [text-shadow:none] mb-[16px] sm:mb-[32px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[456px] sm:h-[72px] sm:[text-shadow:2px_2px_0_rgba(0,0,0,0.06)]"
+                    className="font-manrope text-[14px] font-normal leading-[150%] tracking-[-0.02em] w-full h-auto text-[#666666]  mb-[16px] sm:mb-[32px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[456px] sm:h-[72px] [text-shadow:2px_2px_0_#0000000F]"
                     style={{
                       fontStyle: 'normal',
                       lineHeightTrim: 'none',
@@ -80,7 +80,7 @@ export default function FounderHighlight() {
                 <hr className="m-0 border-0 border-t border-[#E5E5E5] sm:border-[#E5E7EB]" />
 
                 <p
-                  className="font-manrope text-[14px] font-medium leading-[150%] tracking-[-0.02em] w-full h-auto text-[#1A1A1A] mt-[16px] sm:mt-[32px] sm:font-semibold sm:text-[20px] sm:text-[#000000] sm:w-[456px] sm:h-[150px]"
+                  className="font-manrope text-[14px] font-medium leading-[150%] tracking-[-0.02em] w-full h-auto text-[#1A1A1A] mt-[16px] sm:mt-[32px] sm:font-semibold sm:text-[20px] sm:text-[#000000] sm:w-[456px] sm:h-[150px] [text-shadow:2px_2px_0_#0000000F]"
                   style={{
                     fontStyle: 'normal',
                     lineHeightTrim: 'none',
@@ -91,7 +91,7 @@ export default function FounderHighlight() {
                 </p>
 
                 <p
-                  className="font-manrope w-full h-auto text-[12px] font-normal leading-[150%] tracking-[-0.02em] text-[#757575] mt-[24px] mb-0 sm:mb-[12px] sm:mt-[24px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[361px] sm:h-[24px]"
+                  className="font-manrope w-full h-auto text-[12px] font-normal leading-[150%] tracking-[-0.02em] text-[#757575] mt-[24px] mb-0 sm:mb-[12px] sm:mt-[24px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[361px] sm:h-[24px] [text-shadow:2px_2px_0_#0000000F]"
                   style={{
                     fontStyle: 'normal',
                     lineHeightTrim: 'none',
