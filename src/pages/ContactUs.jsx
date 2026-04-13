@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import HeroImg from '../assets/images/Hero_img.svg'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -9,12 +9,98 @@ import MailIcon from '../assets/images/mail.svg'
 import PhoneIcon from '../assets/images/phone_contact.svg'
 import AddressIcon from '../assets/images/Address.png'
 import Line1 from '../assets/images/Line1.svg'
+import CaretDownMd from '../assets/images/Caret_Down_MD.svg'
 import SubmitBtn from '../assets/images/submit_btn.svg'
 import TickCircle from '../assets/images/tick-circle.svg'
 import SubmitAnotherBtn from '../assets/images/Submitanother.svg'
 
+const FALLBACK_DIAL_CODES = [
+  { code: 'IN', name: 'India', dial: '+91' },
+  { code: 'US', name: 'United States', dial: '+1' },
+  { code: 'GB', name: 'United Kingdom', dial: '+44' },
+]
+
 export default function ContactUs() {
   const [successOpen, setSuccessOpen] = useState(false)
+  const [dialOpen, setDialOpen] = useState(false)
+  const [dialSearch, setDialSearch] = useState('')
+  const [dialCodes, setDialCodes] = useState(FALLBACK_DIAL_CODES)
+  const [selectedDial, setSelectedDial] = useState(FALLBACK_DIAL_CODES[0])
+  const dialWrapRef = useRef(null)
+
+  const filteredDialCodes = useMemo(() => {
+    const q = dialSearch.trim().toLowerCase()
+    if (!q) return dialCodes
+    return dialCodes.filter(
+      (c) => c.name.toLowerCase().includes(q) || c.dial.toLowerCase().includes(q),
+    )
+  }, [dialCodes, dialSearch])
+
+  useEffect(() => {
+    if (!dialOpen) return
+    const onPointerDown = (e) => {
+      if (!dialWrapRef.current) return
+      if (!dialWrapRef.current.contains(e.target)) setDialOpen(false)
+    }
+    document.addEventListener('mousedown', onPointerDown)
+    document.addEventListener('touchstart', onPointerDown, { passive: true })
+    return () => {
+      document.removeEventListener('mousedown', onPointerDown)
+      document.removeEventListener('touchstart', onPointerDown)
+    }
+  }, [dialOpen])
+
+  useEffect(() => {
+    const controller = new AbortController()
+
+    async function loadCountries() {
+      try {
+        const res = await fetch('https://restcountries.com/v3.1/all?fields=name,idd,cca2', {
+          signal: controller.signal,
+        })
+        if (!res.ok) throw new Error(`Failed to load countries: ${res.status}`)
+        const data = await res.json()
+
+        const rows = (Array.isArray(data) ? data : [])
+          .map((c) => {
+            const name = c?.name?.common
+            const code = c?.cca2
+            const root = c?.idd?.root
+            const suffixes = Array.isArray(c?.idd?.suffixes) ? c.idd.suffixes : []
+            if (!name || !code || !root || suffixes.length === 0) return null
+            return { code, name, dial: `${root}${suffixes[0]}` }
+          })
+          .filter(Boolean)
+
+        // de-dupe by code+dial (some countries have multiple)
+        const seen = new Set()
+        const unique = []
+        for (const r of rows) {
+          const k = `${r.code}|${r.dial}`
+          if (seen.has(k)) continue
+          seen.add(k)
+          unique.push(r)
+        }
+
+        unique.sort((a, b) => a.name.localeCompare(b.name))
+        if (unique.length > 0) setDialCodes(unique)
+
+        // Keep selection stable; prefer India if present
+        const preferred =
+          unique.find((x) => x.code === selectedDial.code && x.dial === selectedDial.dial) ||
+          unique.find((x) => x.code === 'IN' && x.dial === '+91') ||
+          unique[0]
+        if (preferred) setSelectedDial(preferred)
+      } catch (e) {
+        if (e?.name === 'AbortError') return
+        // keep fallback list on error
+      }
+    }
+
+    loadCountries()
+    return () => controller.abort()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
@@ -349,16 +435,68 @@ export default function ContactUs() {
                     Phone/Contact Number <span className="text-red-500">*</span>
                   </label>
                   <div
-                    className="box-border flex h-[50px] w-full max-w-full min-w-0 items-center gap-[8px] overflow-hidden rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] py-[10px] pl-4 pr-4 transition-all sm:max-w-[248px]"
+                    className="relative box-border flex h-[50px] w-full max-w-full min-w-0 items-center gap-[8px] overflow-visible rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] py-[10px] pl-4 pr-4 transition-all sm:max-w-[248px]"
                   >
-                    <select
-                      className="bg-transparent border-0 font-manrope text-[14px] text-[#111827] cursor-pointer shrink-0"
-                      style={{ height: '100%', padding: 0, border: 'none' }}
-                    >
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                    </select>
+                    <div ref={dialWrapRef} className="relative shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => setDialOpen((v) => !v)}
+                        className="inline-flex items-center gap-2 bg-transparent border-0 p-0 font-manrope text-[14px] text-[#111827] cursor-pointer"
+                        style={{ height: '100%' }}
+                        aria-haspopup="listbox"
+                        aria-expanded={dialOpen}
+                      >
+                        <span>{selectedDial.dial}</span>
+                        <img
+                          src={CaretDownMd}
+                          alt=""
+                          className="w-[18px] h-[18px] opacity-70"
+                          style={{ filter: 'brightness(0)' }}
+                          aria-hidden
+                        />
+                      </button>
+
+                      {dialOpen && (
+                        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-[240px] rounded-[10px] border border-[#E5E7EB] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
+                          <div className="p-2">
+                            <input
+                              value={dialSearch}
+                              onChange={(e) => setDialSearch(e.target.value)}
+                              placeholder="Search country..."
+                              className="w-full rounded-[8px] border border-[#E5E7EB] px-3 py-2 font-manrope text-[14px] text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#1F2A44]/20"
+                              autoFocus
+                            />
+                          </div>
+                          <div className="max-h-[220px] overflow-auto pb-2" role="listbox">
+                            {filteredDialCodes.map((c) => {
+                              const isActive = c.code === selectedDial.code && c.dial === selectedDial.dial
+                              return (
+                                <button
+                                  key={`${c.code}-${c.dial}`}
+                                  type="button"
+                                  role="option"
+                                  aria-selected={isActive}
+                                  onClick={() => {
+                                    setSelectedDial(c)
+                                    setDialOpen(false)
+                                    setDialSearch('')
+                                  }}
+                                  className={`w-full px-3 py-2 text-left font-manrope text-[14px] ${
+                                    isActive ? 'bg-[#F4F6F9] text-[#111827]' : 'bg-white text-[#111827] hover:bg-[#F4F6F9]'
+                                  }`}
+                                >
+                                  {c.name} ({c.dial})
+                                </button>
+                              )
+                            })}
+                            {filteredDialCodes.length === 0 && (
+                              <div className="px-3 py-2 font-manrope text-[14px] text-[#6B7280]">No results</div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    
                     <img
                       src={Line1}
                       alt=""

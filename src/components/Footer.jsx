@@ -23,7 +23,7 @@ const productTypes = [
 
 export default function Footer() {
   return (
-    <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8">
+    <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8 mb-[40px] max-[393px]:mb-0">
       <footer className="relative w-full max-w-full min-h-0 overflow-hidden rounded-none border border-white/10 bg-[#1F2A44] pb-28 opacity-100 lg:max-w-[1520px] lg:rounded-2xl lg:min-h-[626px] lg:pb-0">
         <div className="relative z-10 pt-[60px] pl-[20px] pr-[20px] pb-[34px] w-full max-w-[353px] min-h-[719px] text-left lg:mx-0 lg:mt-[124px] lg:ml-[80px] lg:mr-[78px] lg:min-h-0 lg:max-w-none lg:w-[1362px] lg:px-0 lg:pt-0 lg:pb-0">
           {/* Main: mobile = brand, 2-col links, address, contact | lg = 5 columns */}

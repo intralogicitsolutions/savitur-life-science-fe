@@ -25,7 +25,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="w-full max-w-[353px] mx-[20px] px-0 mt-[20px] mb-[20px] md:mx-auto md:mt-0 md:mb-0 md:max-w-[1360px]">
         <div className="flex items-center justify-between h-[46px] mt-0 mb-0 md:mt-[24px] md:mb-[24px]">
           {/* Logo */}

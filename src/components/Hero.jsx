@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="absolute inset-0 hidden sm:block">
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat"
-          style={{ backgroundImage: `url(${HeroImg})` }}
+          style={{ backgroundImage: `url(${HeroImg})`, backgroundPosition: 'top' }}
         />
 
         <div

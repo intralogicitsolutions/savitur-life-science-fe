@@ -93,7 +93,7 @@ export default function Partnership() {
 
           {/* Main heading */}
           <h2
-            className=" [text-shadow:2px_2px_0_#0000000F] font-normal text-[26px] sm:text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-full max-w-[330px] sm:max-w-[574px] h-auto text-center mb-[40px] sm:mb-[69px]"
+            className="[text-shadow:2px_2px_0_#0000000F] font-sora text-[26px] sm:text-[32px] md:text-[40px] leading-[110%] tracking-[-0.05em] w-full max-w-[330px] sm:max-w-[574px] h-auto text-center mb-[40px] sm:mb-[69px]"
             
           >
             Precision, Partnership &amp; Predictability

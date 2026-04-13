@@ -11,6 +11,15 @@ import CheckAll from '../assets/images/Check_All.svg'
 import ChevronRightMD from '../assets/images/Chevron_Right_MD.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import { useEffect, useState } from 'react'
+import FounderImg from '../assets/images/Founder_img.svg'
+import FrameImg from '../assets/images/Frame.svg'
+import MailIcon from '../assets/images/mail.svg'
+import CallIcon from '../assets/images/call.svg'
+import LinkedinIcon from '../assets/images/linkedin.svg'
+import ProcessImg from '../assets/images/Process_img.svg'
+import OptimizationImg from '../assets/images/Optimization_img.svg'
+import RegulatoryImg from '../assets/images/Regulatory_img.svg'
+import ProcessOptimizationImg from '../assets/images/Process Optimization_img.svg'
 
 const whatSetsUsApartCards = [
   {
@@ -19,8 +28,7 @@ const whatSetsUsApartCards = [
         Scientifically <br /> Guided Sourcing
       </>
     ),
-    imageUrl:
-      'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=800',
+    imageUrl: ProcessImg,
     titleWidth: 177,
     titleHeight: 66,
     titleWidthMobile: 133,
@@ -44,8 +52,7 @@ const whatSetsUsApartCards = [
       </>
     ),
     
-    imageUrl:
-      'https://images.pexels.com/photos/3912479/pexels-photo-3912479.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageUrl:OptimizationImg,
       titleWidth: 158,
       titleHeight: 66,
       titleWidthMobile: 119,
@@ -69,8 +76,7 @@ const whatSetsUsApartCards = [
       </>
     ),
   
-    imageUrl:
-      'https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageUrl: RegulatoryImg,
       titleWidth: 221,
       titleHeight: 66,
       titleWidthMobile: 166,
@@ -95,8 +101,7 @@ const whatSetsUsApartCards = [
       </>
     ),
     
-    imageUrl:
-      'https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageUrl: ProcessOptimizationImg,
       titleWidth: 163,
       titleHeight: 66,
       titleWidthMobile: 123,
@@ -420,8 +425,136 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <FounderHighlight />
+      {/* Founder Highlight */}
+      
+      <section className="w-full flex justify-center pt-0 sm:pt-[60px]">
+      <div className="mx-auto w-[393px] h-[778px] sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px]">
+        <div className="relative flex w-full items-center justify-center rounded-[15px] bg-[#F9F9F9] overflow-hidden sm:bg-[#F4F6F9]">
+          {/* Decorative frame image on the left */}
+          <div className="hidden lg:block absolute w-[72px] h-[776px] top-[-17px] left-[98px] opacity-40 pointer-events-none">
+            <img
+              src={FrameImg}
+              alt=""
+              className="w-full h-full object-contain"
+            />
+          </div>
 
+          {/* Combined image + content frame */}
+          <div className="mx-auto flex h-[778px] w-full max-w-[393px] flex-col items-stretch justify-center gap-3 ml-[20px] mr-[20px] mt-[60px] mb-[60px] sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
+            {/* Left image — 353×353 on 393px-wide layout; desktop unchanged */}
+            <div className="flex w-full shrink-0 justify-center sm:block sm:w-[456px] sm:h-[522px] sm:justify-start">
+              <div className="relative aspect-square w-full max-w-[353px] overflow-hidden rounded-[20px] bg-[#E5E7EB] sm:aspect-auto sm:h-full sm:max-w-none sm:w-full sm:rounded-[16px]">
+                <img
+                  src={FounderImg}
+                  alt="Founder"
+                  className="h-full w-full object-cover rounded-[20px] sm:rounded-[16px]"
+                />
+              </div>
+            </div>
+
+            {/* Right content */}
+            <div className="w-full min-w-0 max-w-full flex flex-col justify-between gap-4 ml-0 flex-shrink-0 sm:gap-0 sm:overflow-hidden sm:relative sm:top-[6px] sm:w-[456px] sm:min-w-[456px] sm:max-w-[456px] sm:h-[440px] sm:min-h-[440px] sm:max-h-[440px] sm:ml-[64px] mt-[20px]">
+              {/* Badge + texts */}
+              <div>
+                <div
+                  className="inline-flex w-[168px] h-[32px] items-center rounded-[60px] border border-[#E0E0E0] bg-white px-[12px] py-[6px] opacity-100 mb-[12px] shadow-none sm:mb-[14px] sm:w-[189px] sm:h-[36px] sm:gap-0 sm:border-[#E5E7EB] sm:shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  style={{ transform: 'rotate(0deg)' }}
+                >
+                  <span className="inline-flex items-center justify-center w-[24px] h-[24px]">
+                  <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
+                  </span>
+
+                  <span
+                    className="whitespace-nowrap font-sora text-[14px] font-medium leading-[100%] tracking-[-0.04em] text-[#1A1A1A] sm:text-[16px] sm:font-sora sm:text-[#111827] [text-shadow:2px_2px_0_#0000000F]"
+                    style={{ fontStyle: 'normal' }}
+                  >
+                    Founder Highlight
+                  </span>
+                </div>
+
+                <div>
+                  <h2
+                    className="inline-block font-sora font-normal text-[26px] leading-[120%] tracking-[-0.04em] text-[#1A1A1A] w-full h-auto opacity-100 mb-[12px] sm:mb-[8px] sm:text-[40px] sm:leading-[120%] sm:tracking-[-0.04em] sm:text-[#000000] sm:w-[456px] sm:h-[150px] sm:[text-shadow:2px_2px_0_#0000000F]"
+                    style={{
+                      fontStyle: 'normal',
+                      transform: 'rotate(0deg)',
+                    }}
+                  >
+                    Leadership Backed by Deep Pharmaceutical Expertise of 25+ Years
+                  </h2>
+
+                  <p
+                    className="font-manrope text-[14px] font-semibold leading-[150%] tracking-[-0.02em]  text-[#666666] opacity-100 mb-[8px] sm:mb-[12px] sm:font-semibold sm:text-[16px] sm:leading-[150%] sm:tracking-[-0.02em] sm:text-[#4D4D4D] sm:w-[436px] sm:h-[120px] w-[353px] h-[105px] [text-shadow:2px_2px_0_#0000000F]"
+                    style={{
+                      fontStyle: 'normal',
+                      lineHeightTrim: 'none',
+                      transform: 'rotate(0deg)',
+                    }}
+                  >
+                    Led by Dr. Rajendra Chavda, a seasoned pharmaceutical research professional with extensive experience in API development, synthetic chemistry, and process optimization, our company is built on a strong scientific foundation.
+                  </p>
+                </div>
+
+                
+
+               
+
+                <p
+                  className="font-manrope w-full h-auto text-[12px] font-normal leading-[150%] tracking-[-0.02em] text-[#757575] mt-[24px] mb-0 sm:mb-[12px] sm:mt-[24px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[361px] sm:h-[24px] [text-shadow:2px_2px_0_#0000000F]"
+                  style={{
+                    fontStyle: 'normal',
+                    lineHeightTrim: 'none',
+                  }}
+                >
+                  For any query &amp; guidance related to this business.
+                </p>
+               
+              </div>
+              
+             
+
+              {/* Contact actions */}
+              <div className="flex flex-wrap items-center gap-2 w-full h-auto sm:gap-2">
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
+                    aria-label="Email"
+                  >
+                    <img src={MailIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
+                    aria-label="Call"
+                  >
+                    <img src={CallIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
+                    aria-label="LinkedIn"
+                  >
+                    <img src={LinkedinIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
+                  aria-label="Contact Us"
+                >
+                  <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
       {/* What Sets Us Apart — We focus on long-term */}
       <section className="w-full flex justify-center bg-white sm:mt-[124px] sm:mb-[124px] max-[393px]:mt-[60px] ">
         <div className="w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px] max-[393px]:w-[354px] max-[393px]:h-auto max-[393px]:overflow-visible">
@@ -484,10 +617,7 @@ export default function AboutUs() {
                   style={{ backgroundImage: `url(${card.imageUrl})` }}
                   aria-hidden
                 />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: 'rgba(20, 30, 48, 0.58)' }}
-                />
+                <div />
                 <div
                   className="relative z-10 flex h-full items-end w-full"
                   style={{ padding: 'clamp(12px, 3.5vw, 20px)' }}

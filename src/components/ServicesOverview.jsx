@@ -1,27 +1,29 @@
 import CheckAll from '../assets/images/Check_All.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import ArrowUp from '../assets/images/Arrow_Up.svg'
+import ProcessImg from '../assets/images/Process_img.svg'
+import OptimizationImg from '../assets/images/Optimization_img.svg'
+import RegulatoryImg from '../assets/images/Regulatory_img.svg'
+import ProcessOptimizationImg from '../assets/images/Process Optimization_img.svg'
 
 const services = [
   {
     title: 'Process Feasibility Reviews',
-    imageUrl:
-      'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageUrl: ProcessImg,
   },
   {
     title: 'Optimization & Scale-up Guidance',
-    imageUrl:
-      'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageUrl:OptimizationImg,
   },
   {
     title: 'Regulatory & Compliance Alignment',
-    imageUrl:
-      'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageUrl: RegulatoryImg,
+      
   },
   {
     title: 'Process Optimization Consultancy',
-    imageUrl:
-      'https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    imageUrl: ProcessOptimizationImg,
+      
   },
 ]
 
@@ -70,8 +72,7 @@ export default function ServicesOverview() {
                 aria-hidden
               />
 
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.55)] to-[rgba(0,0,0,0.15)]" />
+             
 
               {/* Title */}
               <div className="relative z-10 flex h-full items-end p-4">
