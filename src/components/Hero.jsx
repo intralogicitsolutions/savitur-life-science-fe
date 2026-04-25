@@ -2,6 +2,7 @@ import HeroImg from '../assets/images/Hero_img.svg'
 import CheckAll from '../assets/images/Check_All.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import ArrowUpRightMD from '../assets/images/Arrow_Up_Right_MD.svg'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -89,13 +90,13 @@ export default function Hero() {
               />
             </a>
 
-            <a
-              href="#"
+            <Link
+              to="/products/api"
               className="inline-flex h-[24px] w-[177px] flex-nowrap items-center justify-center text-white font-sora font-semibold text-[14px] sm:h-[40px] sm:w-[132px] sm:text-[16px] min-[1600px]:text-[16px] leading-[100%] tracking-[-0.02em] min-h-[24px] whitespace-nowrap rounded-lg underline [text-decoration-skip-ink:auto] transition-colors shrink-0 [text-shadow:2px_2px_0px_#0000000F] min-[1600px]:h-[24px] min-[1600px]:w-[199px] min-[1600px]:[text-decoration-style:solid] min-[1600px]:[text-decoration-offset:0%] min-[1600px]:[text-decoration-thickness:0%]"
             >
               View Product Catalogue
               <img src={ArrowUpRightMD} alt="" className="inline-block h-[24px] w-[24px] flex-shrink-0 text-[#FFFFFF]" aria-hidden />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

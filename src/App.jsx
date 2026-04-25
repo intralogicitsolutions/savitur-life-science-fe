@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Navigate, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import HeroStrip from './components/HeroStrip'
@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import Services from './pages/Services'
+import Product from './pages/Product'
 
 function App() {
   return (
@@ -56,7 +57,20 @@ function App() {
           </div>
         }
       />
+      <Route path="/products" element={<Navigate to="/products/api" replace />} />
+      <Route path="/product" element={<Navigate to="/products/api" replace />} />
+      <Route
+        path="/products/:productType"
+        element={
+          <div>
+            <Product />
+          </div>
+        }
+      />
     </Routes>
+    
+
+    
   )
 }
 

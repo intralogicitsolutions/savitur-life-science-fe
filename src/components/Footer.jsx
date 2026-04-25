@@ -5,20 +5,21 @@ import Flinkedin from '../assets/images/Flinkedin.svg'
 import Ffacebook from '../assets/images/Ffacebook.svg'
 import Finstagram from '../assets/images/Finstagram.svg'
 import FSaviturLogo from '../assets/images/FSavitur_Logo.svg'
+import { Link } from 'react-router-dom'
 
 const quickLinks = [
-  { label: 'Home', href: '#', active: true },
-  { label: 'About Us', href: '#' },
-  { label: 'Service', href: '#' },
-  { label: 'Contact Us', href: '#' },
+  { label: 'Home', to: '/', active: true },
+  { label: 'About Us', to: '/about-us' },
+  { label: 'Services', to: '/services' },
+  { label: 'Contact Us', to: '/contact-us' },
 ]
 
 const productTypes = [
-  'Intermediate',
-  'API',
-  'Lab Chemicals & Reagents',
-  'Excipients',
-  'Finished Formulation',
+  { label: 'Intermediate', to: '/products/intermediate' },
+  { label: 'API', to: '/products/api' },
+  { label: 'Lab Chemicals & Reagents', to: '/products/lab-chemicals-reagents' },
+  { label: 'Excipients', to: '/products/excipients' },
+  { label: 'Finished Formulation', to: '/products/finished-formulation' },
 ]
 
 export default function Footer() {
@@ -30,9 +31,9 @@ export default function Footer() {
           <div className="grid w-full grid-cols-1 lg:grid-cols-5 lg:gap-6">
             {/* Company Branding */}
             <div className="Sm:w-[202px] sm:h-[118px] w-[177px] h-[104px] lg:col-span-1 lg:h-auto mb-[36px]">
-              <a href="#" className="sm:mb-[24px] mb-[16px] inline-block">
+              <Link to="/" className="sm:mb-[24px] mb-[16px] inline-block">
                 <img src={HeaderLogo} alt="Savitur Life Science" className="sm:h-[46px] sm:w-[154px] h-[46px] w-[154px]" />
-              </a>
+              </Link>
               <p className="h-auto w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90 [text-shadow:2px_2px_0_#0000000F]">
                 Powering Progress in Pharmaceutical Excellence
               </p>
@@ -47,12 +48,12 @@ export default function Footer() {
                 <ul className="[text-shadow:2px_2px_0_#0000000F] list-inside list-disc space-y-2 text-white">
                   {quickLinks.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
+                      <Link
+                        to={link.to}
                         className={`sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -64,13 +65,13 @@ export default function Footer() {
                 </h3>
                 <ul className="[text-shadow:2px_2px_0_#0000000F] list-outside list-disc space-y-2 pl-5 text-white marker:text-white">
                   {productTypes.map((type) => (
-                    <li key={type} className="pl-1 leading-[140%]">
-                      <a
-                        href="#"
+                    <li key={type.label} className="pl-1 leading-[140%]">
+                      <Link
+                        to={type.to}
                         className="font-medium text-[14px] leading-[140%] tracking-[-0.04em] text-white transition-colors hover:underline sm:text-[16px] sm:leading-[100%]"
                       >
-                        {type}
-                      </a>
+                        {type.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

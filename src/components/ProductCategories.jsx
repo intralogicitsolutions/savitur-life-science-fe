@@ -6,32 +6,38 @@ import ApiIcon from '../assets/images/api.svg'
 import LabIcon from '../assets/images/Lab.svg'
 import ExcipientsIcon from '../assets/images/exciplents.svg'
 import FinishedIcon from '../assets/images/finished.svg'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
     title: 'Intermediate',
     cta: 'View Products ↗',
     icon: IntermediateIcon,
+    to: '/products/intermediate',
   },
   {
     title: 'API',
     cta: 'View Products ↗',
     icon: ApiIcon,
+    to: '/products/api',
   },
   {
     title: 'Lab Chemicals & Reagents',
     cta: 'View Products ↗',
     icon: LabIcon,
+    to: '/products/lab-chemicals-reagents',
   },
   {
     title: 'Excipients',
     cta: 'View Products ↗',
     icon: ExcipientsIcon,
+    to: '/products/excipients',
   },
   {
     title: 'Finished Formulation',
     cta: 'View Products ↗',
     icon: FinishedIcon,
+    to: '/products/finished-formulation',
   },
 ]
 
@@ -69,8 +75,9 @@ export default function ProductCategories() {
         {/* Category cards */}
         <div className="mt-[28px] mb-[39px] grid w-full grid-cols-2 gap-3 opacity-100 sm:mt-[56px] sm:mb-[56px] sm:gap-[16px] lg:grid-cols-5">
           {categories.map((item) => (
-            <article
+            <Link
               key={item.title}
+              to={item.to}
               className="flex h-[170px] min-w-0 w-[169px] flex-col justify-between overflow-hidden rounded-[16px] border border-[#EEF0F4] bg-[#F4F6F9] px-[12px] py-[12px] sm:rounded-[24px] sm:px-[16px] sm:py-5 lg:h-[252px] lg:w-[220px] lg:px-7 lg:py-7"
             >
               <div className="flex flex-col">
@@ -85,13 +92,10 @@ export default function ProductCategories() {
                 </h3>
               </div>
 
-              <button
-                type="button"
-                className="inline-flex h-[20px] sm:h-[24px] w-full max-w-[138px] items-center justify-start"
-              >
+              <div className="inline-flex h-[20px] sm:h-[24px] w-full max-w-[138px] items-center justify-start">
                 <img src={ViewProductImg} alt="View Products" className="h-[24px] w-full max-w-[138px] object-contain object-left" />
-              </button>
-            </article>
+              </div>
+            </Link>
           ))}
         </div>
 

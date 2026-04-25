@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import HeaderLogo from '../assets/images/Header_Logo.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
@@ -11,18 +11,52 @@ import CallIcon from '../assets/images/call.svg'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about-us' },
-  { label: 'Products', to: '#', showArrow: true },
-  { label: 'Service', to: '/services' },
+  {
+    label: 'Products',
+    to: '#',
+    showArrow: true,
+    dropdown: [
+      { label: 'API', to: '/products/api' },
+      { label: 'Intermediate', to: '/products/intermediate' },
+      { label: 'Finished Formulation', to: '/products/finished-formulation' },
+      { label: 'Lab Chemicals & Reagents', to: '/products/lab-chemicals-reagents' },
+      { label: 'Excipients', to: '/products/excipients' },
+    ],
+  },
+  { label: 'Services', to: '/services' },
 ]
 
 export default function Header() {
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
+  const [desktopProductsOpen, setDesktopProductsOpen] = useState(false)
+  const desktopProductsRef = useRef(null)
 
   const isLinkActive = (to) => {
     if (to === '/') return location.pathname === '/'
     return location.pathname === to
   }
+
+  useEffect(() => {
+    if (!desktopProductsOpen) return
+
+    const onPointerDown = (e) => {
+      if (!desktopProductsRef.current) return
+      if (!desktopProductsRef.current.contains(e.target)) setDesktopProductsOpen(false)
+    }
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setDesktopProductsOpen(false)
+    }
+
+    document.addEventListener('pointerdown', onPointerDown)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [desktopProductsOpen])
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -41,7 +75,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center justify-between w-[402px] h-[24px]">
             {navLinks.map((link) => {
               const active = link.to.startsWith('/') && isLinkActive(link.to)
-              const className = `flex items-center text-white hover:text-white transition-colors font-normal ${
+              const className = `flex items-center gap-0.5 text-white hover:text-white transition-colors font-normal ${
                 active ? 'underline hover:font-semibold' : 'hover:font-semibold hover:underline'
               }`
 
@@ -55,6 +89,70 @@ export default function Header() {
                   )}
                 </>
               )
+
+              if (link.dropdown) {
+                const productsInner = (
+                  <>
+                    <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#FFFFFF]">
+                      {link.label}
+                    </span>
+                    {link.showArrow && (
+                      <img
+                        src={CaretDownMd}
+                        alt=""
+                        className={`w-[24px] h-[24px] brightness-0 invert transition-transform ${
+                          desktopProductsOpen ? 'rotate-180' : ''
+                        }`}
+                        aria-hidden
+                      />
+                    )}
+                  </>
+                )
+
+                return (
+                  <div
+                    key={link.label}
+                    ref={desktopProductsRef}
+                    className="relative"
+                    onMouseEnter={() => setDesktopProductsOpen(true)}
+                    onMouseLeave={() => setDesktopProductsOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      className={`${className} cursor-pointer bg-transparent border-0 p-0`}
+                      aria-haspopup="true"
+                      aria-expanded={desktopProductsOpen}
+                      onClick={() => setDesktopProductsOpen((v) => !v)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Escape') setDesktopProductsOpen(false)
+                      }}
+                    >
+                      {productsInner}
+                    </button>
+                    <div
+                      className={`absolute left-0 top-full z-[70] w-[225px] pt-2 transition-[opacity,visibility] duration-150 ${
+                        desktopProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                      }`}
+                      role="menu"
+                    >
+                      <ul className="rounded-[12px] bg-white py-2 shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+                        {link.dropdown.map((item) => (
+                          <li key={item.label} role="none">
+                            <Link
+                              role="menuitem"
+                              to={item.to}
+                              className="block px-4 py-2.5 font-sora text-[15px] leading-[120%] tracking-[-0.02em] text-[#1F2A44] transition-colors hover:bg-[#F4F6F9] hover:font-medium"
+                              onClick={() => setDesktopProductsOpen(false)}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )
+              }
 
               if (link.to.startsWith('/')) {
                 return (
@@ -93,7 +191,12 @@ export default function Header() {
               type="button"
               aria-label="Menu"
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((v) => !v)}
+              onClick={() => {
+                setMenuOpen((v) => {
+                  if (v) setMobileProductsOpen(false)
+                  return !v
+                })
+              }}
             >
               <img src={HeaderBar} alt="" className="w-[40px] h-[40px]" aria-hidden />
             </button>
@@ -117,6 +220,49 @@ export default function Header() {
               <nav className="flex flex-col gap-[14px]">
                 {navLinks.map((link) => {
                   const className = `flex items-center text-[#1F2A44] transition-colors font-normal`
+
+                  if (link.dropdown) {
+                    return (
+                      <div key={link.label} className="flex flex-col gap-[10px]">
+                        <button
+                          type="button"
+                          className={`${className} w-full justify-between text-left cursor-pointer bg-transparent border-0 p-0`}
+                          onClick={() => setMobileProductsOpen((v) => !v)}
+                          aria-expanded={mobileProductsOpen}
+                        >
+                          <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#1F2A44]">
+                            {link.label}
+                          </span>
+                          {link.showArrow && (
+                            <img
+                              src={CaretDownMd}
+                              alt=""
+                              className={`w-[20px] h-[20px] transition-transform ${mobileProductsOpen ? 'rotate-180' : ''}`}
+                              aria-hidden
+                            />
+                          )}
+                        </button>
+                        {mobileProductsOpen && (
+                          <ul className="ml-2 flex flex-col gap-[10px] border-l-2 border-[#EEF0F4] pl-3">
+                            {link.dropdown.map((item) => (
+                              <li key={item.label}>
+                                <Link
+                                  to={item.to}
+                                  className="block font-sora text-[15px] leading-[130%] tracking-[-0.02em] text-[#4D4D4D] hover:text-[#1F2A44]"
+                                  onClick={() => {
+                                    setMenuOpen(false)
+                                    setMobileProductsOpen(false)
+                                  }}
+                                >
+                                  {item.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    )
+                  }
 
                   if (link.to.startsWith('/')) {
                     return (
