@@ -84,8 +84,8 @@ export default function Footer() {
                 Office Address
               </h3>
               <address className="[text-shadow:2px_2px_0_#0000000F] not-italic font-medium text-[12px] leading-[150%] sm:text-[16px] sm:leading-[150%] text-white/90">
-                Sr. No. 117, Plot No. 1, Taluka: behind Balaji Multiflex Pvt. Ltd, Village:, Amreli,
-                Paddhari, Gujarat, India - 360110.
+              B/103 Siddhi Haritage, Jivraj park main road, Ambika township, Rajkot, Gujarat, India.
+                - 360 005
               </address>
             </div>
 
@@ -100,14 +100,30 @@ export default function Footer() {
                   className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
-                  info@saviturlifescience.com
+                  dr.rajendra@saviturlifescience.com
                 </a>
                 <a
                   href="tel:+917043112818"
                   className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
-                  +91 70431 12818
+                  +91 96648 94484
+                </a>
+
+                <a
+                  href="mailto:info@saviturlifescience.com"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                >
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  karan@saviturlifescience.com
+                </a>
+
+                <a
+                  href="tel:+917043112818"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                >
+                  <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  +91 92270 32237
                 </a>
               </div>
             </div>
@@ -119,7 +135,8 @@ export default function Footer() {
           {/* Copyright & Social — design: left text, right icons on mobile */}
           <div className="[text-shadow:2px_2px_0_#0000000F] flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
             <p className="sm:w-[240px] w-[186px] h-[42px] font-medium text-[14px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] sm:max-w-none sm:text-[16px] lg:w-auto">
-              Copyrights © 2023 all rights reserved by SaviturLifeScience
+            Copyrights © 2023 all rights
+            reserved by SaviturLifeScience
             </p>
             <div className="flex h-[24px] w-[96px] flex-shrink-0 items-center justify-between">
               <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="LinkedIn">
