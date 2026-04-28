@@ -23,6 +23,10 @@ const productTypes = [
 ]
 
 export default function Footer() {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }
+
   return (
     <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8 mb-[40px] max-[393px]:mb-0">
       <footer className="relative w-full max-w-full min-h-0 overflow-hidden rounded-none border border-white/10 bg-[#1F2A44] pb-28 opacity-100 lg:max-w-[1520px] lg:rounded-2xl lg:min-h-[626px] lg:pb-0">
@@ -31,7 +35,7 @@ export default function Footer() {
           <div className="grid w-full grid-cols-1 lg:grid-cols-5 lg:gap-6">
             {/* Company Branding */}
             <div className="Sm:w-[202px] sm:h-[118px] w-[177px] h-[104px] lg:col-span-1 lg:h-auto mb-[36px]">
-              <Link to="/" className="sm:mb-[24px] mb-[16px] inline-block">
+              <Link to="/" onClick={scrollTop} className="sm:mb-[24px] mb-[16px] inline-block">
                 <img src={HeaderLogo} alt="Savitur Life Science" className="sm:h-[46px] sm:w-[154px] h-[46px] w-[154px]" />
               </Link>
               <p className="h-auto w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90 [text-shadow:2px_2px_0_#0000000F]">
@@ -50,6 +54,7 @@ export default function Footer() {
                     <li key={link.label}>
                       <Link
                         to={link.to}
+                        onClick={scrollTop}
                         className={`sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
                       >
                         {link.label}
@@ -68,6 +73,7 @@ export default function Footer() {
                     <li key={type.label} className="pl-1 leading-[140%]">
                       <Link
                         to={type.to}
+                        onClick={scrollTop}
                         className="font-medium text-[14px] leading-[140%] tracking-[-0.04em] text-white transition-colors hover:underline sm:text-[16px] sm:leading-[100%]"
                       >
                         {type.label}
@@ -103,7 +109,7 @@ export default function Footer() {
                   dr.rajendra@saviturlifescience.com
                 </a>
                 <a
-                  href="tel:+917043112818"
+                  href="tel:+919664894484"
                   className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
@@ -130,7 +136,7 @@ export default function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="mb-6 mt-8 h-0 max-w-[1361px] border-t border-white/20 w-[393px]:mt-[32px] w-[353px] max-[393px]:mb-[24px] lg:mb-[24px]" />
+          <div className="mt-8 mb-6 h-0 w-full border-t border-white/20 max-[393px]:mt-[32px] max-[393px]:mb-[24px] lg:mb-[24px]" />
 
           {/* Copyright & Social — design: left text, right icons on mobile */}
           <div className="[text-shadow:2px_2px_0_#0000000F] flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
@@ -139,7 +145,13 @@ export default function Footer() {
             reserved by SaviturLifeScience
             </p>
             <div className="flex h-[24px] w-[96px] flex-shrink-0 items-center justify-between">
-              <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/dr-rajendra-chavda-7b8072b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white transition-opacity hover:opacity-80"
+                aria-label="LinkedIn"
+              >
                 <img src={Flinkedin} alt="" className="h-[24px] w-[24px]" />
               </a>
               <a href="#" className="text-white transition-opacity hover:opacity-80" aria-label="Instagram">

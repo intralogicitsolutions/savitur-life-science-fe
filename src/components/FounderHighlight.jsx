@@ -5,6 +5,7 @@ import MailIcon from '../assets/images/mail.svg'
 import CallIcon from '../assets/images/call.svg'
 import LinkedinIcon from '../assets/images/linkedin.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
+import { Link } from 'react-router-dom'
 
 export default function FounderHighlight() {
   return (
@@ -123,22 +124,24 @@ export default function FounderHighlight() {
                     <img src={CallIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
                   </button>
 
-                  <button
-                    type="button"
+                  <a
+                    href="https://www.linkedin.com/in/dr-rajendra-chavda-7b8072b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
                     aria-label="LinkedIn"
                   >
                     <img src={LinkedinIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </button>
+                  </a>
                 </div>
 
-                <button
-                  type="button"
+                <Link
+                  to="/contact-us"
                   className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
                   aria-label="Contact Us"
                 >
                   <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -108,16 +108,17 @@ export default function ProductCategories() {
             Any queries related to Product Availability or Inquiry.
           </p>
 
-          <button
-            type="button"
+          <Link
+            to="/contact-us"
             className="inline-flex items-center justify-center w-[132px] h-[40px] hover:opacity-90 transition-opacity mt-[12px] sm:w-[157px] sm:h-[48px]"
+            aria-label="Contact Us"
           >
             <img
               src={ContactBtn}
               alt="Contact Us"
               className="w-[195px] h-[94px] sm:w-[157px] sm:h-[48px] mb-0"
             />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

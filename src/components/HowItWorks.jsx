@@ -1,6 +1,7 @@
 import CheckAll from '../assets/images/Check_All.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import HeroImg from '../assets/images/Hero_img.svg'
+import { Link } from 'react-router-dom'
 
 export default function HowItWorks() {
   return (
@@ -60,8 +61,7 @@ export default function HowItWorks() {
                   <span
                     className="flex h-[40px] w-[40px] sm:h-[48px] sm:w-[48px] shrink-0 items-center justify-center rounded-full text-white font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em]"
                     style={{
-                      backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00) [text-shadow:2px_2px_0_#0000000F]',
-                      
+                      backgroundImage: 'linear-gradient(135deg, #FF8C42, #E65C00)',
                     }}
                   >
                     {index + 1}
@@ -86,12 +86,9 @@ export default function HowItWorks() {
           >
             Any queries related to Product Availability or Inquiry.
           </p>
-          <button
-            type="button"
-            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
-          >
+          <Link to="/contact-us" className="inline-flex items-center justify-center hover:opacity-90 transition-opacity">
            <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

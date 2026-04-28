@@ -247,17 +247,16 @@ export default function ContactUs() {
                   Email
                 </p>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] break-words max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[15px] text-[14px] leading-[100%] whitespace-nowrap max-w-full"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
                     fontStyle: 'normal',
                     lineHeight: '100%',
-                    letterSpacing: '-0.02em',
                   }}
                   title="info@saviturlifescience.com"
                 >
-                  info@saviturlifescience.com
+                  dr.rajendra@saviturlifescience.com
                 </p>
               </div>
             </a>    
@@ -283,7 +282,7 @@ export default function ContactUs() {
                   Contact
                 </p>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -292,7 +291,7 @@ export default function ContactUs() {
                     letterSpacing: '-0.02em',
                   }}
                   title="+91 70431 12818"
-                >+91 70431 12818</p>
+                >+91 96648 94484</p>
               </div>
             </a>
             <div className="flex items-start gap-4">
@@ -304,7 +303,7 @@ export default function ContactUs() {
               />
               <div>
               <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px]  text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -316,7 +315,7 @@ export default function ContactUs() {
                   Address
                 </p>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[20px] text-[18px] leading-[130%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px]  leading-[130%] max-[393px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -325,7 +324,9 @@ export default function ContactUs() {
                   }}
                   title="Rajkot, Gujarat, India - 360110"
                 >
-                    Rajkot, Gujarat, India - 360110</p>
+                    B/103 Siddhi Haritage, Jivraj park main road, <br />
+                     Ambika township, Rajkot,  Gujarat, India. <br />
+                    - 360 005.</p>
               </div>
             </div>
           </div>

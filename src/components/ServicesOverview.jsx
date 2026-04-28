@@ -5,6 +5,7 @@ import ProcessImg from '../assets/images/Process_img.svg'
 import OptimizationImg from '../assets/images/Optimization_img.svg'
 import RegulatoryImg from '../assets/images/Regulatory_img.svg'
 import ProcessOptimizationImg from '../assets/images/Process Optimization_img.svg'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -89,13 +90,13 @@ export default function ServicesOverview() {
 
         {/* Bottom CTA row */}
         <div className="flex flex-row items-center w-[343px] h-[40px] sm:justify-center sm:gap-4 sm:w-[404px] sm:h-auto mx-auto rounded-full">
-          <button
-            type="button"
+          <Link
+            to="/contact-us"
             className="inline-flex items-center justify-center hover:opacity-90 transition-opacity mr-[16px]"
             aria-label="Contact Us"
           >
             <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-          </button>
+          </Link>
 
           <button
             type="button"

@@ -11,6 +11,7 @@ import CheckAll from '../assets/images/Check_All.svg'
 import ChevronRightMD from '../assets/images/Chevron_Right_MD.svg'
 import ContactBtn from '../assets/images/contact-btn.svg'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import FounderImg from '../assets/images/Founder_img.svg'
 import FrameImg from '../assets/images/Frame.svg'
 import MailIcon from '../assets/images/mail.svg'
@@ -273,12 +274,13 @@ export default function AboutUs() {
                 </p>
 
                 <div className="flex items-center justify-start mt-[30px] sm:w-[404px] sm:h-[48px] w-[343px] h-[40px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-wrap max-[393px]:gap-y-[12px] max-[393px]:mt-[24px]">
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact-us"
                     className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity sm:pr-[22px] pr-[16px]"
+                    aria-label="Contact Us"
                   >
                    <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-                  </a>
+                  </Link>
 
                   <a
                     href="#"
@@ -532,13 +534,15 @@ export default function AboutUs() {
                     <img src={CallIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
                   </button>
 
-                  <button
-                    type="button"
+                  <a
+                    href="https://www.linkedin.com/in/dr-rajendra-chavda-7b8072b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
                     aria-label="LinkedIn"
                   >
                     <img src={LinkedinIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </button>
+                  </a>
                 </div>
 
                 <button
@@ -593,16 +597,17 @@ export default function AboutUs() {
                 We focus on long-term value, not transactional supply.
               </h2>
             </div>
-            <a
-              href="#"
+            <Link
+              to="/contact-us"
               className="inline-flex items-center justify-center w-[157px] h-[48px] shrink-0 hover:opacity-90 transition-opacity self-center sm:self-center max-[393px]:hidden"
+              aria-label="Contact Us"
             >
               <img
                 src={ContactBtn}
                 alt="Contact Us"
                 className="w-[157px] h-[48px] object-contain"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Four cards — each 276×316 */}
@@ -661,9 +666,9 @@ export default function AboutUs() {
 
           {/* Mobile: button below cards */}
           <div className="hidden max-[393px]:flex w-full justify-center max-[393px]:mt-[45px] max-[393px]:mb-[27px]">
-            <a href="#" className="inline-flex items-center justify-center w-[150px] h-[42px] hover:opacity-90 transition-opacity">
-            <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-            </a>
+            <Link to="/contact-us" className="inline-flex items-center justify-center w-[150px] h-[42px] hover:opacity-90 transition-opacity" aria-label="Contact Us">
+              <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
+            </Link>
           </div>
         </div>
       </section>           

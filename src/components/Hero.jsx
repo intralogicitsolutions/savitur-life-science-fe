@@ -79,16 +79,13 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex h-[40px] w-[325px] flex-nowrap items-center justify-between gap-x-[10px] sm:h-auto sm:w-auto sm:flex-wrap sm:gap-y-2 sm:justify-start min-[1600px]:flex-nowrap min-[1600px]:gap-y-0 min-[1600px]:w-[378px] min-[1600px]:h-[48px] min-[1600px]:justify-between">
-            <a
-              href="#"
-              className="h-[40px] w-[132px] flex-shrink-0 sm:w-auto sm:h-auto"
-            >
+            <Link to="/contact-us" className="h-[40px] w-[132px] flex-shrink-0 sm:w-auto sm:h-auto">
               <img
                 src={ContactBtn}
                 alt="Contact Us"
                 className="h-[40px] w-[132px] object-contain sm:h-[48px] sm:w-[157px]"
               />
-            </a>
+            </Link>
 
             <Link
               to="/products/api"
