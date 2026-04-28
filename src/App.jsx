@@ -13,10 +13,13 @@ import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import Services from './pages/Services'
 import Product from './pages/Product'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
@@ -67,7 +70,8 @@ function App() {
           </div>
         }
       />
-    </Routes>
+      </Routes>
+    </>
     
 
     

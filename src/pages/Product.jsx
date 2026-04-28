@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import HeroImg from '../assets/images/Hero_img.svg'
 import ChevronRightMD from '../assets/images/Chevron_Right_MD.svg'
@@ -8,8 +8,7 @@ import SearchIcon from '../assets/images/Search_Magnifying_Glass.svg'
 import CloseCircleIcon from '../assets/images/Close_Circle.svg'
 import Footer from '../components/Footer'
 
-const LAB_PAGE_SIZE = 20
-const PAGE_SIZE = 20
+const PAGE_SIZE = 13
 
 const Product = () => {
   const { productType } = useParams()
@@ -68,6 +67,7 @@ const Product = () => {
   }, [])
 
   const isLabChemicals = productType === 'lab-chemicals-reagents'
+  const prevIsLabChemicalsRef = useRef(isLabChemicals)
   const rawProducts = productMap?.[productType]
   const labData =
     isLabChemicals && rawProducts && typeof rawProducts === 'object' && !Array.isArray(rawProducts)
@@ -76,11 +76,12 @@ const Product = () => {
 
   const rows = useMemo(() => (Array.isArray(rawProducts) ? rawProducts : []), [rawProducts])
 
+  // For Lab Chemicals page: do NOT auto-select a category on first visit.
   const validLabCategoryId = useMemo(() => {
     const cats = labData?.categories
     if (!cats?.length) return null
     if (labCategoryId && cats.some((c) => c.id === labCategoryId)) return labCategoryId
-    return cats[0].id
+    return null
   }, [labData, labCategoryId])
 
   const activeLabCategory = useMemo(
@@ -99,7 +100,7 @@ const Product = () => {
     })
   }, [labProductList, search])
 
-  const labTotalPages = Math.max(1, Math.ceil(labFiltered.length / LAB_PAGE_SIZE))
+  const labTotalPages = Math.max(1, Math.ceil(labFiltered.length / PAGE_SIZE))
 
   const effectiveLabPage = useMemo(
     () => Math.min(Math.max(1, labPage), labTotalPages),
@@ -108,16 +109,37 @@ const Product = () => {
 
   const labPageRows = useMemo(() => {
     const total = labFiltered.length
-    const idealStart = (effectiveLabPage - 1) * LAB_PAGE_SIZE
-    const maxStart = Math.max(0, total - LAB_PAGE_SIZE)
+    const idealStart = (effectiveLabPage - 1) * PAGE_SIZE
+    const maxStart = Math.max(0, total - PAGE_SIZE)
     const start = Math.min(idealStart, maxStart)
-    return labFiltered.slice(start, start + LAB_PAGE_SIZE)
+    return labFiltered.slice(start, start + PAGE_SIZE)
   }, [labFiltered, effectiveLabPage])
 
   const labShowsPrice = useMemo(
     () => labFiltered.some((r) => r?.price !== undefined && r?.price !== null && String(r.price).trim() !== ''),
     [labFiltered]
   )
+
+  const labEmptyMessage = useMemo(
+    () => (validLabCategoryId ? 'No products found.' : 'Please select a category to view products.'),
+    [validLabCategoryId]
+  )
+
+  useEffect(() => {
+    const wasLab = prevIsLabChemicalsRef.current
+    if (isLabChemicals && !wasLab) {
+      // Entering lab page from another page: start with no selection.
+      // Defer state updates to avoid synchronous setState-in-effect lint.
+      const t = setTimeout(() => {
+        setLabCategoryId(null)
+        setLabPage(1)
+        setSearch('')
+        setLabMobilePickerOpen(true)
+      }, 0)
+      return () => clearTimeout(t)
+    }
+    prevIsLabChemicalsRef.current = isLabChemicals
+  }, [isLabChemicals])
 
   const filteredRows = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -276,10 +298,6 @@ const Product = () => {
                   }}
                 >
                   {activeLabel}
-                  <span className="ml-2 sm:hidden font-sora font-normal text-[26px] leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                    : {labMobilePickerOpen ? (labData?.categories?.length ?? 0) : labFiltered.length}{' '}
-                    {labMobilePickerOpen ? 'Categories' : 'Sub Categories'}
-                  </span>
                 </h2>
                 <div className="mt-[36px] w-full mb-[36px]">
                   <div className="flex h-[44px] w-full items-center rounded-[10px] border border-[#1F2A4433] bg-[#F4F6F9] px-3">
@@ -308,8 +326,8 @@ const Product = () => {
                   Lab categories are not available. Please check back later.
                 </div>
               ) : (
-                <div className="mx-auto w-full sm:w-[1164px] flex flex-col lg:flex-row lg:items-start gap-[20px]">
-                  <aside className="hidden lg:block shrink-0 w-[236px]">
+                <div className="mx-auto w-full sm:w-[1164px] flex flex-col lg:flex-row lg:items-stretch gap-[20px]">
+                  <aside className="hidden lg:flex shrink-0 w-[236px] flex-col h-full">
                     <h3
                       className="font-sora font-normal text-[24px] leading-[100%] tracking-[-0.04em] text-[#0F172A]"
                       style={{
@@ -325,7 +343,7 @@ const Product = () => {
                       Category
                     </h3>
                     <nav
-                      className="mt-[24px] space-y-1.5 rounded-[10px] border border-[#E5E7EB] bg-white pt-[10px] pb-[12px] px-[8px]"
+                      className="mt-[24px] flex-1 overflow-auto space-y-1.5 rounded-[10px] border border-[#E5E7EB] bg-white pt-[10px] pb-[12px] px-[8px]"
                       aria-label="Lab chemical categories"
                     >
                       {labData.categories.map((c) => {
@@ -360,7 +378,7 @@ const Product = () => {
                     </nav>
                   </aside>
 
-                  <div className="min-w-0 flex-1 w-full lg:w-[908px]">
+                  <div className="min-w-0 flex-1 w-full lg:w-[908px] h-full">
                     {/* Mobile header (393px) */}
                     {!labMobilePickerOpen && (
                       <button
@@ -462,7 +480,7 @@ const Product = () => {
                     <div className={`mt-4 space-y-3 sm:hidden ${labMobilePickerOpen ? 'hidden' : ''}`}>
                       {labPageRows.length === 0 ? (
                         <div className="rounded-[10px] border border-[#E5E7EB] bg-white px-4 py-6 text-center font-manrope text-[14px] font-semibold text-[#64748B]">
-                          No products found.
+                          {labEmptyMessage}
                         </div>
                       ) : (
                         labPageRows.map((r) => (
@@ -471,45 +489,56 @@ const Product = () => {
                             className="w-full rounded-[12px] border border-[#E5E7EB] bg-[#F4F6F9] px-4 py-4"
                           >
                             <div className="space-y-2">
-                              <div className="flex items-start gap-2">
-                                <div className="min-w-[110px] font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                                  Product Name 
+                              <div className="grid grid-cols-[110px_12px_1fr] items-start gap-x-2">
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                                  Product Name
                                 </div>
-                                <div className="min-w-0 flex-1 font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
-                                  : {r.name}
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] text-[#0F172A]">
+                                  :
+                                </div>
+                                <div className="min-w-0 font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
+                                  {r.name}
                                 </div>
                               </div>
 
-                              <div className="flex items-start gap-2">
-                                <div className="min-w-[110px] font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                              <div className="grid grid-cols-[110px_12px_1fr] items-start gap-x-2">
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
                                   Case No.
                                 </div>
-                                <div className="font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A]">
-                                  : {r.casNo}
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] text-[#0F172A]">
+                                  :
+                                </div>
+                                <div className="font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
+                                  {r.casNo}
                                 </div>
                               </div>
 
-                              <div className="flex items-start gap-2">
-                                <div className="min-w-[110px] font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                              <div className="grid grid-cols-[110px_12px_1fr] items-start gap-x-2">
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
                                   Product Code
                                 </div>
-                                <div className="font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A]">
-                                  : {r.productCode}
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] text-[#0F172A]">
+                                  :
+                                </div>
+                                <div className="font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
+                                  {r.productCode}
                                 </div>
                               </div>
 
-                              <div className="flex items-start gap-2">
-                                <div className="min-w-[110px] font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                              <div className="grid grid-cols-[110px_12px_1fr] items-start gap-x-2">
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
                                   Contact Us
                                 </div>
+                                <div className="font-sora text-[14px] font-semibold leading-[100%] text-[#0F172A]">
+                                  :
+                                </div>
                                 <div className="font-sora text-[14px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A]">
-                                  :{' '}
-                                  <button
-                                    type="button"
+                                  <Link
+                                    to="/contact-us"
                                     className="font-sora text-[14px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                                   >
                                     Inquiry
-                                  </button>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
@@ -519,8 +548,8 @@ const Product = () => {
                     </div>
 
                     {/* Desktop lab table */}
-                    <div className="mt-[24px] hidden sm:block w-full lg:w-[908px] rounded-[10px] border border-[#E5E7EB]">
-                      <table className="w-full border-collapse table-fixed overflow-y-auto">
+                    <div className="mt-[24px] hidden sm:block w-full lg:w-[908px] min-h-[520px] rounded-[10px] border border-[#E5E7EB]">
+                      <table className="w-full h-full border-collapse table-fixed overflow-y-auto">
                         <thead className="bg-[#F4F6F9]">
                           <tr>
                             <th className="w-[45%] p-[16px] text-left font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.04em] text-[#000000] border-b border-[#E5E7EB]">
@@ -544,33 +573,33 @@ const Product = () => {
                           {labPageRows.length === 0 ? (
                             <tr>
                               <td colSpan={5} className="px-4 py-8 text-center font-manrope text-[14px] font-semibold text-[#64748B]">
-                                No products found.
+                                {labEmptyMessage}
                               </td>
                             </tr>
                           ) : (
                             labPageRows.map((r) => (
-                              <tr key={`${r.name}|${r.casNo}|${r.productCode}`}>
-                                <td className="px-4 py-3 font-sora text-[15px] font-normal leading-[100%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-top break-words">
+                              <tr key={`${r.name}|${r.casNo}|${r.productCode}`} className="h-[75px]">
+                                <td className="h-[75px] px-4 py-3 font-sora text-[15px] font-normal leading-[130%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-middle break-words">
                                   {r.name}
                                 </td>
-                                <td className="px-4 py-3 font-sora text-[15px] font-normal leading-[100%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-top break-words">
+                                <td className="h-[75px] px-4 py-3 font-sora text-[15px] font-normal leading-[130%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-middle break-words">
                                   {r.casNo}
                                 </td>
-                                <td className="px-4 py-3 font-sora text-[15px] font-normal leading-[100%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-top break-words">
+                                <td className="h-[75px] px-4 py-3 font-sora text-[15px] font-normal leading-[130%] tracking-[-0.04em] capitalize text-[#0F172A] border-b border-[#E5E7EB] align-middle break-words">
                                   {r.productCode}
                                 </td>
-                                <td className="px-4 py-3 text-right border-b border-[#E5E7EB] align-top">
+                                <td className="h-[75px] px-4 py-3 text-right border-b border-[#E5E7EB] align-middle">
                                   <span className="font-sora text-[15px] font-semibold text-[#0F172A]">
                                     {labShowsPrice ? (r.price ?? '—') : '—'}
                                   </span>
                                 </td>
-                                <td className="px-4 py-3 text-right border-b border-[#E5E7EB] align-top">
-                                  <button
-                                    type="button"
+                                <td className="h-[75px] px-4 py-3 text-right border-b border-[#E5E7EB] align-middle">
+                                  <Link
+                                    to="/contact-us"
                                     className="font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                                   >
                                     Inquiry
-                                  </button>
+                                  </Link>
                                 </td>
                               </tr>
                             ))
@@ -579,8 +608,31 @@ const Product = () => {
                       </table>
                     </div>
 
+                    {/* Mobile pagination: only when picker is closed */}
                     {labTotalPages > 1 && !labMobilePickerOpen && (
-                      <div className="mt-[24px] flex flex-wrap items-center justify-center gap-2">
+                      <div className="mt-[24px] flex flex-wrap items-center justify-center gap-2 sm:hidden">
+                        {Array.from({ length: labTotalPages }, (_, i) => i + 1).map((p) => (
+                          <button
+                            key={p}
+                            type="button"
+                            onClick={() => setLabPage(p)}
+                            className={
+                              p === effectiveLabPage
+                                ? 'flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#E65C00] font-sora text-[14px] font-semibold text-white'
+                                : 'flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#F4F6F9] font-sora text-[14px] font-semibold text-[#0F172A] transition-colors hover:bg-[#EEF2F6]'
+                            }
+                            aria-label={`Page ${p}`}
+                            aria-current={p === effectiveLabPage ? 'page' : undefined}
+                          >
+                            {p}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Desktop pagination: always visible when pages > 1 */}
+                    {labTotalPages > 1 && (
+                      <div className="mt-[24px] hidden flex-wrap items-center justify-center gap-2 sm:flex">
                         {Array.from({ length: labTotalPages }, (_, i) => i + 1).map((p) => (
                           <button
                             key={p}
@@ -651,69 +703,87 @@ const Product = () => {
                   {/* Finished Formulation: 2 cols (Product Name + Inquiry) */}
                   {isFinishedFormulation || isExcipients ? (
                     <div className="space-y-2">
-                      <div className="grid grid-cols-[120px_1fr] items-start gap-x-3">
+                      <div className="grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
                         <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          Product Name:
+                          Product Name
+                        </div>
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
                         </div>
                         <div className="font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
                           {r.name}
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-[120px_1fr] items-start gap-x-3">
+                      <div className="grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
                         <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          Contact Us:
+                          Contact Us
+                        </div>
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
                         </div>
                         <div className="font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A]">
-                          <button
-                            type="button"
+                          <Link
+                            to="/contact-us"
                             className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                           >
                             Inquiry
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   ) : (
                     <>
-                      <div className="flex items-start gap-2">
-                        <div className="min-w-[120px] font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          Product Name :
+                      <div className="grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                          Product Name
                         </div>
-                        <div className="min-w-0 flex-1 font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
+                        </div>
+                        <div className="min-w-0 font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
                           {r.name}
                         </div>
                       </div>
 
-                      <div className="mt-2 flex items-start gap-2">
-                        <div className="min-w-[120px] font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          Case No. :
+                      <div className="mt-2 grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                          Case No.
+                        </div>
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
                         </div>
                         <div className="font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A] break-words">
                           {r.casNo}
                         </div>
                       </div>
 
-                      <div className="mt-2 flex items-start gap-2">
-                        <div className="min-w-[120px] font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          {thirdColLabel} :
+                      <div className="mt-2 grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                          {thirdColLabel}
+                        </div>
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
                         </div>
                         <div className="font-sora font-normal text-[15px] leading-[120%] tracking-[-0.04em] text-[#0F172A] whitespace-pre-line break-words">
                           {productType === 'intermediate' ? formattedEndUse(r.endUse) : r.grade}
                         </div>
                       </div>
 
-                      <div className="mt-2 flex items-start gap-2">
-                        <div className="min-w-[120px] font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
-                          Contact Us:
+                      <div className="mt-2 grid grid-cols-[120px_12px_1fr] items-start gap-x-2">
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0F172A]">
+                          Contact Us
+                        </div>
+                        <div className="font-sora text-[15px] font-semibold leading-[100%] text-[#0F172A]">
+                          :
                         </div>
                         <div className="font-sora text-[15px] font-normal leading-[120%] tracking-[-0.04em] text-[#0F172A]">
-                          <button
-                            type="button"
+                          <Link
+                            to="/contact-us"
                             className="font-sora text-[15px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                           >
                             Inquiry
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </>
@@ -745,7 +815,7 @@ const Product = () => {
           )}
 
           {/* Desktop table */}
-          <div className="hidden sm:block w-full sm:mx-auto sm:w-[1164px] overflow-hidden rounded-[10px] border border-[#E5E7EB]">
+          <div className="hidden sm:block w-full sm:mx-auto sm:w-[1164px] min-h-[520px] overflow-hidden rounded-[10px] border border-[#E5E7EB]">
             <div>
               <table className="w-full border-collapse table-fixed">
                 <thead className="bg-[#F4F6F9]">
@@ -811,27 +881,27 @@ const Product = () => {
                               {r.name}
                             </td>
                             <td className="px-4 py-3 text-right border-b border-[#E5E7EB]">
-                              <button
-                                type="button"
+                              <Link
+                                to="/contact-us"
                                 className="font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                               >
                                 Inquiry
-                              </button>
+                              </Link>
                             </td>
                           </>
                         ) : (
                           <>
-                            <td className="px-4 py-3 font-sora font-normal text-[15px] leading-[100%] tracking-[-0.04em] text-[#000000] whitespace-nowrap overflow-hidden text-ellipsis border-b border-[#E5E7EB]">
+                            <td className="px-4 py-3 font-sora font-normal text-[15px] leading-[130%] tracking-[-0.04em] text-[#000000] whitespace-normal break-words border-b border-[#E5E7EB]">
                               {r.name}
                             </td>
-                            <td className="px-4 py-3 font-sora font-normal text-[15px] leading-[100%] tracking-[-0.04em] text-[#000000] border-b border-l border-[#E5E7EB]">
+                            <td className="px-4 py-3 font-sora font-normal text-[15px] leading-[130%] tracking-[-0.04em] text-[#000000] border-b border-l border-[#E5E7EB] break-words">
                               {r.casNo}
                             </td>
                             <td
                               className={`px-4 py-3 pr-24 font-sora font-normal text-[#000000] border-b border-l border-[#E5E7EB] ${
                                 productType === 'intermediate'
                                   ? 'text-[15px] leading-[120%] tracking-[-0.04em]'
-                                  : 'text-[15px] leading-[100%] tracking-[-0.04em]'
+                                  : 'text-[15px] leading-[130%] tracking-[-0.04em]'
                               }`}
                             >
                               <span className={productType === 'intermediate' ? 'whitespace-pre-line' : undefined}>
@@ -839,12 +909,12 @@ const Product = () => {
                               </span>
                             </td>
                             <td className="px-4 py-3 text-right border-b border-[#E5E7EB]">
-                              <button
-                                type="button"
+                              <Link
+                                to="/contact-us"
                                 className="font-sora text-[16px] font-semibold leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(95.49deg,_#E65C00_0.91%,_#FF8C42_113.49%)]"
                               >
                                 Inquiry
-                              </button>
+                              </Link>
                             </td>
                           </>
                         )}

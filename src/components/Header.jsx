@@ -16,11 +16,11 @@ const navLinks = [
     to: '#',
     showArrow: true,
     dropdown: [
-      { label: 'API', to: '/products/api' },
       { label: 'Intermediate', to: '/products/intermediate' },
-      { label: 'Finished Formulation', to: '/products/finished-formulation' },
+      { label: 'API', to: '/products/api' },
       { label: 'Lab Chemicals & Reagents', to: '/products/lab-chemicals-reagents' },
       { label: 'Excipients', to: '/products/excipients' },
+      { label: 'Finished Formulation', to: '/products/finished-formulation' },
     ],
   },
   { label: 'Services', to: '/services' },
@@ -130,7 +130,7 @@ export default function Header() {
                       {productsInner}
                     </button>
                     <div
-                      className={`absolute left-0 top-full z-[70] w-[225px] pt-2 transition-[opacity,visibility] duration-150 ${
+                      className={`absolute left-0 top-full z-[70] w-[250px] lg:w-[250px] pt-2 transition-[opacity,visibility] duration-150 ${
                         desktopProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                       }`}
                       role="menu"
