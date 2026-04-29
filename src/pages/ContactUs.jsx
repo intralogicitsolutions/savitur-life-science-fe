@@ -224,8 +224,8 @@ export default function ContactUs() {
           {/* Contact Details */}
           <div className="flex w-full max-w-[338px] flex-col max-[393px]:max-w-full">
             <a
-              href="mailto:info@saviturlifescience.com"
-              className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full"
+              href="mailto:dr.rajendra@saviturlifescience.com"
+              className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full sm:hidden"
             >
               <img  
                 src={MailIcon}
@@ -259,7 +259,46 @@ export default function ContactUs() {
                   dr.rajendra@saviturlifescience.com
                 </p>
               </div>
-            </a>    
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:mb-[24px] max-[393px]:mb-[20px] sm:flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full"
+            >
+              <img  
+                src={MailIcon}
+                alt=""
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
+                aria-hidden
+              />
+              <div className="min-w-0 flex flex-col justify-center leading-none">
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Email
+                </p>
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[15px] text-[14px] leading-[100%] whitespace-nowrap max-w-full"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                  }}
+                  title="info@saviturlifescience.com"
+                >
+                  dr.rajendra@saviturlifescience.com
+                </p>
+              </div>
+            </a>
             
             <a href="tel:+917043112818" className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full">
             <img

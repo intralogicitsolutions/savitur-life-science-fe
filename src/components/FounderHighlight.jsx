@@ -108,21 +108,30 @@ export default function FounderHighlight() {
               {/* Contact actions */}
               <div className="flex flex-wrap items-center gap-2 w-full h-auto sm:gap-2">
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
-                    aria-label="Email"
+                  <a
+                    href="mailto:dr.rajendra@saviturlifescience.com"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full sm:hidden"
+                    aria-label="Email dr.rajendra@saviturlifescience.com"
                   >
                     <img src={MailIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </button>
+                  </a>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hidden sm:inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
+                    aria-label="Email dr.rajendra@saviturlifescience.com"
+                  >
+                    <img src={MailIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
+                  </a>
 
-                  <button
-                    type="button"
+                  <a
+                    href="tel:+919664894484"
                     className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
-                    aria-label="Call"
+                    aria-label="Call +91 96648 94484"
                   >
                     <img src={CallIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </button>
+                  </a>
 
                   <a
                     href="https://www.linkedin.com/in/dr-rajendra-chavda-7b8072b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"

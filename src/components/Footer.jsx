@@ -102,8 +102,17 @@ export default function Footer() {
               </h3>
               <div className="space-y-3 sm:space-y-4">
                 <a
-                  href="mailto:info@saviturlifescience.com"
-                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  href="mailto:dr.rajendra@saviturlifescience.com"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
+                >
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  dr.rajendra@saviturlifescience.com
+                </a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
                   dr.rajendra@saviturlifescience.com
@@ -117,8 +126,17 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="mailto:info@saviturlifescience.com"
-                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  href="mailto:karan@saviturlifescience.com"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
+                >
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  karan@saviturlifescience.com
+                </a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=karan%40saviturlifescience.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
                   karan@saviturlifescience.com

@@ -10,6 +10,9 @@ import Footer from '../components/Footer'
 
 const PAGE_SIZE = 13
 
+// Lab desktop table: keep empty-state vertical center calc in sync when this changes
+const LAB_DESKTOP_TABLE_MIN_HEIGHT_PX = 1030
+
 const Product = () => {
   const { productType } = useParams()
   const [search, setSearch] = useState('')
@@ -189,7 +192,7 @@ const Product = () => {
   }
 
   return (
-    <>
+    <div className="[text-shadow:2px_2px_0_#0000000F]">
     <Header />
     <section
       className="relative w-full min-w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]"
@@ -479,8 +482,10 @@ const Product = () => {
                     {/* Mobile lab cards (393px design) */}
                     <div className={`mt-4 space-y-3 sm:hidden ${labMobilePickerOpen ? 'hidden' : ''}`}>
                       {labPageRows.length === 0 ? (
-                        <div className="rounded-[10px] border border-[#E5E7EB] bg-white px-4 py-6 text-center font-manrope text-[14px] font-semibold text-[#64748B]">
-                          {labEmptyMessage}
+                        <div className="rounded-[10px] border border-[#E5E7EB] bg-white px-4 py-6 text-center flex min-h-[120px] items-center justify-center">
+                          <span className="mx-auto inline-block max-w-[300px] text-center font-manrope text-[16px] leading-[140%] font-semibold text-[#64748B]">
+                            {labEmptyMessage}
+                          </span>
                         </div>
                       ) : (
                         labPageRows.map((r) => (
@@ -548,7 +553,10 @@ const Product = () => {
                     </div>
 
                     {/* Desktop lab table */}
-                    <div className="mt-[24px] hidden sm:block w-full lg:w-[908px] min-h-[520px] rounded-[10px] border border-[#E5E7EB]">
+                    <div
+                      className="mt-[24px] hidden sm:block w-full lg:w-[908px] rounded-[10px] border border-[#E5E7EB]"
+                      style={{ minHeight: `${LAB_DESKTOP_TABLE_MIN_HEIGHT_PX}px` }}
+                    >
                       <table className="w-full h-full border-collapse table-fixed overflow-y-auto">
                         <thead className="bg-[#F4F6F9]">
                           <tr>
@@ -572,8 +580,17 @@ const Product = () => {
                         <tbody className="bg-white">
                           {labPageRows.length === 0 ? (
                             <tr>
-                              <td colSpan={5} className="px-4 py-8 text-center font-manrope text-[14px] font-semibold text-[#64748B]">
-                                {labEmptyMessage}
+                              <td colSpan={5} className="align-middle px-4 py-0">
+                                <div
+                                  className="flex w-full flex-col items-center justify-center px-4 py-10 text-center sm:py-16"
+                                  style={{
+                                    minHeight: `${LAB_DESKTOP_TABLE_MIN_HEIGHT_PX - 56}px`,
+                                  }}
+                                >
+                                  <span className="mx-auto inline-block max-w-[720px] font-manrope text-[16px] font-semibold leading-[140%] text-[#64748B] sm:text-[18px]">
+                                    {labEmptyMessage}
+                                  </span>
+                                </div>
                               </td>
                             </tr>
                           ) : (
@@ -954,7 +971,7 @@ const Product = () => {
       {/* Footer */}
       <Footer />
 
-    </>
+    </div>
   )
 }
 

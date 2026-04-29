@@ -173,20 +173,24 @@ export default function Header() {
           {/* Mobile icons (matches 393px header screenshot) */}
           <div className="flex md:hidden items-center justify-end gap-[12px] flex-shrink-0">
             <a
-              href="mailto:info@saviturlifescience.com"
+              href="mailto:dr.rajendra@saviturlifescience.com"
               aria-label="Email"
-              className="inline-flex items-center justify-center"
+              className="inline-flex items-center justify-center sm:hidden"
             >
               <img src={MailIcon} alt="" className="w-[40px] h-[40px]" />
             </a>
-            <Link
-            to="/contact-us"
-              href="tel:+917043112818"
-              aria-label="Call"
-              className="inline-flex items-center justify-center"
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Email"
+              className="hidden sm:inline-flex items-center justify-center"
             >
+              <img src={MailIcon} alt="" className="w-[40px] h-[40px]" />
+            </a>
+            <a href="tel:+917043112818" aria-label="Call" className="inline-flex items-center justify-center">
               <img src={CallIcon} alt="" className="w-[40px] h-[40px]" aria-hidden />
-            </Link>
+            </a>
             <button
               type="button"
               aria-label="Menu"
