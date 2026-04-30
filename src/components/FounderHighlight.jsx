@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 export default function FounderHighlight() {
   return (
     <section className="w-full flex justify-center pt-0 sm:pt-[60px]">
-      <div className="mx-auto w-[393px] h-[778px] sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px]">
+      <div className="mx-auto w-full max-w-[480px] h-[778px] sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px]">
         <div className="relative flex w-full items-center justify-center rounded-[15px] bg-[#F9F9F9] overflow-hidden sm:bg-[#F4F6F9]">
           {/* Decorative frame image on the left */}
           <div className="hidden lg:block absolute w-[72px] h-[776px] top-[-17px] left-[98px] opacity-40 pointer-events-none">
@@ -22,7 +22,7 @@ export default function FounderHighlight() {
           </div>
 
           {/* Combined image + content frame */}
-          <div className="mx-auto flex h-[778px] w-full max-w-[393px] flex-col items-stretch justify-center gap-3 ml-[20px] mr-[20px] mt-[60px] mb-[60px] sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
+          <div className="mx-auto flex h-[778px] w-full max-w-[480px] flex-col items-stretch justify-center gap-3 px-[20px] max-[360px]:px-[16px] mt-[60px] mb-[60px] sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
             {/* Left image — 353×353 on 393px-wide layout; desktop unchanged */}
             <div className="flex w-full shrink-0 justify-center sm:block sm:w-[456px] sm:h-[522px] sm:justify-start">
               <div className="relative aspect-square w-full max-w-[353px] overflow-hidden rounded-[20px] bg-[#E5E7EB] sm:aspect-auto sm:h-full sm:max-w-none sm:w-full sm:rounded-[16px]">

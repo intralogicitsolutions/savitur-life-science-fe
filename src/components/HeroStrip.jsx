@@ -6,10 +6,10 @@ export default function HeroStrip() {
 
   return (
     <section
-      className="mx-auto flex h-[52px] w-full max-w-[393px] items-center justify-center overflow-hidden sm:h-[62px] sm:w-[2103px] sm:max-w-none"
+      className="mx-auto flex h-[52px] w-full items-center justify-center overflow-hidden sm:h-[62px] sm:w-[2103px] sm:max-w-none"
       style={{ background: 'linear-gradient(to right, #E65C00, #FF8C42)' }}
     >
-      <div className="[text-shadow:2px_2px_0_#0000000F] hero-strip-marquee-track items-center gap-[22px] sm:gap-[36px]">
+      <div className="[text-shadow:2px_2px_0_#0000000F] hero-strip-marquee-track items-center gap-[22px] sm:gap-[36px] px-[20px] max-[360px]:px-[16px]">
         {loop.map((phrase, i) => (
           <span
             key={`${phrase}-${i}`}

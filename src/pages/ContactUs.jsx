@@ -125,10 +125,10 @@ export default function ContactUs() {
 
         {/* Content */}
         <div className="relative z-10 w-full h-full min-h-[689px] sm:min-h-[460px] flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center sm:w-[267px] sm:h-[93px] w-[166px] max-[393px]:w-[223px] h-[66px]">
+          <div className="flex flex-col items-center justify-center text-center sm:w-[267px] sm:h-[93px] w-[166px] max-[480px]:w-[223px] h-[66px]">
             {/* Main heading */}
             <h1 
-              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] max-[393px]:whitespace-nowrap leading-[100%] tracking-[-0.04em] mb-[14px]"
+              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal sm:text-[50px] text-[32px] max-[480px]:whitespace-nowrap leading-[100%] tracking-[-0.04em] mb-[14px]"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -180,16 +180,16 @@ export default function ContactUs() {
       <HeroStrip />
 
     {/* Contact Us - Get In Touch Section */}
-    <div className="w-full flex justify-center max-[393px]:max-w-full ">
+    <div className="w-full flex justify-center max-[480px]:max-w-full">
       <section
-        className="flex sm:w-[1524px] items-center justify-center rounded-[16px] mx-[38px] sm:mt-[38px] sm:mb-[100px] min-h-0 px-0 sm:h-[746px] w-[393px] h-[1130px] max-[393px]:mx-0  max-[393px]:max-w-none max-[393px]:rounded-none"
+        className="flex w-full max-w-[480px] items-center justify-center rounded-[16px] mx-auto sm:w-[1524px] sm:max-w-none sm:mx-[38px] sm:mt-[38px] sm:mb-[100px] min-h-0 px-0 sm:h-[746px] h-auto max-[480px]:rounded-none"
         style={{ background: '#F4F6F9' }}
       >
       <div
-        className="flex w-full max-w-[1046px] flex-col items-stretch justify-between shrink-0 max-[393px]:w-full max-[393px]:max-w-full max-[393px]:mx-4 lg:h-[602px] lg:flex-row lg:items-center lg:gap-0 lg:px-0 lg:py-0 "
+        className="flex w-full max-w-[1046px] flex-col items-stretch justify-between shrink-0 max-[480px]:w-full max-[480px]:max-w-full max-[480px]:mx-0 lg:h-[602px] lg:flex-row lg:items-center lg:gap-0 lg:px-0 lg:py-0"
       >
         {/* Left Column - Contact Info */}
-        <div className="flex w-[393px] h-[428px] flex-col self-center sm:h-[392px] sm:w-[387px] lg:mr-[85px] lg:self-auto max-[393px]:mb-[60px] max-[393px]:mt-[80px] max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-full max-[393px]:px-[20px]">
+        <div className="flex w-full max-w-[387px] flex-col self-center sm:w-[387px] lg:mr-[85px] lg:self-auto max-[480px]:mb-[60px] max-[480px]:mt-[80px] max-[480px]:h-auto max-[480px]:w-full max-[480px]:max-w-full px-[20px] max-[360px]:px-[16px] sm:px-0">
           {/* Contact Us Badge */}
           <div className="w-[123px] h-[32px] sm:w-[138px] sm:h-[36px] inline-flex items-center pl-[12px] pr-[12px] pt-[6px] pb-[6px] rounded-full bg-white border border-[rgba(0,0,0,0.08)] shadow-sm sm:mb-[14px] mb-[12px]">
               <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
@@ -210,7 +210,7 @@ export default function ContactUs() {
 
           {/* Main Heading */}
           <h2
-            className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[32px] max-[393px]:mb-[20px] w-full text-[#111827] sm:text-[40px] text-[26px] leading-[120%] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
+            className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[32px] max-[480px]:mb-[20px] w-full text-[#111827] sm:text-[40px] text-[26px] leading-[120%] max-[480px]:text-[26px] max-[480px]:leading-[120%]"
             style={{
               fontFamily: 'Sora',
               fontWeight: 400,
@@ -222,10 +222,10 @@ export default function ContactUs() {
           </h2>
 
           {/* Contact Details */}
-          <div className="flex w-full max-w-[338px] flex-col max-[393px]:max-w-full">
+          <div className="flex w-full max-w-[338px] flex-col max-[480px]:max-w-full">
             <a
               href="mailto:dr.rajendra@saviturlifescience.com"
-              className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full sm:hidden"
+              className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full sm:hidden"
             >
               <img  
                 src={MailIcon}
@@ -264,7 +264,7 @@ export default function ContactUs() {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:mb-[24px] max-[393px]:mb-[20px] sm:flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full"
+              className="hidden sm:mb-[24px] max-[480px]:mb-[20px] sm:flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full"
             >
               <img  
                 src={MailIcon}
@@ -300,7 +300,7 @@ export default function ContactUs() {
               </div>
             </a>
             
-            <a href="tel:+917043112818" className="sm:mb-[24px] max-[393px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-[313px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[393px]:max-w-full">
+            <a href="tel:+917043112818" className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full">
             <img
                 src={PhoneIcon}
                 alt=""
@@ -321,7 +321,7 @@ export default function ContactUs() {
                   Contact
                 </p>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px] leading-[100%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px] leading-[100%] max-[480px]:whitespace-normal sm:truncate"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -333,6 +333,119 @@ export default function ContactUs() {
                 >+91 96648 94484</p>
               </div>
             </a>
+
+           
+            <a
+              href="mailto:karan@saviturlifescience.com"
+              className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full sm:hidden"
+            >
+              <img  
+                src={MailIcon}
+                alt=""
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
+                aria-hidden
+              />
+              <div className="min-w-0 flex flex-col justify-center leading-none">
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Email
+                </p>
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[15px] text-[14px] leading-[100%] whitespace-nowrap max-w-full"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                  }}
+                  title="karan@saviturlifescience.com"
+                >
+                  karan@saviturlifescience.com
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=karan%40saviturlifescience.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:mb-[24px] max-[480px]:mb-[20px] sm:flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full"
+            >
+              <img  
+                src={MailIcon}
+                alt=""
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
+                aria-hidden
+              />
+              <div className="min-w-0 flex flex-col justify-center leading-none">
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Email
+                </p>
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[15px] text-[14px] leading-[100%] whitespace-nowrap max-w-full"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                  }}
+                  title="karan@saviturlifescience.com"
+                >
+                  karan@saviturlifescience.com
+                </p>
+              </div>
+            </a>
+            
+            <a href="tel:+919227032237" className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full">
+            <img
+                src={PhoneIcon}
+                alt=""
+                className="sm:w-[48px] sm:h-[48px] w-[40px] h-[40px] shrink-0 object-contain group-hover:opacity-90 transition-opacity"
+                aria-hidden
+              />
+              <div>
+              <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope sm:text-[16px] text-[14px] text-[#4D4D4D] leading-[100%] sm:mb-[5px] mb-[2px]"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Contact
+                </p>
+                <p
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px] leading-[100%] max-[480px]:whitespace-normal sm:truncate"
+                  style={{
+                    fontFamily: 'Manrope',
+                    fontWeight: 600,
+                    fontStyle: 'normal',
+                    lineHeight: '100%',
+                    letterSpacing: '-0.02em',
+                  }}
+                  title="+91 92270 32237"
+                >+91 92270 32237</p>
+              </div>
+            </a>
+
             <div className="flex items-start gap-4">
               <img
                 src={AddressIcon}
@@ -354,7 +467,7 @@ export default function ContactUs() {
                   Address
                 </p>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px]  leading-[130%] max-[393px]:whitespace-normal sm:truncate"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[#000000] sm:text-[16px] leading-[130%] whitespace-pre-line"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -363,21 +476,20 @@ export default function ContactUs() {
                   }}
                   title="Rajkot, Gujarat, India - 360110"
                 >
-                    B/103 Siddhi Haritage, Jivraj park main road, <br />
-                     Ambika township, Rajkot,  Gujarat, India. <br />
-                    - 360 005.</p>
+                  {'B/103 Siddhi Haritage, Jivraj park main road, Ambika township, Rajkot, Gujarat, India.- 360 005.'}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Right Column - Contact Form Card */}
-        <div className="flex w-full flex-1 justify-center lg:min-w-0 max-[393px]:w-full">
+        <div className="flex w-full flex-1 justify-center lg:min-w-0 max-[480px]:w-full">
           <div
-            className="box-border w-[393px] h-[750px] sm:w-[574px] sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[393px]:max-w-full max-[393px]:rounded-none max-[393px]:px-[20px] max-[393px]:pb-[60px] max-[393px]:pt-[60px] lg:h-[602px]"
+            className="box-border w-full max-w-[480px] h-[750px] sm:w-[574px] sm:max-w-none sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[480px]:h-auto max-[480px]:max-w-full max-[480px]:rounded-none max-[480px]:px-[20px] max-[360px]:px-[16px] max-[480px]:pb-[60px] max-[480px]:pt-[60px] lg:h-[602px]"
           >
             <h3
-              className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[393px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
+              className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
               style={{
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -576,7 +688,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="mt-[38px] flex w-full cursor-pointer items-center justify-center border-0 bg-transparent p-0 max-[393px]:mt-6"
+                className="mt-[38px] flex w-full cursor-pointer items-center justify-center border-0 bg-transparent p-0 max-[480px]:mt-6"
               >
                 <img
                   src={SubmitBtn}
@@ -595,14 +707,14 @@ export default function ContactUs() {
       {/* Success modal */}
       {successOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 p-5 max-[393px]:items-stretch max-[393px]:justify-stretch max-[393px]:p-0"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 p-5 max-[480px]:items-stretch max-[480px]:justify-stretch max-[480px]:p-0"
           role="dialog"
           aria-modal="true"
           aria-labelledby="contact-success-title"
         >
-          <div className="flex h-[772px] w-full max-w-[393px] flex-col overflow-hidden rounded-[12px] bg-white text-center shadow-[0_12px_40px_rgba(0,0,0,0.15)] max-[393px]:h-[100dvh] max-[393px]:min-h-[100dvh] max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:rounded-none max-[393px]:shadow-none sm:h-[602px] sm:max-w-[574px]">
+          <div className="flex h-[772px] w-full max-w-[480px] flex-col overflow-hidden rounded-[12px] bg-white text-center shadow-[0_12px_40px_rgba(0,0,0,0.15)] max-[480px]:h-[100dvh] max-[480px]:min-h-[100dvh] max-[480px]:w-full max-[480px]:max-w-[480px] max-[480px]:rounded-none max-[480px]:shadow-none sm:h-[602px] sm:max-w-[574px]">
             
-            <div className="box-border mb-[60px] ml-[38px] mr-[38px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[393px]:mx-0 max-[393px]:mb-0 max-[393px]:mt-8 max-[393px]:h-auto max-[393px]:w-full max-[393px]:max-w-[393px] max-[393px]:px-4 max-[393px]:pt-8 max-[480px]:h-auto max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
+            <div className="box-border mb-[60px] ml-[38px] mr-[38px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[480px]:mx-0 max-[480px]:mb-0 max-[480px]:mt-8 max-[480px]:h-auto max-[480px]:w-full max-[480px]:max-w-[480px] max-[480px]:px-4 max-[480px]:pt-8 max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
               <img
                 src={TickCircle}
                 alt=""
@@ -625,7 +737,7 @@ export default function ContactUs() {
 
             <div className="mt-auto shrink-0">
               <div className="mb-[30px] h-px w-full bg-[#E5E7EB]" />
-              <div className="flex justify-center px-6 pb-8 max-[393px]:px-4 max-[393px]:pb-8">
+              <div className="flex justify-center px-6 pb-8 max-[480px]:px-4 max-[480px]:pb-8">
                 <button
                   type="button"
                   onClick={() => setSuccessOpen(false)}

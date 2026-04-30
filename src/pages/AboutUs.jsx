@@ -218,7 +218,7 @@ export default function AboutUs() {
 
       {/* About Us business panel */}
       <section className="w-full">
-        <div className="w-full max-w-[1164px] h-auto mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden max-[393px]:w-[354px] max-[393px]:max-w-[354px] max-[393px]:h-auto max-[393px]:min-h-[978px] max-[393px]:overflow-visible max-[393px]:mt-[60px] max-[393px]:mb-[60px]">
+        <div className="w-full max-w-[1164px] h-auto mx-auto mt-[124px] mb-[124px] rounded-[16px] bg-[#FFFFFF] overflow-hidden max-[480px]:w-full max-[480px]:max-w-none max-[480px]:h-auto max-[480px]:min-h-0 max-[480px]:overflow-visible max-[480px]:mt-[60px] max-[480px]:mb-[60px] max-[480px]:px-[20px] max-[360px]:px-[16px]">
           <div className="flex flex-col h-full">
             {/* Top pill */}
             <div>
@@ -238,10 +238,10 @@ export default function AboutUs() {
             </div>
 
             {/* Top row */}
-            <div className="flex items-start justify-between gap-[118px] max-[393px]:flex-col max-[393px]:gap-[16px]">
-              <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-[12px]">
+            <div className="flex items-start justify-between gap-[118px] max-[480px]:flex-col max-[480px]:gap-[16px]">
+              <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[99px] mt-[14px] max-[480px]:w-full max-[360px]:w-full max-[480px]:h-auto max-[480px]:mt-[12px]">
                 <h2
-                  className="[text-shadow:2px_2px_0_#0000000F] font-sora font-normal sm:text-[40px] text-[26px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] font-sora font-normal sm:text-[40px] text-[26px] leading-[100%] tracking-[-0.04em] text-[#111827] w-[574px] h-[150px] max-[480px]:w-full max-[480px]:h-auto"
                   style={{
                     fontStyle: 'normal',
                     lineHeight: '120%',
@@ -258,9 +258,9 @@ export default function AboutUs() {
                 
               </div>
 
-              <div className="w-[520px] flex flex-col items-start max-[393px]:w-full">
+              <div className="w-[520px] flex flex-col items-start max-[480px]:w-full">
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.02em] sm:w-[472px] sm:h-[72px] w-[351px] h-[84px] text-[#4D4D4D] mt-[14px] text-left max-[393px]:w-full max-[393px]:h-auto max-[393px]:mt-0"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.02em] sm:w-[472px] sm:h-[72px] w-[351px] h-[84px] text-[#4D4D4D] mt-[14px] text-left max-[480px]:w-full max-[360px]:w-full max-[480px]:h-auto max-[480px]:mt-0"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -273,7 +273,7 @@ export default function AboutUs() {
                   Delivering high-quality pharmaceutical materials and strategic consultancy to support research, development, and commercial manufacturing worldwide.
                 </p>
 
-                <div className="flex items-center justify-start mt-[30px] sm:w-[404px] sm:h-[48px] w-[343px] h-[40px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-wrap max-[393px]:gap-y-[12px] max-[393px]:mt-[24px]">
+                <div className="flex items-center justify-start mt-[30px] sm:w-[404px] sm:h-[48px] w-[343px] h-[40px] max-[480px]:w-full max-[360px]:w-full max-[480px]:h-auto max-[480px]:flex-wrap max-[480px]:gap-y-[12px] max-[480px]:mt-[24px]">
                   <Link
                     to="/contact-us"
                     className="inline-flex items-center justify-center w-[157px] h-[48px] hover:opacity-90 transition-opacity sm:pr-[22px] pr-[16px]"
@@ -282,12 +282,13 @@ export default function AboutUs() {
                    <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
                   </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/services"
                     className="inline-flex items-center hover:opacity-90 transition-opacity"
+                    aria-label="View services in detail"
                   >
                     <span
-                      className="font-sora font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em] underline max-[393px]:whitespace-nowrap"
+                      className="font-sora font-semibold sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.02em] underline max-[480px]:whitespace-nowrap"
                       style={{
                         fontFamily: 'Sora',
                         fontWeight: 600,
@@ -315,15 +316,15 @@ export default function AboutUs() {
                       style={{ filter: 'brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(1500%) hue-rotate(360deg) brightness(105%) contrast(101%)' }}
                       aria-hidden
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Cards row */}
-            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:flex-col max-[393px]:gap-[14px] max-[393px]:mt-[32px]">
+            <div className="flex justify-between w-[1164px] h-[285px] mt-[56px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:flex-col max-[480px]:gap-[14px] max-[480px]:mt-[32px]">
               {/* Who We Are */}
-              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:px-[16px] max-[393px]:pb-[20px]">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:px-[16px] max-[480px]:pb-[20px]">
                 
                   <img src={WhoWeAreIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]"/>
               
@@ -341,7 +342,7 @@ export default function AboutUs() {
                   Who We Are
                 </h3>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[480px]:w-full max-[480px]:leading-[22px] max-[480px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -355,7 +356,7 @@ export default function AboutUs() {
               </div>
 
               {/* Mission */}
-              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:p-[16px]">
                 
                   <img
                     src={MissionIcon}
@@ -378,7 +379,7 @@ export default function AboutUs() {
                   Mission
                 </h3>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[480px]:w-full max-[480px]:leading-[22px] max-[480px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -392,7 +393,7 @@ export default function AboutUs() {
               </div>
 
               {/* Vision */}
-              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:p-[16px]">
+              <div className="sm:w-[377px] sm:h-[286px] w-[354px] h-[205px] rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] overflow-hidden px-[22px] pt-[20px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:p-[16px]">
                 
                   <img src={VisionIcon} alt="" className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] mb-[8px]" />
                
@@ -410,7 +411,7 @@ export default function AboutUs() {
                   Vision
                 </h3>
                 <p
-                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[393px]:leading-[22px] max-[393px]:h-auto"
+                  className="[text-shadow:2px_2px_0_#0000000F] sm:mt-[12px] mt-[8px] sm:text-[16px] text-[14px] text-[#4D4D4D] w-[333px] h-[120px] leading-[150%] max-[480px]:w-full max-[480px]:leading-[22px] max-[480px]:h-auto"
                   style={{
                     fontFamily: 'Manrope',
                     fontWeight: 600,
@@ -430,7 +431,7 @@ export default function AboutUs() {
       {/* Founder Highlight */}
       
       <section className="w-full flex justify-center pt-0 sm:pt-[60px]">
-      <div className="mx-auto w-[393px] h-[778px] sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px]">
+      <div className="mx-auto w-full max-w-none h-auto sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px] max-[480px]:px-[20px] max-[360px]:px-[16px]">
         <div className="relative flex w-full items-center justify-center rounded-[15px] bg-[#F9F9F9] overflow-hidden sm:bg-[#F4F6F9]">
           {/* Decorative frame image on the left */}
           <div className="hidden lg:block absolute w-[72px] h-[776px] top-[-17px] left-[98px] opacity-40 pointer-events-none">
@@ -442,7 +443,7 @@ export default function AboutUs() {
           </div>
 
           {/* Combined image + content frame */}
-          <div className="mx-auto flex h-[778px] w-full max-w-[393px] flex-col items-stretch justify-center gap-3 ml-[20px] mr-[20px] mt-[60px] mb-[60px] sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
+          <div className="mx-auto flex h-[778px] w-full max-w-none flex-col items-stretch justify-center gap-3 mt-[60px] mb-[60px] max-[480px]:h-auto sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
             {/* Left image — 353×353 on 393px-wide layout; desktop unchanged */}
             <div className="flex w-full shrink-0 justify-center sm:block sm:w-[456px] sm:h-[522px] sm:justify-start">
               <div className="relative aspect-square w-full max-w-[353px] overflow-hidden rounded-[20px] bg-[#E5E7EB] sm:aspect-auto sm:h-full sm:max-w-none sm:w-full sm:rounded-[16px]">
@@ -485,82 +486,40 @@ export default function AboutUs() {
                     Leadership Backed by Deep Pharmaceutical Expertise of 25+ Years
                   </h2>
 
+                  <div
+                    className="mb-[8px] w-[353px] shrink-0 sm:mb-[12px] sm:h-[96px] sm:w-[436px] sm:overflow-hidden max-[480px]:w-full"
+                    style={{
+                      fontFamily: 'Manrope',
+                      fontWeight: 600,
+                      fontStyle: 'normal',
+                      fontSize: '16px',
+                      lineHeight: '150%',
+                      letterSpacing: '-0.02em',
+                      leadingTrim: 'none',
+                      lineHeightTrim: 'none',
+                    }}
+                  >
+                    <ul className="m-0 flex list-disc flex-col justify-between gap-0 pl-5 text-[#1A1A1A] marker:text-black sm:h-full sm:pl-[1.375rem] [text-shadow:2px_2px_0_#0000000F]">
+                      <li className="pl-0 marker:text-current">PhD in Medicinal Chemistry</li>
+                      <li className="pl-0 marker:text-current">31 Patents</li>
+                      <li className="pl-0 marker:text-current">5 International Publications</li>
+                      <li className="pl-0 marker:text-current">
+                        Expert in DMF Filing &amp; Product Lifecycle Management
+                      </li>
+                    </ul>
+                  </div>
+
                   <p
-                    className="font-manrope text-[14px] font-semibold leading-[150%] tracking-[-0.02em]  text-[#666666] opacity-100 mb-[8px] sm:mb-[12px] sm:font-semibold sm:text-[16px] sm:leading-[150%] sm:tracking-[-0.02em] sm:text-[#4D4D4D] sm:w-[436px] sm:h-[120px] w-[353px] h-[105px] [text-shadow:2px_2px_0_#0000000F]"
+                    className="font-manrope text-[14px] font-semibold leading-[150%] tracking-[-0.02em]  text-[#666666] opacity-100 mb-[8px] sm:mb-[12px] sm:font-semibold sm:text-[16px] sm:leading-[150%] sm:tracking-[-0.02em] sm:text-[#4D4D4D] sm:w-[436px] sm:h-[120px] w-[353px] h-[105px] max-[480px]:w-full max-[480px]:h-auto [text-shadow:2px_2px_0_#0000000F]"
                     style={{
                       fontStyle: 'normal',
                       lineHeightTrim: 'none',
                       transform: 'rotate(0deg)',
                     }}
                   >
-                    Led by Dr. Rajendra Chavda, a seasoned pharmaceutical research professional with extensive experience in API development, synthetic chemistry, and process optimization, our company is built on a strong scientific foundation.
+                    Dr. Chavda is actively involved in academia and governance as a Director (APC Pharma Group, USA), Visiting Professor, Member of the Academic Council at Dr. Subhash University, and a Certified Independent Director under the Ministry of Corporate Affairs, Government of India.
                   </p>
                 </div>
-
-                
-
-               
-
-                <p
-                  className="font-manrope w-full h-auto text-[12px] font-normal leading-[150%] tracking-[-0.02em] text-[#757575] mt-[24px] mb-0 sm:mb-[12px] sm:mt-[24px] sm:font-semibold sm:text-[16px] sm:text-[#4D4D4D] sm:w-[361px] sm:h-[24px] [text-shadow:2px_2px_0_#0000000F]"
-                  style={{
-                    fontStyle: 'normal',
-                    lineHeightTrim: 'none',
-                  }}
-                >
-                  For any query &amp; guidance related to this business.
-                </p>
-               
-              </div>
-              
-             
-
-              {/* Contact actions */}
-              <div className="flex flex-wrap items-center gap-2 w-full h-auto sm:gap-2">
-                <div className="flex items-center gap-2">
-                  <a
-                    href="mailto:dr.rajendra@saviturlifescience.com"
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full sm:hidden"
-                    aria-label="Email dr.rajendra@saviturlifescience.com"
-                  >
-                    <img src={MailIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </a>
-                  <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hidden sm:inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
-                    aria-label="Email dr.rajendra@saviturlifescience.com"
-                  >
-                    <img src={MailIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </a>
-
-                  <a
-                    href="tel:+919664894484"
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
-                    aria-label="Call +91 96648 94484"
-                  >
-                    <img src={CallIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/dr-rajendra-chavda-7b8072b6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] sm:h-[48px] sm:w-[48px] sm:rounded-full"
-                    aria-label="LinkedIn"
-                  >
-                    <img src={LinkedinIcon} alt="" className="h-[40px] w-[40px] sm:h-[48px] sm:w-[48px]" aria-hidden />
-                  </a>
-                </div>
-
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center hover:opacity-90 transition-opacity"
-                  aria-label="Contact Us"
-                >
-                  <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
-                </button>
               </div>
             </div>
           </div>
@@ -568,12 +527,12 @@ export default function AboutUs() {
       </div>
     </section>
       
-      {/* What Sets Us Apart — We focus on long-term */}
-      <section className="w-full flex justify-center bg-white sm:mt-[124px] sm:mb-[124px] max-[393px]:mt-[60px] ">
-        <div className="w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px] max-[393px]:w-[354px] max-[393px]:h-auto max-[393px]:overflow-visible">
+    {/* What Sets Us Apart — We focus on long-term */}
+      <section className="w-full flex justify-center bg-white sm:mt-[124px] sm:mb-[124px] max-[480px]:mt-[60px]">
+        <div className="w-full max-w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px] max-[480px]:h-auto max-[480px]:overflow-visible max-[480px]:px-[20px] max-[360px]:px-[16px]">
           {/* Top row */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 sm:mb-[56px] w-[1164px] h-[150px] max-[393px]:mt-[120px] max-[393px]:mb-[78px]  max-[393px]:w-full max-[393px]:h-auto">
-            <div className="max-w-[574px] h-[150px] max-[393px]:w-full max-[393px]:h-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 sm:mb-[56px] w-full h-[150px] max-[480px]:mt-[120px] max-[480px]:mb-[78px] max-[480px]:h-auto">
+            <div className="max-w-[574px] h-[150px] max-[480px]:w-full max-[480px]:h-auto">
               <div
                 className="inline-flex items-center justify-center rounded-[60px] bg-white opacity-100 shrink-0 box-border sm:w-[199px] sm:h-[36px] w-[176px] h-[32px]"
                 style={{
@@ -593,7 +552,7 @@ export default function AboutUs() {
                 </span>
               </div>
               <h2
-                className="[text-shadow:2px_2px_0_#0000000F] mt-[12px] text-[#111827] w-[574px] h-[100px] sm:text-[40px]  leading-[120%] max-[393px]:w-full max-[393px]:h-auto max-[393px]:text-[26px] max-[393px]:leading-[150%]"
+                className="[text-shadow:2px_2px_0_#0000000F] mt-[12px] text-[#111827] w-[574px] h-[100px] sm:text-[40px]  leading-[120%] max-[480px]:w-full max-[480px]:h-auto max-[480px]:text-[26px] max-[480px]:leading-[150%]"
                 style={{
                   fontFamily: 'Sora',
                   fontWeight: 400,
@@ -608,7 +567,7 @@ export default function AboutUs() {
             </div>
             <Link
               to="/contact-us"
-              className="inline-flex items-center justify-center w-[157px] h-[48px] shrink-0 hover:opacity-90 transition-opacity self-center sm:self-center max-[393px]:hidden"
+              className="inline-flex items-center justify-center w-[157px] h-[48px] shrink-0 hover:opacity-90 transition-opacity self-center sm:self-center max-[480px]:hidden"
               aria-label="Contact Us"
             >
               <img
@@ -620,11 +579,11 @@ export default function AboutUs() {
           </div>
 
           {/* Four cards — each 276×316 */}
-          <div className="flex flex-row flex-wrap justify-between gap-[14px] w-[1164px] h-[316px] opacity-100 shrink-0 max-[393px]:flex-col max-[393px]:w-full max-[393px]:h-auto max-[393px]:justify-start">
+          <div className="flex flex-row flex-wrap justify-between gap-[14px] w-full h-[316px] opacity-100 shrink-0 max-[480px]:flex-col max-[480px]:h-auto max-[480px]:justify-start">
             {whatSetsUsApartCards.map((card) => (
               <article
                 key={card.title}
-                className="relative w-[276px] h-[316px] shrink-0 rounded-[12px] overflow-hidden max-[393px]:w-[351px] max-[393px]:h-[142px]"
+                className="relative w-[276px] h-[316px] shrink-0 rounded-[12px] overflow-hidden max-[480px]:w-full max-[480px]:h-[142px]"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -674,7 +633,7 @@ export default function AboutUs() {
           </div>
 
           {/* Mobile: button below cards */}
-          <div className="hidden max-[393px]:flex w-full justify-center max-[393px]:mt-[45px] max-[393px]:mb-[27px]">
+          <div className="hidden max-[480px]:flex w-full justify-center max-[480px]:mt-[45px] max-[480px]:mb-[27px]">
             <Link to="/contact-us" className="inline-flex items-center justify-center w-[150px] h-[42px] hover:opacity-90 transition-opacity" aria-label="Contact Us">
               <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
             </Link>

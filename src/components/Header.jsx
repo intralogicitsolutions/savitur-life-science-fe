@@ -60,7 +60,7 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="w-full max-w-[353px] mx-[20px] px-0 mt-[20px] mb-[20px] md:mx-auto md:mt-0 md:mb-0 md:max-w-[1360px]">
+      <div className="w-full mx-auto max-w-[480px] px-[20px] max-[360px]:px-[16px] mt-[20px] mb-[20px] md:px-0 md:mt-0 md:mb-0 md:max-w-[1360px]">
         <div className="flex items-center justify-between h-[46px] mt-0 mb-0 md:mt-[24px] md:mb-[24px]">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
@@ -173,8 +173,10 @@ export default function Header() {
           {/* Mobile icons (matches 393px header screenshot) */}
           <div className="flex md:hidden items-center justify-end gap-[12px] flex-shrink-0">
             <a
-              href="mailto:dr.rajendra@saviturlifescience.com"
-              aria-label="Email"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Email karan@saviturlifescience.com"
               className="inline-flex items-center justify-center sm:hidden"
             >
               <img src={MailIcon} alt="" className="w-[40px] h-[40px]" />
@@ -183,14 +185,17 @@ export default function Header() {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
               target="_blank"
               rel="noreferrer"
-              aria-label="Email"
+              aria-label="Email karan@saviturlifescience.com"
               className="hidden sm:inline-flex items-center justify-center"
             >
               <img src={MailIcon} alt="" className="w-[40px] h-[40px]" />
             </a>
-            <a href="tel:+917043112818" aria-label="Call" className="inline-flex items-center justify-center">
+            <a href="tel:+919664894484" aria-label="Call +919664894484" className="inline-flex items-center justify-center">
               <img src={CallIcon} alt="" className="w-[40px] h-[40px]" aria-hidden />
             </a>
+
+          
+
             <button
               type="button"
               aria-label="Menu"
@@ -219,7 +224,7 @@ export default function Header() {
       {/* Mobile dropdown nav (names only) */}
       {menuOpen && (
         <div className="md:hidden absolute left-0 right-0 top-[86px] z-[60] w-full">
-          <div className="w-full px-[20px]">
+          <div className="w-full px-[20px] max-[360px]:px-[16px]">
             <div className="w-full rounded-[16px] bg-white px-[16px] py-[16px] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
               <nav className="flex flex-col gap-[14px]">
                 {navLinks.map((link) => {
@@ -247,7 +252,7 @@ export default function Header() {
                           )}
                         </button>
                         {mobileProductsOpen && (
-                          <ul className="ml-2 flex flex-col gap-[10px] border-l-2 border-[#EEF0F4] pl-3">
+                          <ul className="ml-2 flex flex-col gap-[10px] pl-3">
                             {link.dropdown.map((item) => (
                               <li key={item.label}>
                                 <Link
@@ -296,6 +301,16 @@ export default function Header() {
                     </a>
                   )
                 })}
+
+                <Link
+                  to="/contact-us"
+                  className="flex items-center text-[#1F2A44] transition-colors font-normal"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span className="font-sora font-normal text-[16px] leading-[100%] tracking-[-0.02em] text-[#1F2A44]">
+                    Contact Us
+                  </span>
+                </Link>
               </nav>
             </div>
           </div>
@@ -304,7 +319,7 @@ export default function Header() {
 
       {/* Line image below header */}
       <hr
-        className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-[353px] border border-[#FFFFFF] bg-transparent"
+        className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%-40px)] max-[360px]:w-[calc(100%-32px)] border border-[#FFFFFF] bg-transparent"
         style={{ height: '0px', opacity: 0.2 }}
         aria-hidden
       />

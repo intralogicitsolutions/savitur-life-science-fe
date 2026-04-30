@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import CheckAll from '../assets/images/Check_All.svg'
 import WcontactUs from '../assets/images/Wcontact-us.svg'
 
@@ -78,7 +79,7 @@ export default function Partnership() {
 
   return (
     <section className="w-full bg-white sm:mt-[124px] flex justify-center px-0 sm:px-6">
-        <div className="w-full max-w-[393px] h-[601px] sm:max-w-none sm:w-[1524px] sm:rounded-[16px] sm:h-[746px] bg-[#FF9A52] text-center text-[#000000] flex flex-col items-center border border-[rgba(0,0,0,0.12)] opacity-100 box-border px-[20px] py-[60px] sm:px-0 sm:py-0">
+        <div className="w-full max-w-[480px] h-[601px] max-[360px]:h-auto sm:max-w-none sm:w-[1524px] sm:rounded-[16px] sm:h-[746px] bg-[#FF9A52] text-center text-[#000000] flex flex-col items-center border border-[rgba(0,0,0,0.12)] opacity-100 box-border px-[20px] max-[360px]:px-[16px] py-[60px] max-[360px]:py-[48px] sm:px-0 sm:py-0">
           {/* Top pill */}
           <div className="mb-[14px] mt-0 inline-flex items-center gap-1 pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[153px] h-[32px] opacity-100 sm:w-[172px] sm:h-[36px] rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] text-[13px] font-semibold tracking-[0.18em] uppercase shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:mt-[124px]">
             <span>
@@ -100,50 +101,50 @@ export default function Partnership() {
           </h2>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 gap-x-[22px] gap-y-[28px] max-w-[351px] sm:max-w-none sm:flex sm:w-[1164px] sm:h-[111px] sm:mx-auto sm:items-center sm:justify-between mb-[40px] sm:mb-[84px] w-[354px] h-[218px]">
+          <div className="grid w-full grid-cols-2 max-[360px]:grid-cols-1 gap-x-[22px] gap-y-[28px] max-w-[480px] sm:max-w-none sm:flex sm:w-[1164px] sm:h-[111px] sm:mx-auto sm:items-center sm:justify-between mb-[40px] sm:mb-[84px] h-auto max-[360px]:mb-[28px]">
             
-            <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
+            <div className="w-full h-[95px] sm:w-full sm:h-auto">
               <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               
               >
                 {count1}+
               </p>
-              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-full h-[42px] sm:h-auto opacity-90 text-[#212121]"
               
               >
                 Trusted Global <span className="sm:hidden"><br /></span> Suppliers
               </p>
             </div>
 
-            <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
+            <div className="w-full h-[95px] sm:w-full sm:h-auto">
             <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               
               >
                 {count2}Y+
               </p>
-              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              <p className="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-full h-[42px] sm:h-auto opacity-90 text-[#212121]"
               
               >
                 Experience</p>
             </div>
-            <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
+            <div className="w-full h-[95px] sm:w-full sm:h-auto">
             <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               
               >
                 {count3}+
               </p>
-              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-full h-[42px] sm:h-auto opacity-90 text-[#212121]"
               
               >
                 Quality Products</p>
             </div>
-            <div className="w-[169px] h-[95px] sm:w-full sm:h-auto">
+            <div className="w-full h-[95px] sm:w-full sm:h-auto">
             <p className="[text-shadow:2px_2px_0_#0000000F] font-semibold text-[42px] sm:text-[40px] md:text-[64px] leading-[100%] tracking-[-0.04em]"
               
               >
                 {count4}+
               </p>
-              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-[169px] h-[42px] sm:w-full sm:h-auto opacity-90 text-[#212121]"
+              <p className ="[text-shadow:2px_2px_0_#0000000F] mt-2 font-semibold text-[14px] sm:text-[14px] md:text-[20px] leading-[150%] tracking-[-0.01em] text-center w-full h-[42px] sm:h-auto opacity-90 text-[#212121]"
               
               >
                 On-time Delivery</p>
@@ -158,9 +159,9 @@ export default function Partnership() {
               Get best quality pharma materials.
             </p>
 
-            <button type="button" className="inline-flex items-center justify-center">
+            <Link to="/about-us" className="inline-flex items-center justify-center" aria-label="About Us">
               <img src={WcontactUs} alt="About Us" className="h-[40px] sm:h-[48px] w-[132px] sm:w-[157px] mt-[6px] sm:mt-[12px]" />
-            </button>
+            </Link>
           </div>
         </div>
     </section>

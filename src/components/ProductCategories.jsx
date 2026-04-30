@@ -44,7 +44,7 @@ const categories = [
 export default function ProductCategories() {
   return (
     <section className="w-full bg-white flex justify-center mt-[60px] mb-[60px] sm:mt-[124px] sm:mb-[124px]">
-      <div className="mx-auto h-[931px] min-h-[931px] w-[354px] max-w-[354px] sm:h-[648px] sm:min-h-0 sm:max-h-none sm:w-full sm:max-w-[1164px] sm:overflow-visible">
+      <div className="mx-auto w-full max-w-[480px] px-[20px] max-[360px]:px-[16px] h-auto min-h-0 sm:px-0 sm:h-[648px] sm:min-h-0 sm:max-h-none sm:max-w-[1164px] sm:overflow-visible">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="max-w-xl space-y-4">
@@ -78,7 +78,7 @@ export default function ProductCategories() {
             <Link
               key={item.title}
               to={item.to}
-              className="flex h-[170px] min-w-0 w-[169px] flex-col justify-between overflow-hidden rounded-[16px] border border-[#EEF0F4] bg-[#F4F6F9] px-[12px] py-[12px] sm:rounded-[24px] sm:px-[16px] sm:py-5 lg:h-[252px] lg:w-[220px] lg:px-7 lg:py-7"
+              className="flex h-[170px] w-full min-w-0 flex-col justify-between overflow-hidden rounded-[16px] border border-[#EEF0F4] bg-[#F4F6F9] px-[12px] py-[12px] sm:rounded-[24px] sm:px-[16px] sm:py-5 lg:h-[252px] lg:w-[220px] lg:px-7 lg:py-7"
             >
               <div className="flex flex-col">
                 <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] mb-[12px] sm:mb-[24px]">
@@ -100,7 +100,7 @@ export default function ProductCategories() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mx-auto flex sm:max-w-[378px] w-[195px] h-[94px] flex-col items-center px-2 text-center sm:h-[84px]">
+        <div className="mx-auto flex w-full max-w-[378px] flex-col items-center px-2 text-center sm:h-[84px]">
           <p
             className="flex h-[42px] w-[195px] items-center justify-center font-manrope font-semibold text-[14px] leading-[150%] tracking-[-0.02em] text-[#4D4D4D] opacity-95 text-center min-[1600px]:whitespace-nowrap sm:whitespace-normal [text-shadow:2px_2px_0_#0000000F]"
             
@@ -116,7 +116,7 @@ export default function ProductCategories() {
             <img
               src={ContactBtn}
               alt="Contact Us"
-              className="w-[195px] h-[94px] sm:w-[157px] sm:h-[48px] mb-0"
+              className="h-full w-full object-contain mb-0"
             />
           </Link>
         </div>

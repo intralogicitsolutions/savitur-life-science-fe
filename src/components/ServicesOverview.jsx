@@ -31,7 +31,7 @@ const services = [
 export default function ServicesOverview() {
   return (
     <section className="w-full bg-white flex justify-center opacity-100">
-      <div className="w-full max-w-[393px] min-h-[997px] sm:max-w-[1164px] sm:min-h-0 px-[20px] sm:px-6 lg:px-0 mt-[124px] lg:mt-[140px] pb-[60px] pt-[60px] sm:pb-0 sm:pt-0">
+      <div className="w-full max-w-[480px] min-h-[997px] sm:max-w-[1164px] sm:min-h-0 px-[20px] max-[360px]:px-[16px] sm:px-6 lg:px-0 mt-[124px] lg:mt-[140px] pb-[60px] pt-[60px] sm:pb-0 sm:pt-0">
         {/* Top content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">
@@ -65,7 +65,7 @@ export default function ServicesOverview() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="relative w-[351px] h-[142px] opacity-100 sm:w-full sm:h-[280px] lg:h-[316px] overflow-hidden rounded-[12px]"
+              className="relative w-full h-[142px] opacity-100 sm:w-full sm:h-[280px] lg:h-[316px] overflow-hidden rounded-[12px]"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
@@ -89,22 +89,23 @@ export default function ServicesOverview() {
         </div>
 
         {/* Bottom CTA row */}
-        <div className="flex flex-row items-center w-[343px] h-[40px] sm:justify-center sm:gap-4 sm:w-[404px] sm:h-auto mx-auto rounded-full">
+        <div className="mx-auto flex w-full max-w-[404px] flex-row items-center justify-between h-[40px] max-[360px]:h-auto max-[360px]:flex-col max-[360px]:items-start max-[360px]:gap-y-[10px] sm:justify-center sm:gap-4 sm:h-auto rounded-full">
           <Link
             to="/contact-us"
-            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity mr-[16px]"
+            className="inline-flex items-center justify-center hover:opacity-90 transition-opacity mr-[16px] max-[360px]:mr-0"
             aria-label="Contact Us"
           >
             <img src={ContactBtn} alt="Contact Us" className="sm:w-[157px] sm:h-[48px] w-[132px] h-[40px]" />
           </Link>
 
-          <button
-            type="button"
+          <Link
+            to="/services"
             className="inline-flex items-center font-semibold text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] bg-gradient-to-r from-[#FF8C42] to-[#E65C00] text-transparent bg-clip-text underline whitespace-nowrap"
+            aria-label="View services in detail"
           >
             <span>Or View Service in Details</span>
             <img src={ArrowUp} alt="Arrow Up" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]" />
-          </button>
+          </Link>
         </div>
 
       </div>

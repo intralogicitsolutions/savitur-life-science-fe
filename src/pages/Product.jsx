@@ -194,9 +194,7 @@ const Product = () => {
   return (
     <div className="[text-shadow:2px_2px_0_#0000000F]">
     <Header />
-    <section
-      className="relative w-full min-w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]"
-    >
+    <section className="relative w-full h-[689px] min-h-[689px] overflow-hidden sm:h-[460px] sm:min-h-[460px]">
         {/* Background image */}
         <div
           className="absolute inset-0  bg-no-repeat bg-cover bg-[position:65%_calc(0%+40px)] sm:bg-top top-[-37px]"
@@ -213,10 +211,10 @@ const Product = () => {
 
         {/* Content */}
         <div className="relative z-10 w-full h-full min-h-[689px] sm:min-h-[460px] flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center w-full px-4 sm:px-0 sm:w-auto">
+          <div className="flex flex-col items-center justify-center text-center w-full px-[20px] max-[360px]:px-[16px] sm:px-0 sm:w-auto">
             {/* Main heading */}
             <h1 
-              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal text-[28px] sm:text-[50px] leading-[110%] tracking-[-0.04em] mb-[14px] whitespace-normal break-words max-w-[353px] sm:max-w-none"
+              className="[text-shadow:2px_2px_0_#0000000F] text-[#FFFFFF] font-sora font-normal text-[28px] max-[360px]:text-[20px] sm:text-[50px] leading-[110%] max-[360px]:leading-[100%] tracking-[-0.04em] mb-[14px] whitespace-normal break-words max-[360px]:whitespace-nowrap max-[360px]:break-normal w-full max-w-[480px] sm:max-w-none"
               style={{ 
                 fontFamily: 'Sora',
                 fontWeight: 400,
@@ -230,7 +228,7 @@ const Product = () => {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] sm:text-[16px] leading-[100%] tracking-[-0.02em] h-[24px] flex flex-nowrap items-center justify-center gap-0 whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
+            <div className="text-[#FFFFFF] font-sora font-normal text-[14px] max-[360px]:text-[12px] sm:text-[16px] leading-[100%] tracking-[-0.02em] flex flex-wrap items-center justify-center gap-x-0 gap-y-1 max-w-full">
               <span 
               className="[text-shadow:2px_2px_0_#0000000F] opacity-90 shrink-0"
               style={{
@@ -244,8 +242,8 @@ const Product = () => {
             >
               Home
             </span>
-              <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px]">
-                <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
+              <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px] max-[360px]:text-[12px]">
+                <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] max-[360px]:w-[18px] max-[360px]:h-[18px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
               className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0"
@@ -260,11 +258,11 @@ const Product = () => {
             >
              Products
             </span>
-            <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px]">
-                <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
+            <span className="opacity-70 shrink-0 inline-flex items-center justify-center sm:text-[16px] text-[14px] max-[360px]:text-[12px]">
+                <img src={ChevronRightMD} alt="" className="w-[20px] h-[20px] max-[360px]:w-[18px] max-[360px]:h-[18px] brightness-0 invert" style={{ filter: 'brightness(0) invert(1)' }} aria-hidden />
               </span>
               <span 
-              className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0 whitespace-nowrap"
+              className="[text-shadow:2px_2px_0_#0000000F] opacity-100 shrink-0 max-w-full break-words"
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 600,
@@ -285,7 +283,7 @@ const Product = () => {
 
       {/* API Products */}
       <section className="w-full bg-white">
-        <div className="mx-auto w-full max-w-[1200px] mt-[60px] sm:mt-[124px] mb-[60px] sm:mb-[124px] px-[20px] sm:px-0">
+        <div className="mx-auto w-full max-w-[1200px] mt-[60px] sm:mt-[124px] mb-[60px] sm:mb-[124px] px-[20px] max-[360px]:px-[16px] sm:px-0">
           {isLabChemicals ? (
             <>
               <div className="mx-auto w-full sm:w-[1164px] flex flex-col justify-center">
@@ -427,7 +425,7 @@ const Product = () => {
                     </h3>
 
                     {labMobilePickerOpen && (
-                      <div className="lg:hidden w-[353px]">
+                      <div className="lg:hidden w-full max-w-[480px]">
                         <div
                           className="font-sora font-normal text-[24px] leading-[100%] tracking-[-0.04em] text-[#0F172A]"
                           style={{
@@ -832,7 +830,11 @@ const Product = () => {
           )}
 
           {/* Desktop table */}
-          <div className="hidden sm:block w-full sm:mx-auto sm:w-[1164px] min-h-[520px] overflow-hidden rounded-[10px] border border-[#E5E7EB]">
+          <div
+            className={`hidden sm:block w-full sm:mx-auto sm:w-[1164px] overflow-hidden rounded-[10px] border border-[#E5E7EB] ${
+              isExcipients ? 'min-h-[251px]' : 'min-h-[420px]'
+            }`}
+          >
             <div>
               <table className="w-full border-collapse table-fixed">
                 <thead className="bg-[#F4F6F9]">

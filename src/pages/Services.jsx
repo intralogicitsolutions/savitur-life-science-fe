@@ -82,7 +82,7 @@ export default function Services() {
                 leadingTrim: 'none',
               }}
             >
-                Contact us
+                Services
               </span>
             </div>
           </div>
@@ -92,8 +92,7 @@ export default function Services() {
 
       {/* Services — expert consultancy */}
       <section
-        className="mx-auto mb-[124px] mt-[124px] box-border flex min-h-0 w-full max-w-full flex-col max-[393px]:max-w-[354px] max-[393px]:mt-[60px] max-[393px]:mb-[60px] max-[393px]:px-[20px]"
-        style={{ width: '1164px', maxWidth: '100%' }}
+        className="mx-auto mb-[124px] mt-[124px] box-border flex min-h-0 w-full max-w-[1164px] flex-col px-0 max-[480px]:max-w-[480px] max-[480px]:mt-[60px] max-[480px]:mb-[60px] max-[480px]:px-[20px] max-[360px]:px-[16px]"
       >
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div>
@@ -121,17 +120,15 @@ export default function Services() {
               </span>
             </div>
 
-          <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[70px] mt-[14px] max-[393px]:w-[351px] max-[393px]:h-[70px]">
+          <div className="sm:w-[574px] sm:h-[150px] w-[351px] h-[70px] mt-[14px] max-[480px]:w-full max-[480px]:h-auto">
               <h2
-                className="[text-shadow:2px_2px_0_#0000000F] box-border sm:text-[40px] text-[26px] max-[393px]:text-[26px] max-[393px]:leading-[120%]"
+                className="[text-shadow:2px_2px_0_#0000000F] box-border sm:text-[40px] text-[26px] max-[480px]:text-[26px] max-[480px]:leading-[120%]"
                 style={{
                   fontFamily: "Sora",
                   fontWeight: 400,
                   fontStyle: "normal",
                   lineHeight: "120%",
                   letterSpacing: "-0.04em",
-                  width: "574px",
-                  height: "150px",
                   textShadow: "2px 2px 0px #0000000F",
                 }}
               >
@@ -142,7 +139,7 @@ export default function Services() {
           </div>
           
           <p
-            className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:text-[16px] text-[14px] mt-[50px] max-[393px]:mt-0 max-[393px]:w-full"
+            className="[text-shadow:2px_2px_0_#0000000F] text-[#4D4D4D] sm:text-[16px] text-[14px] mt-[50px] max-[480px]:mt-0 max-[480px]:w-full"
             style={{
               fontFamily: 'Manrope',
               fontWeight: 600,
@@ -162,10 +159,10 @@ export default function Services() {
         </div>
 
         {/* Cards (3 columns x 2 rows) */}
-        <div className="grid grid-cols-3 w-[1164px] sm:mt-[56px] mt-[28px] max-[393px]:grid-cols-1 max-[393px]:w-full max-[393px]:mt-[28px] max-[393px]:gap-[14px]">
+        <div className="grid grid-cols-3 w-full sm:mt-[56px] mt-[28px] max-[480px]:grid-cols-1 max-[480px]:w-full max-[480px]:mt-[28px] max-[480px]:gap-[14px]">
           {/* 1 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -204,7 +201,7 @@ export default function Services() {
 
           {/* 2 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -245,7 +242,7 @@ export default function Services() {
 
           {/* 3 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -285,7 +282,7 @@ export default function Services() {
 
           {/* 4 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -325,7 +322,7 @@ export default function Services() {
 
           {/* 5 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px] shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -364,7 +361,7 @@ export default function Services() {
 
           {/* 6 */}
           <article
-            className="box-border sm:w-[377px] sm:h-[285px] w-[354px] h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[393px]:w-full max-[393px]:h-auto max-[393px]:mb-0"
+            className="box-border sm:w-[377px] sm:h-[285px] w-full h-[209px] shrink-0 rounded-[12px] border border-[#EEF0F4] bg-[#F4F6F9] sm:px-[20px] sm:py-[20px] px-[16px] pt-[16px] pb-[20px] flex flex-col mb-[16px] max-[480px]:w-full max-[480px]:h-auto max-[480px]:mb-0"
             style={{ boxShadow: '2px 2px 0px 0px #0000000F' }}
           >
             <div className="sm:w-[54px] sm:h-[54px] w-[40px] h-[40px]  shrink-0 flex items-center justify-center sm:mb-[24px] mb-[12px]">
@@ -404,7 +401,7 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="mx-auto flex h-[94px] w-[188px] shrink-0 flex-col items-center justify-center mt-[56px] max-[393px]:mt-[32px] sm:h-[84px] sm:w-[376px]">
+        <div className="mx-auto flex h-auto w-full max-w-[376px] shrink-0 flex-col items-center justify-center mt-[56px] max-[480px]:mt-[32px] sm:h-[84px]">
           <p
             className="[text-shadow:2px_2px_0_#0000000F] text-center text-[#4D4D4D] sm:text-[16px] text-[14px] mb-[12px] sm:mb-[12px]"
             style={{

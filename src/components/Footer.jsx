@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8 mb-[40px] max-[393px]:mb-0">
       <footer className="relative w-full max-w-full min-h-0 overflow-hidden rounded-none border border-white/10 bg-[#1F2A44] pb-28 opacity-100 lg:max-w-[1520px] lg:rounded-2xl lg:min-h-[626px] lg:pb-0">
-        <div className="relative z-10 pt-[60px] pl-[20px] pr-[20px] pb-[34px] w-full max-w-[353px] min-h-[719px] text-left lg:mx-0 lg:mt-[124px] lg:ml-[80px] lg:mr-[78px] lg:min-h-0 lg:max-w-none lg:w-[1362px] lg:px-0 lg:pt-0 lg:pb-0">
+        <div className="relative z-10 pt-[60px] pb-[34px] w-full max-w-[480px] px-[20px] max-[360px]:px-[16px] min-h-[719px] text-left lg:mx-0 lg:mt-[124px] lg:ml-[80px] lg:mr-[78px] lg:min-h-0 lg:max-w-none lg:w-[1362px] lg:px-0 lg:pt-0 lg:pb-0">
           {/* Main: mobile = brand, 2-col links, address, contact | lg = 5 columns */}
           <div className="grid w-full grid-cols-1 lg:grid-cols-5 lg:gap-6">
             {/* Company Branding */}
@@ -38,7 +38,7 @@ export default function Footer() {
               <Link to="/" onClick={scrollTop} className="sm:mb-[24px] mb-[16px] inline-block">
                 <img src={HeaderLogo} alt="Savitur Life Science" className="sm:h-[46px] sm:w-[154px] h-[46px] w-[154px]" />
               </Link>
-              <p className="h-auto w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90 [text-shadow:2px_2px_0_#0000000F]">
+              <p className="h-auto w-full max-w-[202px] font-semibold sm:text-[16px] text-[14px] leading-[150%] tracking-[-0.01em] text-white/90 [text-shadow:2px_2px_0_#0000000F]">
                 Powering Progress in Pharmaceutical Excellence
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
 
             {/* Office Address */}
-            <div className="w-[261px] h-[99px] sm:h-[145px] sm:w-[220px] mb-[30px]">
+            <div className="w-full max-w-[261px] h-auto sm:h-[145px] sm:w-[220px] mb-[30px]">
             <h3 className="[text-shadow:2px_2px_0_#0000000F] sm:mb-[24px] mb-[16px] font-medium sm:text-[16px] text-[15px] leading-[100%] tracking-[-0.04em] text-white">
                 Office Address
               </h3>
@@ -143,7 +143,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="tel:+917043112818"
+                  href="tel:+919227032237"
                   className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
                   <img src={Fphone} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
@@ -157,8 +157,8 @@ export default function Footer() {
           <div className="mt-8 mb-6 h-0 w-full border-t border-white/20 max-[393px]:mt-[32px] max-[393px]:mb-[24px] lg:mb-[24px]" />
 
           {/* Copyright & Social — design: left text, right icons on mobile */}
-          <div className="[text-shadow:2px_2px_0_#0000000F] flex flex-row flex-wrap items-start justify-between gap-4 max-[393px]:w-[353px] max-[353px]:h-[42px] max-[393px]:flex-nowrap max-[393px]:items-center">
-            <p className="sm:w-[240px] w-[186px] h-[42px] font-medium text-[14px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] sm:max-w-none sm:text-[16px] lg:w-auto">
+          <div className="[text-shadow:2px_2px_0_#0000000F] flex w-full flex-row flex-wrap items-start justify-between gap-4 max-[393px]:flex-nowrap max-[393px]:items-center">
+            <p className="sm:w-[240px] w-full max-w-[240px] font-medium text-[14px] leading-[150%] tracking-[-0.04em] text-[#FFFFFF] sm:max-w-none sm:text-[16px] lg:w-auto">
             Copyrights © 2023 all rights
             reserved by SaviturLifeScience
             </p>

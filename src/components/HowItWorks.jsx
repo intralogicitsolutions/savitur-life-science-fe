@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 
 export default function HowItWorks() {
   return (
-    <section className="w-full bg-white flex justify-center px-[20px] sm:px-6 lg:px-0">
-      <div className="w-full max-w-[982px] min-h-0 opacity-100 box-border mt-[60px] mb-[60px] md:mt-[160px] md:mb-[124px] max-[393px]:max-w-[353px] max-[393px]:min-h-[855px]">
+    <section className="w-full bg-white flex justify-center px-[20px] max-[360px]:px-[16px] sm:px-6 lg:px-0">
+      <div className="w-full max-w-[480px] sm:max-w-[982px] min-h-0 opacity-100 box-border mt-[60px] mb-[60px] md:mt-[160px] md:mb-[124px] max-[360px]:px-0">
         <div className="flex flex-col md:flex-row md:items-center md:gap-16 bg-white w-full">
           {/* Hero image — full width on mobile, left column on md+ */}
-          <div className="w-full max-[393px]:w-[353px] md:w-[456px] md:shrink-0 h-[353px] max-[393px]:h-[353px] sm:h-[280px] md:h-[522px] rounded-[16px] overflow-hidden relative">
+          <div className="w-full md:w-[456px] md:shrink-0 h-[353px] sm:h-[280px] md:h-[522px] rounded-[16px] overflow-hidden relative">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -20,7 +20,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Content */}
-          <div className="w-full md:w-[456px] md:max-w-[456px] flex flex-col items-start text-left h-auto max-[393px]:mt-[28px] md:mt-0">
+          <div className="w-full md:w-[456px] md:max-w-[456px] flex flex-col items-start text-left h-auto mt-[28px] md:mt-0">
             {/* Pill */}
             <div
               className="inline-flex items-center gap-1 pt-[6px] pr-[12px] pb-[6px] pl-[12px] w-[141px] h-[32px] sm:w-[158px] sm:h-[36px]  rounded-[60px] bg-white border border-[rgba(0,0,0,0.12)] opacity-100 sm:text-[13px] text-[11px] font-semibold tracking-[0.18em] uppercase mb-[12px]"
@@ -37,7 +37,7 @@ export default function HowItWorks() {
 
             {/* Heading */}
             <h2
-              className="[text-shadow:2px_2px_0_#0000000F] font-normal text-[26px] sm:text-[32px] md:text-[39px] leading-[120%] text-[#000000] max-[393px]:w-[351px] max-[393px]:h-[99px] w-full h-auto md:max-w-[456px]"
+              className="[text-shadow:2px_2px_0_#0000000F] font-normal text-[26px] sm:text-[32px] md:text-[39px] leading-[120%] text-[#000000] w-full h-auto md:max-w-[456px]"
               
             >
               From Sample to Commercial Scale — Seamless at Every Stage
