@@ -430,9 +430,9 @@ export default function AboutUs() {
 
       {/* Founder Highlight */}
       
-      <section className="w-full flex justify-center pt-0 sm:pt-[60px]">
+      <section className="w-full flex justify-center pt-0 sm:pt-[60px] bg-[#F9F9F9] sm:bg-[#F4F6F9]">
       <div className="mx-auto w-full max-w-none h-auto sm:max-w-none sm:w-[1524px] sm:h-[742px] sm:mx-[38px] max-[480px]:px-[20px] max-[360px]:px-[16px]">
-        <div className="relative flex w-full items-center justify-center rounded-[15px] bg-[#F9F9F9] overflow-hidden sm:bg-[#F4F6F9]">
+        <div className="relative flex w-full items-center justify-center rounded-[15px] bg-transparent overflow-hidden">
           {/* Decorative frame image on the left */}
           <div className="hidden lg:block absolute w-[72px] h-[776px] top-[-17px] left-[98px] opacity-40 pointer-events-none">
             <img
@@ -446,7 +446,7 @@ export default function AboutUs() {
           <div className="mx-auto flex h-[778px] w-full max-w-none flex-col items-stretch justify-center gap-3 mt-[60px] mb-[60px] max-[480px]:h-auto sm:mx-0 sm:h-[522px] sm:w-[982px] sm:max-w-none sm:justify-start sm:gap-0 sm:p-0 sm:flex-row sm:mt-[102px] sm:mb-[102px]">
             {/* Left image — 353×353 on 393px-wide layout; desktop unchanged */}
             <div className="flex w-full shrink-0 justify-center sm:block sm:w-[456px] sm:h-[522px] sm:justify-start">
-              <div className="relative aspect-square w-full max-w-[353px] overflow-hidden rounded-[20px] bg-[#E5E7EB] sm:aspect-auto sm:h-full sm:max-w-none sm:w-full sm:rounded-[16px]">
+              <div className="relative aspect-square w-full max-w-[353px] max-[480px]:max-w-none overflow-hidden rounded-[20px] bg-[#E5E7EB] sm:aspect-auto sm:h-full sm:max-w-none sm:w-full sm:rounded-[16px]">
                 <img
                   src={FounderImg}
                   alt="Founder"
@@ -531,7 +531,7 @@ export default function AboutUs() {
       <section className="w-full flex justify-center bg-white sm:mt-[124px] sm:mb-[124px] max-[480px]:mt-[60px]">
         <div className="w-full max-w-[1164px] h-[522px] flex flex-col overflow-hidden rounded-[16px] max-[480px]:h-auto max-[480px]:overflow-visible max-[480px]:px-[20px] max-[360px]:px-[16px]">
           {/* Top row */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 sm:mb-[56px] w-full h-[150px] max-[480px]:mt-[120px] max-[480px]:mb-[78px] max-[480px]:h-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 sm:mb-[56px] w-full h-[150px] max-[480px]:mb-[78px] max-[480px]:h-auto">
             <div className="max-w-[574px] h-[150px] max-[480px]:w-full max-[480px]:h-auto">
               <div
                 className="inline-flex items-center justify-center rounded-[60px] bg-white opacity-100 shrink-0 box-border sm:w-[199px] sm:h-[36px] w-[176px] h-[32px]"

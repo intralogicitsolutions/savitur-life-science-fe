@@ -27,6 +27,68 @@ export default function ContactUs() {
   const [dialCodes, setDialCodes] = useState(FALLBACK_DIAL_CODES)
   const [selectedDial, setSelectedDial] = useState(FALLBACK_DIAL_CODES[0])
   const dialWrapRef = useRef(null)
+  const firstNameRef = useRef(null)
+  const emailRef = useRef(null)
+  const phoneRef = useRef(null)
+  const messageRef = useRef(null)
+
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+  const [touched, setTouched] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    phone: false,
+    message: false,
+  })
+
+  const errors = useMemo(() => {
+    const next = {}
+    const firstName = form.firstName.trim()
+    const email = form.email.trim()
+    const phone = form.phone.trim()
+    const message = form.message.trim()
+
+    if (!firstName) next.firstName = 'First name is required.'
+    if (!email) next.email = 'Email is required.'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = 'Please enter a valid email.'
+    if (!phone) next.phone = 'Phone number is required.'
+    else if (!/^[0-9\s()+-]{6,}$/.test(phone)) next.phone = 'Please enter a valid phone number.'
+    if (!message) next.message = 'Message is required.'
+
+    return next
+  }, [form.email, form.firstName, form.message, form.phone])
+
+  const isFormValid = useMemo(() => Object.keys(errors).length === 0, [errors])
+
+  const resetForm = () => {
+    setForm({ firstName: '', lastName: '', email: '', phone: '', message: '' })
+    setTouched({ firstName: false, lastName: false, email: false, phone: false, message: false })
+    setDialSearch('')
+    setDialOpen(false)
+  }
+
+  const onSubmitAttempt = (e) => {
+    e.preventDefault()
+    setTouched({ firstName: true, lastName: true, email: true, phone: true, message: true })
+    if (!isFormValid) {
+      const order = [
+        ['firstName', firstNameRef],
+        ['email', emailRef],
+        ['phone', phoneRef],
+        ['message', messageRef],
+      ]
+      const firstInvalid = order.find(([key]) => Boolean(errors[key]))
+      if (firstInvalid?.[1]?.current) firstInvalid[1].current.focus()
+      return
+    }
+    setSuccessOpen(true)
+  }
 
   const filteredDialCodes = useMemo(() => {
     const q = dialSearch.trim().toLowerCase()
@@ -300,7 +362,7 @@ export default function ContactUs() {
               </div>
             </a>
             
-            <a href="tel:+917043112818" className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full">
+            <a href="tel:+919664894484" className="sm:mb-[24px] max-[480px]:mb-[20px] flex sm:h-[54px] sm:w-[325px] w-full max-w-[325px] h-[46px] shrink-0 items-center gap-4 overflow-hidden group max-[480px]:max-w-full">
             <img
                 src={PhoneIcon}
                 alt=""
@@ -329,7 +391,7 @@ export default function ContactUs() {
                     lineHeight: '100%',
                     letterSpacing: '-0.02em',
                   }}
-                  title="+91 70431 12818"
+                  title="+91 96648 94484"
                 >+91 96648 94484</p>
               </div>
             </a>
@@ -486,274 +548,322 @@ export default function ContactUs() {
         {/* Right Column - Contact Form Card */}
         <div className="flex w-full flex-1 justify-center lg:min-w-0 max-[480px]:w-full">
           <div
-            className="box-border w-full max-w-[480px] h-[750px] sm:w-[574px] sm:max-w-none sm:h-[602px] shrink-0 overflow-y-auto rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[480px]:h-auto max-[480px]:max-w-full max-[480px]:rounded-none max-[480px]:px-[20px] max-[360px]:px-[16px] max-[480px]:pb-[60px] max-[480px]:pt-[60px] lg:h-[602px]"
+            className="box-border w-full max-w-[480px] h-[750px] sm:w-[574px] sm:max-w-none sm:h-[602px] shrink-0 rounded-[12px] bg-white pl-8 pr-8 pt-12 pb-8 max-[480px]:h-auto max-[480px]:min-h-[750px] max-[480px]:max-w-full max-[480px]:rounded-none max-[480px]:px-[20px] max-[360px]:px-[16px] max-[480px]:pb-[60px] max-[480px]:pt-[60px] lg:h-[602px]"
           >
-            <h3
-              className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
-              style={{
-                fontFamily: 'Sora',
-                fontWeight: 400,
-                fontStyle: 'normal',
-                letterSpacing: '-0.04em',
-              }}
-            >
-              Get In Touch
-            </h3>
+            {!successOpen ? (
+              <>
+                <h3
+                  className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
+                  style={{
+                    fontFamily: 'Sora',
+                    fontWeight: 400,
+                    fontStyle: 'normal',
+                    letterSpacing: '-0.04em',
+                  }}
+                >
+                  Get In Touch
+                </h3>
 
-            <form
-              className="flex flex-col"
-              onSubmit={(e) => {
-                e.preventDefault()
-                setSuccessOpen(true)
-              }}
-            >
-              <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label
-                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
-                    style={{
-                      fontFamily: 'Manrope',
-                      fontWeight: 600,
-                      fontStyle: 'normal',
-                      fontSize: '14px',
-                      lineHeight: '100%',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    First Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter First Name"
-                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
-                  />
-                </div>
-
-                <div>
-                <label
-                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
-                    style={{
-                      fontFamily: 'Manrope',
-                      fontWeight: 600,
-                      fontStyle: 'normal',
-                      fontSize: '14px',
-                      lineHeight: '100%',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    Last Name</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Last Name"
-                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
-                  />
-                </div>
-              </div>
-
-
-              <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                <label
-                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
-                    style={{
-                      fontFamily: 'Manrope',
-                      fontWeight: 600,
-                      fontStyle: 'normal',
-                      fontSize: '14px',
-                      lineHeight: '100%',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Enter Email"
-                    className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
-                  />
-                </div>
-                <div>
-                <label
-                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] mb-[6px]"
-                    style={{
-                      fontFamily: 'Manrope',
-                      fontWeight: 600,
-                      fontStyle: 'normal',
-                      fontSize: '14px',
-                      lineHeight: '100%',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    Phone/Contact Number <span className="text-red-500">*</span>
-                  </label>
-                  <div
-                    className="relative box-border flex h-[50px] w-full max-w-full min-w-0 items-center gap-[8px] overflow-visible rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] py-[10px] pl-4 pr-4 transition-all sm:max-w-[248px]"
-                  >
-                    <div ref={dialWrapRef} className="relative shrink-0">
-                      <button
-                        type="button"
-                        onClick={() => setDialOpen((v) => !v)}
-                        className="inline-flex items-center gap-2 bg-transparent border-0 p-0 font-manrope text-[14px] text-[#111827] cursor-pointer"
-                        style={{ height: '100%' }}
-                        aria-haspopup="listbox"
-                        aria-expanded={dialOpen}
+                <form
+                  className="flex flex-col"
+                  onSubmit={onSubmitAttempt}
+                >
+                  <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label
+                        className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
+                        style={{
+                          fontFamily: 'Manrope',
+                          fontWeight: 600,
+                          fontStyle: 'normal',
+                          fontSize: '14px',
+                          lineHeight: '100%',
+                          letterSpacing: '-0.02em',
+                        }}
                       >
-                        <span>{selectedDial.dial}</span>
-                        <img
-                          src={CaretDownMd}
-                          alt=""
-                          className="w-[18px] h-[18px] opacity-70"
-                          style={{ filter: 'brightness(0)' }}
-                          aria-hidden
-                        />
-                      </button>
-
-                      {dialOpen && (
-                        <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-[240px] rounded-[10px] border border-[#E5E7EB] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
-                          <div className="p-2">
-                            <input
-                              value={dialSearch}
-                              onChange={(e) => setDialSearch(e.target.value)}
-                              placeholder="Search country..."
-                              className="w-full rounded-[8px] border border-[#E5E7EB] px-3 py-2 font-manrope text-[14px] text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#1F2A44]/20"
-                              autoFocus
-                            />
-                          </div>
-                          <div className="max-h-[220px] overflow-auto pb-2" role="listbox">
-                            {filteredDialCodes.map((c) => {
-                              const isActive = c.code === selectedDial.code && c.dial === selectedDial.dial
-                              return (
-                                <button
-                                  key={`${c.code}-${c.dial}`}
-                                  type="button"
-                                  role="option"
-                                  aria-selected={isActive}
-                                  onClick={() => {
-                                    setSelectedDial(c)
-                                    setDialOpen(false)
-                                    setDialSearch('')
-                                  }}
-                                  className={`w-full px-3 py-2 text-left font-manrope text-[14px] ${
-                                    isActive ? 'bg-[#F4F6F9] text-[#111827]' : 'bg-white text-[#111827] hover:bg-[#F4F6F9]'
-                                  }`}
-                                >
-                                  {c.name} ({c.dial})
-                                </button>
-                              )
-                            })}
-                            {filteredDialCodes.length === 0 && (
-                              <div className="px-3 py-2 font-manrope text-[14px] text-[#6B7280]">No results</div>
-                            )}
-                          </div>
-                        </div>
+                        First Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        ref={firstNameRef}
+                        type="text"
+                        placeholder="Enter First Name"
+                        value={form.firstName}
+                        onChange={(e) => setForm((v) => ({ ...v, firstName: e.target.value }))}
+                        onBlur={() => setTouched((v) => ({ ...v, firstName: true }))}
+                        className={`box-border h-[50px] w-full max-w-full rounded-[12px] border bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px] ${
+                          touched.firstName && errors.firstName ? 'border-red-500' : 'border-[#1F2A4433]'
+                        }`}
+                      />
+                      {touched.firstName && errors.firstName && (
+                        <p className="mt-2 font-manrope text-[12px] font-semibold leading-[100%] text-red-600">
+                          {errors.firstName}
+                        </p>
                       )}
                     </div>
-                    
-                    <img
-                      src={Line1}
-                      alt=""
-                      className="w-[1px] h-[20px] shrink-0"
-                      aria-hidden
-                    />
-                    <input
-                      type="tel"
-                      className="flex-1 border-0 bg-transparent font-manrope text-[14px] text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none"
-                      style={{ height: '100%', padding: 0, border: 'none' }}
-                    />
+
+                    <div>
+                      <label
+                        className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
+                        style={{
+                          fontFamily: 'Manrope',
+                          fontWeight: 600,
+                          fontStyle: 'normal',
+                          fontSize: '14px',
+                          lineHeight: '100%',
+                          letterSpacing: '-0.02em',
+                        }}
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter Last Name"
+                        value={form.lastName}
+                        onChange={(e) => setForm((v) => ({ ...v, lastName: e.target.value }))}
+                        onBlur={() => setTouched((v) => ({ ...v, lastName: true }))}
+                        className="box-border h-[50px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px]"
+                      />
+                    </div>
                   </div>
-                </div>
 
-              </div>
+                  <div className="sm:mb-[20px] mb-[16px] grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label
+                        className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
+                        style={{
+                          fontFamily: 'Manrope',
+                          fontWeight: 600,
+                          fontStyle: 'normal',
+                          fontSize: '14px',
+                          lineHeight: '100%',
+                          letterSpacing: '-0.02em',
+                        }}
+                      >
+                        Email <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        ref={emailRef}
+                        type="email"
+                        placeholder="Enter Email"
+                        value={form.email}
+                        onChange={(e) => setForm((v) => ({ ...v, email: e.target.value }))}
+                        onBlur={() => setTouched((v) => ({ ...v, email: true }))}
+                        className={`box-border h-[50px] w-full max-w-full rounded-[12px] border bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] sm:max-w-[248px] ${
+                          touched.email && errors.email ? 'border-red-500' : 'border-[#1F2A4433]'
+                        }`}
+                      />
+                      {touched.email && errors.email && (
+                        <p className="mt-2 font-manrope text-[12px] font-semibold leading-[100%] text-red-600">
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label
+                        className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] mb-[6px]"
+                        style={{
+                          fontFamily: 'Manrope',
+                          fontWeight: 600,
+                          fontStyle: 'normal',
+                          fontSize: '14px',
+                          lineHeight: '100%',
+                          letterSpacing: '-0.02em',
+                        }}
+                      >
+                        Phone/Contact Number <span className="text-red-500">*</span>
+                      </label>
+                      <div
+                        className={`relative box-border flex h-[50px] w-full max-w-full min-w-0 items-center gap-[8px] overflow-visible rounded-[12px] border bg-[#F4F6F9] py-[10px] pl-4 pr-4 transition-all sm:max-w-[248px] ${
+                          touched.phone && errors.phone ? 'border-red-500' : 'border-[#1F2A4433]'
+                        }`}
+                      >
+                        <div ref={dialWrapRef} className="relative shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => setDialOpen((v) => !v)}
+                            className="inline-flex items-center gap-2 bg-transparent border-0 p-0 font-manrope text-[14px] text-[#111827] cursor-pointer"
+                            style={{ height: '100%' }}
+                            aria-haspopup="listbox"
+                            aria-expanded={dialOpen}
+                          >
+                            <span>{selectedDial.dial}</span>
+                            <img
+                              src={CaretDownMd}
+                              alt=""
+                              className="w-[18px] h-[18px] opacity-70"
+                              style={{ filter: 'brightness(0)' }}
+                              aria-hidden
+                            />
+                          </button>
 
-              <div>
-              <label
-                    className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
+                          {dialOpen && (
+                            <div className="absolute left-0 top-[calc(100%+10px)] z-[80] w-[240px] rounded-[10px] border border-[#E5E7EB] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
+                              <div className="p-2">
+                                <input
+                                  value={dialSearch}
+                                  onChange={(e) => setDialSearch(e.target.value)}
+                                  placeholder="Search country..."
+                                  className="w-full rounded-[8px] border border-[#E5E7EB] px-3 py-2 font-manrope text-[14px] text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#1F2A44]/20"
+                                  autoFocus
+                                />
+                              </div>
+                              <div className="max-h-[220px] overflow-auto pb-2" role="listbox">
+                                {filteredDialCodes.map((c) => {
+                                  const isActive = c.code === selectedDial.code && c.dial === selectedDial.dial
+                                  return (
+                                    <button
+                                      key={`${c.code}-${c.dial}`}
+                                      type="button"
+                                      role="option"
+                                      aria-selected={isActive}
+                                      onClick={() => {
+                                        setSelectedDial(c)
+                                        setDialOpen(false)
+                                        setDialSearch('')
+                                      }}
+                                      className={`w-full px-3 py-2 text-left font-manrope text-[14px] ${
+                                        isActive ? 'bg-[#F4F6F9] text-[#111827]' : 'bg-white text-[#111827] hover:bg-[#F4F6F9]'
+                                      }`}
+                                    >
+                                      {c.name} ({c.dial})
+                                    </button>
+                                  )
+                                })}
+                                {filteredDialCodes.length === 0 && (
+                                  <div className="px-3 py-2 font-manrope text-[14px] text-[#6B7280]">No results</div>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        <img src={Line1} alt="" className="w-[1px] h-[20px] shrink-0" aria-hidden />
+                        <input
+                          ref={phoneRef}
+                          type="tel"
+                          value={form.phone}
+                          onChange={(e) => setForm((v) => ({ ...v, phone: e.target.value }))}
+                          onBlur={() => setTouched((v) => ({ ...v, phone: true }))}
+                          placeholder="Enter Phone"
+                          className="flex-1 border-0 bg-transparent font-manrope text-[14px] text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none"
+                          style={{ height: '100%', padding: 0, border: 'none' }}
+                        />
+                      </div>
+                      {touched.phone && errors.phone && (
+                        <p className="mt-2 font-manrope text-[12px] font-semibold leading-[100%] text-red-600">
+                          {errors.phone}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      className="[text-shadow:2px_2px_0_#0000000F] block text-[#000000] sm:mb-[6px] mb-[4px]"
+                      style={{
+                        fontFamily: 'Manrope',
+                        fontWeight: 600,
+                        fontStyle: 'normal',
+                        fontSize: '14px',
+                        lineHeight: '100%',
+                        letterSpacing: '-0.02em',
+                      }}
+                    >
+                      Message/Query/Inquiry <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      ref={messageRef}
+                      rows={5}
+                      placeholder="Enter Message"
+                      value={form.message}
+                      onChange={(e) => setForm((v) => ({ ...v, message: e.target.value }))}
+                      onBlur={() => setTouched((v) => ({ ...v, message: true }))}
+                      className={`box-border h-[130px] w-full max-w-full rounded-[12px] border bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] lg:max-w-[510px] ${
+                        touched.message && errors.message ? 'border-red-500' : 'border-[#1F2A4433]'
+                      }`}
+                    />
+                    {touched.message && errors.message && (
+                      <p className="mt-2 font-manrope text-[12px] font-semibold leading-[100%] text-red-600">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    className={`mt-[12px] flex w-full items-center justify-center border-0 bg-transparent p-0 max-[480px]:mt-3 ${
+                      isFormValid ? 'cursor-pointer' : 'cursor-pointer'
+                    }`}
+                  >
+                    <img src={SubmitBtn} alt="Submit" className="w-[157px] h-[48px] select-none" />
+                  </button>
+                </form>
+              </>
+            ) : (
+              <div
+                className="flex h-full min-h-0 flex-col overflow-hidden text-center"
+                role="status"
+                aria-labelledby="contact-success-title"
+              >
+                <div className="box-border flex min-h-0 flex-1 flex-col items-center justify-center text-center max-[480px]:overflow-visible">
+                  <h3
+                    className="[text-shadow:2px_2px_0_#0000000F] mb-[20px] text-center text-[#000000] text-[26px] leading-[100%] hidden max-[480px]:block max-[319px]:hidden"
                     style={{
-                      fontFamily: 'Manrope',
-                      fontWeight: 600,
+                      fontFamily: 'Sora',
+                      fontWeight: 400,
                       fontStyle: 'normal',
-                      fontSize: '14px',
-                      lineHeight: '100%',
-                      letterSpacing: '-0.02em',
+                      letterSpacing: '-0.04em',
                     }}
                   >
-                  Message/Query/Inquiry <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Enter Message"
-                  className="box-border h-[130px] w-full max-w-full rounded-[12px] border border-[#1F2A4433] bg-[#F4F6F9] pt-[10px] pr-[16px] pb-[12px] pl-[16px] font-manrope text-[14px] text-[#111827] transition-all placeholder:font-semibold placeholder:text-[14px] placeholder:leading-[100%] placeholder:tracking-[-0.02em] placeholder:text-[#4D4D4D] lg:max-w-[510px]"
-                />
-              </div>
+                    Get In Touch
+                  </h3>
+                  <img
+                    src={TickCircle}
+                    alt=""
+                    className="mb-[16px] h-[46px] w-[46px] shrink-0 select-none sm:mb-[32px] sm:h-[64px] sm:w-[64px]"
+                    aria-hidden
+                  />
+                  <h2
+                    id="contact-success-title"
+                    className="[text-shadow:2px_2px_0_#0000000F] mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
+                  >
+                    Message Submitted!
+                  </h2>
 
-              <button
-                type="submit"
-                className="mt-[38px] flex w-full cursor-pointer items-center justify-center border-0 bg-transparent p-0 max-[480px]:mt-6"
-              >
-                <img
-                  src={SubmitBtn}
-                  alt="Submit"
-                  className="w-[157px] h-[48px] select-none"
-                />  
-              </button>
-            </form>
+                  <p className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
+                    Thank you for reaching out! Your message has been received, and our team will get back to you as soon
+                    as possible. <br /> <br /> If your request is urgent, please contact us directly at
+                    info@saviturlifescience.com or +91 96648 94484.
+                  </p>
+                </div>
+
+                <div className="mt-auto shrink-0">
+                  <div className="mb-[30px] h-px w-full bg-[#E5E7EB]" />
+                  <div className="flex justify-center px-6 pb-8 max-[480px]:px-4 max-[480px]:pb-8">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSuccessOpen(false)
+                        resetForm()
+                      }}
+                      className="flex cursor-pointer items-center justify-center border-0 bg-transparent p-0"
+                    >
+                      <img
+                        src={SubmitAnotherBtn}
+                        alt="Submit another"
+                        className="h-[40px] w-[132px] sm:h-[48px] sm:w-[157px]"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
     </section>
     </div>
-
-      {/* Success modal */}
-      {successOpen && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 p-5 max-[480px]:items-stretch max-[480px]:justify-stretch max-[480px]:p-0"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="contact-success-title"
-        >
-          <div className="flex h-[772px] w-full max-w-[480px] flex-col overflow-hidden rounded-[12px] bg-white text-center shadow-[0_12px_40px_rgba(0,0,0,0.15)] max-[480px]:h-[100dvh] max-[480px]:min-h-[100dvh] max-[480px]:w-full max-[480px]:max-w-[480px] max-[480px]:rounded-none max-[480px]:shadow-none sm:h-[602px] sm:max-w-[574px]">
-            
-            <div className="box-border mb-[60px] ml-[38px] mr-[38px] flex h-[272px] w-[459px] max-w-full min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center max-[480px]:mx-0 max-[480px]:mb-0 max-[480px]:mt-8 max-[480px]:h-auto max-[480px]:w-full max-[480px]:max-w-[480px] max-[480px]:px-4 max-[480px]:pt-8 max-[480px]:overflow-visible sm:mb-[110px] sm:ml-[57px] sm:mr-[58px] sm:mt-[100px] sm:h-[272px] sm:w-[459px] sm:flex-none">
-              <img
-                src={TickCircle}
-                alt=""
-                className="mb-[16px] h-[46px] w-[46px] shrink-0 select-none sm:mb-[32px] sm:h-[64px] sm:w-[64px]"
-                aria-hidden
-              />
-              <h2
-                id="contact-success-title"
-                className="[text-shadow:2px_2px_0_#0000000F] mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
-              >
-                Message Submitted!
-              </h2>
-
-              <p className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
-                Thank you for reaching out! Your message has been received, and our team will get back to you as soon as
-                possible. <br /> <br /> If your request is urgent, please contact us directly at
-                info@saviturlifescience.com or +91 70431 12818.
-              </p>
-            </div>
-
-            <div className="mt-auto shrink-0">
-              <div className="mb-[30px] h-px w-full bg-[#E5E7EB]" />
-              <div className="flex justify-center px-6 pb-8 max-[480px]:px-4 max-[480px]:pb-8">
-                <button
-                  type="button"
-                  onClick={() => setSuccessOpen(false)}
-                  className="flex cursor-pointer items-center justify-center border-0 bg-transparent p-0"
-                >
-                  <img
-                    src={SubmitAnotherBtn}
-                    alt="Submit another"
-                    className="h-[40px] w-[132px] sm:h-[48px] sm:w-[157px]"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </>

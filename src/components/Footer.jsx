@@ -5,10 +5,10 @@ import Flinkedin from '../assets/images/Flinkedin.svg'
 import Ffacebook from '../assets/images/Ffacebook.svg'
 import Finstagram from '../assets/images/Finstagram.svg'
 import FSaviturLogo from '../assets/images/FSavitur_Logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const quickLinks = [
-  { label: 'Home', to: '/', active: true },
+  { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about-us' },
   { label: 'Services', to: '/services' },
   { label: 'Contact Us', to: '/contact-us' },
@@ -28,7 +28,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8 mb-[40px] max-[393px]:mb-0">
+    <div className="flex w-full justify-center px-0 sm:px-6 lg:px-8 mb-[40px] max-[480px]:mb-0">
       <footer className="relative w-full max-w-full min-h-0 overflow-hidden rounded-none border border-white/10 bg-[#1F2A44] pb-28 opacity-100 lg:max-w-[1520px] lg:rounded-2xl lg:min-h-[626px] lg:pb-0">
         <div className="relative z-10 pt-[60px] pb-[34px] w-full max-w-[480px] px-[20px] max-[360px]:px-[16px] min-h-[719px] text-left lg:mx-0 lg:mt-[124px] lg:ml-[80px] lg:mr-[78px] lg:min-h-0 lg:max-w-none lg:w-[1362px] lg:px-0 lg:pt-0 lg:pb-0">
           {/* Main: mobile = brand, 2-col links, address, contact | lg = 5 columns */}
@@ -52,13 +52,20 @@ export default function Footer() {
                 <ul className="[text-shadow:2px_2px_0_#0000000F] list-inside list-disc space-y-2 text-white">
                   {quickLinks.map((link) => (
                     <li key={link.label}>
-                      <Link
+                      <NavLink
                         to={link.to}
+                        end={link.to === '/'}
                         onClick={scrollTop}
-                        className={`sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${link.active ? 'font-semibold underline decoration-solid' : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'}`}
+                        className={({ isActive }) =>
+                          `sm:text-[16px] text-[14px] leading-[100%] tracking-[-0.04em] text-white transition-colors ${
+                            isActive
+                              ? 'font-semibold underline decoration-solid'
+                              : 'font-medium hover:font-semibold hover:underline hover:decoration-solid hover:text-white/90'
+                          }`
+                        }
                       >
                         {link.label}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -103,18 +110,18 @@ export default function Footer() {
               <div className="space-y-3 sm:space-y-4">
                 <a
                   href="mailto:dr.rajendra@saviturlifescience.com"
-                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex cursor-pointer items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
                 >
-                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0 cursor-pointer pointer-events-auto" />
                   dr.rajendra@saviturlifescience.com
                 </a>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.rajendra%40saviturlifescience.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] cursor-pointer items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
-                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0 cursor-pointer pointer-events-auto" />
                   dr.rajendra@saviturlifescience.com
                 </a>
                 <a
@@ -127,18 +134,18 @@ export default function Footer() {
 
                 <a
                   href="mailto:karan@saviturlifescience.com"
-                  className="[text-shadow:2px_2px_0_#0000000F] flex items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
+                  className="[text-shadow:2px_2px_0_#0000000F] flex cursor-pointer items-center gap-3 font-medium sm:text-[16px] text-[15px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white sm:hidden"
                 >
-                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0 cursor-pointer pointer-events-auto" />
                   karan@saviturlifescience.com
                 </a>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=karan%40saviturlifescience.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
+                  className="hidden sm:flex [text-shadow:2px_2px_0_#0000000F] cursor-pointer items-center gap-3 font-medium text-[16px] leading-[150%] tracking-[-0.04em] text-white/90 transition-colors hover:text-white"
                 >
-                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0" />
+                  <img src={Fmail} alt="" className="h-[24px] w-[24px] flex-shrink-0 cursor-pointer pointer-events-auto" />
                   karan@saviturlifescience.com
                 </a>
 

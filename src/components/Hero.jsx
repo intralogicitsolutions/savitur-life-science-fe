@@ -53,7 +53,7 @@ export default function Hero() {
           >
             <img src={CheckAll} alt="" className="mr-[2px] h-5 w-5 sm:h-6 sm:w-6" />
             <span className="text-gray-200 font-sora font-normal text-[16px] max-[360px]:text-[14px] leading-[100%] tracking-[-0.04em] whitespace-nowrap [text-shadow:2px_2px_0_#0000000F]">
-              Trusted for Quality & Compliance
+                Illuminating Life Through Science
             </span>
           </div>
 
