@@ -553,7 +553,7 @@ export default function ContactUs() {
             {!successOpen ? (
               <>
                 <h3
-                  className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
+                  className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] hidden max-[480px]:block text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%]"
                   style={{
                     fontFamily: 'Sora',
                     fontWeight: 400,
@@ -805,9 +805,9 @@ export default function ContactUs() {
                 role="status"
                 aria-labelledby="contact-success-title"
               >
-                <div className="box-border flex min-h-0 flex-1 flex-col items-center justify-center text-center max-[480px]:overflow-visible">
+                <div className="box-border flex min-h-0 flex-1 flex-col items-stretch justify-start text-center max-[480px]:overflow-visible">
                   <h3
-                    className="[text-shadow:2px_2px_0_#0000000F] mb-[20px] text-center text-[#000000] text-[26px] leading-[100%] hidden max-[480px]:block max-[319px]:hidden"
+                    className="[text-shadow:2px_2px_0_#0000000F] mb-[36px] max-[480px]:mb-[20px] hidden max-[480px]:block shrink-0 text-center text-[#000000] sm:text-[40px] text-[26px] leading-[100%] w-full"
                     style={{
                       fontFamily: 'Sora',
                       fontWeight: 400,
@@ -817,28 +817,30 @@ export default function ContactUs() {
                   >
                     Get In Touch
                   </h3>
-                  <img
-                    src={TickCircle}
-                    alt=""
-                    className="mb-[16px] h-[46px] w-[46px] shrink-0 select-none sm:mb-[32px] sm:h-[64px] sm:w-[64px]"
-                    aria-hidden
-                  />
-                  <h2
-                    id="contact-success-title"
-                    className="[text-shadow:2px_2px_0_#0000000F] mb-[12px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:text-[32px]"
-                  >
-                    Message Submitted!
-                  </h2>
+                  <div className="flex min-h-0 flex-1 w-full flex-col items-center justify-center text-center px-0 sm:px-2">
+                    <img
+                      src={TickCircle}
+                      alt=""
+                      className="mb-[16px] h-[46px] w-[46px] shrink-0 select-none sm:mb-[32px] sm:h-[64px] sm:w-[64px]"
+                      aria-hidden
+                    />
+                    <h2
+                      id="contact-success-title"
+                      className="[text-shadow:2px_2px_0_#0000000F] mb-[12px] max-w-[420px] font-sora text-[20px] font-normal leading-[120%] tracking-[-0.04em] text-[#000000] sm:mb-[16px] sm:max-w-none sm:text-[32px]"
+                    >
+                      Message Submitted!
+                    </h2>
 
-                  <p className="[text-shadow:2px_2px_0_#0000000F] font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:text-[14px]">
-                    Thank you for reaching out! Your message has been received, and our team will get back to you as soon
-                    as possible. <br /> <br /> If your request is urgent, please contact us directly at
-                    info@saviturlifescience.com or +91 96648 94484.
-                  </p>
+                    <p className="[text-shadow:2px_2px_0_#0000000F] max-w-[420px] font-manrope text-[16px] font-semibold leading-[150%] tracking-[-0.02em] text-[#4D4D4D] sm:max-w-[510px] sm:text-[14px]">
+                      Thank you for reaching out! Your message has been received, and our team will get back to you as soon
+                      as possible. <br /> <br /> If your request is urgent, please contact us directly at
+                      info@saviturlifescience.com or +91 96648 94484.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="mt-auto shrink-0">
-                  <div className="mb-[30px] h-px w-full bg-[#E5E7EB]" />
+                  <div className="mb-[30px] h-px w-full bg-[#E5E7EB] max-[480px]:hidden" aria-hidden />
                   <div className="flex justify-center px-6 pb-8 max-[480px]:px-4 max-[480px]:pb-8">
                     <button
                       type="button"
